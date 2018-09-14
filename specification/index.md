@@ -7,14 +7,22 @@ January 31, 2017
 
 Front Matter
 ------------
-1. [Authors](authors)
-2. [Revision History](history)
+1. [Executive summary](00-front_matter/index.md)
+1. [Authors](00-front_matter/index.md)
+2. [Revision History](00-front_matter/index.md)
 
 Contents
 --------
 
+1. [Introduction](01-introduction/index.md)
+2. [General structure and data model for Submission Information Packages](02-structure/index.md)
+3.	[General SIP metadata](03-metadata/index.md)
+4. [Content Information Type specifications](04-content_types/index.md)
+5. [Submission Agreement](05-submission_agreement/index.md)
+6. [References](07-references/index.md)
+8.	[Appendencies](08-appendencies/index.md)
 
-TBD
+
 
 Acknowledgements
 ----------------
