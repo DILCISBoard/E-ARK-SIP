@@ -24,6 +24,7 @@ Contents
 
 
 
+
 Acknowledgements
 ----------------
 The General SIP Specification was first developed within the E-ARK project in 2014 – 2017. E-ARK was an EC-funded pilot action project in the Competiveness and Innovation Programme 2007- 2013, Grant Agreement no. 620998 under the Policy Support Programme.
