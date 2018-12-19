@@ -117,7 +117,7 @@ The METS Schema for an E-ARK SIP is the same as for an E-ARK AIP or a E-ARK DIP.
 
 These differences are materialised by means of a METS profile. The SIP METS profile extends the CS IP METS profile. In this section we will only highlight the differences between the SIP METS and the CS IP METS XML document. In order to fully understand how to create or interpred a METS file included within a SIP, you should start by reading the CS IP.
 
-### Extendend use of the METS root element (element `mets`)
+### Extended use of the METS root element (element `mets`)
 
 The root of a METS document can contain a number of optional attributes, namespaces (`xmlns:`) and schema instance locations (`xsi:`) for external standards and a number of other elements as seen in the following table:
 
@@ -142,7 +142,7 @@ The root of a METS document can contain a number of optional attributes, namespa
 ```
 
 
-### Extendend use of the METS header (element `metsHdr`)
+### Extended use of the METS header (element `metsHdr`)
 
 The METS header element `<metsHdr>` includes information about the creator of the submission package, the original creator of the data, contact information of the person delivering the SIP, among other entitues. These entities are typically called "Agents" (see element `metsHdr/agent`). 
 
@@ -178,7 +178,7 @@ Example:
   </metsHdr>
 ```
 
-### Extendend use of the METS descriptive metadata section (element `dmdSec`)
+### Extended use of the METS descriptive metadata section (element `dmdSec`)
 
 The METS descriptive metadata section element `<dmdSec>` is responsible for recording descriptive metadata for all the data items available in the package. 
 
@@ -322,14 +322,14 @@ According to the [PAIMAS, 2004](http://public.ccsds.org/Pubs/651x0m1.pdf) standa
 - Change management (e.g. conditions for modification of the agreement, for breaking the agreement);
 - Schedule (submission timetable).
 
-This specification includes a recommendation of a machine-readable format for Submission Agreements (See Appendix A), but it does not mandate its use or in any way forbids the use of any other Submission Agreement formats.
+This specification includes a recommendation of semantic elements that should be present in a Submission Agreement (See Appendix A). This specification does not mandate its use or in any way forbids the use of any other Submission Agreement formats.
 
-The recommended submission agreement is inspired by the PAIMAS requirements and the [submission agreement template](https://www.ngdc.noaa.gov/wiki/images/f/f4/NOAA_Sub_Agreement.docx) provided by the National Oceanic and Atmospheric Administration (NOAA).
+The recommended list of semantic elements is inspired by the PAIMAS requirements and the [submission agreement template](https://www.ngdc.noaa.gov/wiki/images/f/f4/NOAA_Sub_Agreement.docx) provided by the National Oceanic and Atmospheric Administration (NOAA).
 
 
 ## Appendices
  
-### Appendix A: Submission Agreement Template
+### Appendix A: Submission Agreement semantic elements
 
 #### Project information
 
