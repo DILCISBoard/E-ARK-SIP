@@ -4,7 +4,7 @@
 Version: 2.0.0-DRAFT
 Publication date: December 20, 2018
 Author: Miguel Ferreira
-Contritor: karin Bredenberg, Hélder Silva
+Contributor: karin Bredenberg, Hélder Silva
 ```
 
 ## Front matter (TBD)
@@ -31,7 +31,7 @@ The EU funded E-ARK project (2014-2017) first acknowledged this problem and deve
 
 ### Scope and purpose 
 
-This documents describes the correct way of producing and parsing E-ARK compatible Submission Information Packages (SIP). The main objectives of this specification are:
+This document describes the correct way of producing and parsing E-ARK compatible Submission Information Packages (SIP). The main objectives of this specification are:
 
 * To define the general structure for a Submission Information Package format in a way that it is suitable for a wide variety of archival scenarios, e.g. document and image collections, databases or geographical data;
 * To recommend best practices regarding metadata, content and structure of SIPs.
@@ -61,9 +61,9 @@ An additional concept is also part of this set of specifications. That is the Co
 For more information on Content Information Type specifications, please refer to the Common Specification for Information Packages or the individual Content Information Type specification documents.
 
 
-### Definition of a SIP
+### Definition of an SIP
 
-The OAIS reference model defines a SIP as:
+The OAIS reference model defines an SIP as:
 
 > An Information Package that is delivered by the Producer to the OAIS for use in the construction or update of one or more AIPs and/or the associated Descriptive Information. 
 
@@ -82,7 +82,7 @@ This document is based on or influenced by the following documents and best prac
 * Producer-Archive Interface Methodology Abstract Standard (PAIMAS), 2004, [http://public.ccsds.org/Pubs/651x0m1.pdf](http://public.ccsds.org/Pubs/651x0m1.pdf)
 * Producer-Archive Interface Specification (PAIS) – CCSDS, 2014, [http://public.ccsds.org/Pubs/651x1b1.pdf](http://public.ccsds.org/Pubs/651x1b1.pdf)
 * e-SENS (Electronic Simple European Networked Services) project, [http://www.esens.eu/](http://www.esens.eu/ )
-* E-ARK Deliverable D3.2  - SIP Draft Specification, 2015, [http://eark-project.com/resources/project-deliverables/17-d32-e-ark-sip-draft-specification](http://eark-project.com/resources/project-deliverables/17-d32-e-ark-sip-draft-specification)
+* E-ARK Deliverable D3.2 - SIP Draft Specification, 2015, [http://eark-project.com/resources/project-deliverables/17-d32-e-ark-sip-draft-specification](http://eark-project.com/resources/project-deliverables/17-d32-e-ark-sip-draft-specification)
 * E-ARK Deliverable D3.3 - E-ARK SIP Pilot Specification, 2016, [http://eark-project.com/resources/project-deliverables/51-d33pilotspec](http://eark-project.com/resources/project-deliverables/51-d33pilotspec)
 
 ## Structure
@@ -97,9 +97,9 @@ A representation is a set of files, including structural metadata, needed for a 
 
 As one SIP can contain more than one representation of the same intellectual entity, representations MUST be place within distinct folders (i.e., `rep-001`, `rep-002`, `rep-n` under the ```representations``` folder). Metadata on the other hand, may exist within each representation folder or at the root level (next to the `representations` folder). Metadata can serve multiples purposes, being the most obvious one the support for discoverability of resources within the OAIS (i.e., descriptive metadata).
 
-If metadata is stored at the package root level, then there is generaly no need to include a `metadata` folder at the representation level. In such cases, the `metadata` folder under representations is considered optional. The SIP also accounts for the following additional folders that can exist both at the root level or under the `representations` folder:
+If metadata is stored at the package root level, then there is generally no need to include a `metadata` folder at the representation level. In such cases, the `metadata` folder under representations is considered optional. The SIP also accounts for the following additional folders that can exist both at the root level or under the `representations` folder:
 
-* `documentation` – for including additional documentation about the `data` included in the packafge (e.g. a data dictionary for a SIARD file);
+* `documentation` – for including additional documentation about the `data` included in the package (e.g. a data dictionary for a SIARD file);
 * `schemas`  – for storing schemas of XML files included in the data or metadata.
 
 ![General SIP structure](images/fig_10_cs_ip_full.png "Example of the full use of the SIP structure.")
@@ -113,9 +113,9 @@ The details of the internal structure of an SIP including its `data` and `metada
 
 The METS (Metadata Encoding and Transmission Standard) is a standard for encoding descriptive, administrative, and structural metadata expressed using the XML Schema Language.
 
-The METS Schema for an E-ARK SIP is the same as for an E-ARK AIP or a E-ARK DIP. The actual requirents of the METS used in the E-ARK SIP are defined in the Common Specification for Information Packages on section "5.3 Use of METS". However, there are some small differences between a METS instance of an E-ARK SIP and an E-ARK CS IP. Most of the differences consist of setting the values of particular attributes or elements, setting the terms of controlled vocabularies or making optional elements mandatory.
+The METS Schema for an E-ARK SIP is the same as for an E-ARK AIP or a E-ARK DIP. The actual requirements of the METS used in the E-ARK SIP are defined in the Common Specification for Information Packages on section "5.3 Use of METS". However, there are some small differences between a METS instance of an E-ARK SIP and an E-ARK CS IP. Most of the differences consist of setting the values of particular attributes or elements, setting the terms of controlled vocabularies or making optional elements mandatory.
 
-These differences are materialised by means of a METS profile. The SIP METS profile extends the CS IP METS profile. In this section we will only highlight the differences between the SIP METS and the CS IP METS XML document. In order to fully understand how to create or interpred a METS file included within a SIP, you should start by reading the CS IP.
+These differences are materialised by means of a METS profile. The SIP METS profile extends the CS IP METS profile. In this section we will only highlight the differences between the SIP METS and the CS IP METS XML document. In order to fully understand how to create or interpred a METS file included within an SIP, you should start by reading the CS IP.
 
 ### Extended use of the METS root element (element `mets`)
 
@@ -144,14 +144,14 @@ The root of a METS document can contain a number of optional attributes, namespa
 
 ### Extended use of the METS header (element `metsHdr`)
 
-The METS header element `<metsHdr>` includes information about the creator of the submission package, the original creator of the data, contact information of the person delivering the SIP, among other entitues. These entities are typically called "Agents" (see element `metsHdr/agent`). 
+The METS header element `<metsHdr>` includes information about the creator of the submission package, the original creator of the data, contact information of the person delivering the SIP, among other entities. These entities are typically called "Agents" (see element `metsHdr/agent`). 
 
-The `metsHdr` is also used to indicate the type of behaviour to be expected from the OAIS when processing a particular SIP. For example, one might indicate that an SIP should be used to "replace" a particular AIP in the repository or that an SIP is for "testing" purpuses and therefore it should not create an AIP in the end of the ingest process (see atribute `metsHdr/@RECORDSTATUS`).
+The `metsHdr` is also used to indicate the type of behaviour to be expected from the OAIS when processing a particular SIP. For example, one might indicate that an SIP should be used to "replace" a particular AIP in the repository or that an SIP is for "testing" purposes and therefore it should not create an AIP in the end of the ingest process (see attribute `metsHdr/@RECORDSTATUS`).
 
 
-Its also in the `metsHdr` that one can identify the Submission Agreement to which a particular SIP pays respect to (see `metsHdr/altrecordID/@TYPE=”SUBMISSIONAGREEMENT`. 
+It's also in the `metsHdr` that one can identify the Submission Agreement to which a particular SIP pays respect to (see `metsHdr/altrecordID/@TYPE=”SUBMISSIONAGREEMENT`. 
 
-The following table describes the main differences in the `metHdr` between an E-ARK SIP and the CS IP.
+The following table describes the main differences in the `metsHdr` between an E-ARK SIP and the CS IP.
 
 [Table missing. Automatically generated from SIP METS profile]
 
@@ -200,7 +200,7 @@ The SIP specification does not extend any of the requirements already defined by
 
 The METS file section element `<fileSec>` is used to describe all components of the IP which have not been already included in the `amdSec` and `dmdSec` elements. 
 
-For all files the location and checksum need to be available. Therefore the main purpose of the METS file section is to serve as a "table of contents" or "manifest" and allow validating the integrity of the files included into the package.
+For all files the location and checksum need to be available. Therefore, the main purpose of the METS file section is to serve as a "table of contents" or "manifest" and allow validating the integrity of the files included into the package.
 
 All files found in the submission package should be referenced once and only once in the METS-document describing the submission. The elements and attributes are the same regardless of the content type submitted.
 
@@ -297,7 +297,7 @@ Example of the <fileSec> element (representation METS file):
 
 ### Extended use of the METS structural map (element `structMap`)
 
-The mandatory METS structural map element `<structMap>` is intended to provide an overview of components described in the METS document. It can also link the elements of that structure to associated content files and metadata. In CSIP the structMap describes the higher level structure of all the content in the root and may link to representations.
+The mandatory METS structural map element `<structMap>` is intended to provide an overview of components described in the METS document. It can also link the elements of that structure to associated content files and metadata. In CSIP the structMap describes the higher-level structure of all the content in the root and may link to representations.
 
 The SIP specification does not extend any of the requirements already defined by the Common Specification for Information Packages (For more information see section 5.3.6 of the CS IP)
 
@@ -312,7 +312,7 @@ The SIP presents no extensions or exceptions to the concept of Content Informati
 
 Interactions between the OAIS and the Producers are often guided by a Submission Agreement, which establishes specific details  about those interactions such as the type of information expected to be submitted, the metadata the Producer is expected to deliver, the logistics of the actual transfer, and statements regarding access restrictions on the submitted material (Lavoie B, The Open Archival Information System (OAIS) Reference Model: Introductory Guide (2nd Edition), 2014, [http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02](http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02)).
  
-Given the importance of the Submission Agreement, the E-ARK SIP specification provides a way of referring to it regardless of its form. A submission agreement can be delivered in digital (e.g. PDF or XML file) or in analogue forms (e.g. paper document). To better understand how one can reference the Submission Agreeement within the SIP, please see section about the `metsHdr`). 
+Given the importance of the Submission Agreement, the E-ARK SIP specification provides a way of referring to it regardless of its form. A submission agreement can be delivered in digital (e.g. PDF or XML file) or in analogue forms (e.g. paper document). To better understand how one can reference the Submission Agreement within the SIP, please see section about the `metsHdr`). 
 
 According to the [PAIMAS, 2004](http://public.ccsds.org/Pubs/651x0m1.pdf) standard the submission agreement should include a complete and precise definition of:
  
