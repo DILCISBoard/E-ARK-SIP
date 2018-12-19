@@ -2,15 +2,31 @@
 
 ```
 Version: 2.0.0-DRAFT
-Publication date: December 20, 2018
-Author: Miguel Ferreira
-Contributor: karin Bredenberg, Hélder Silva
+Published: December 20, 2018
 ```
+
+## Authors
+
+| Name                             | Organisation                                       |
+| -------------------------------- | -------------------------------------------------- |
+| Miguel Ferreira                  | KEEP SOLUTIONS                                     |
+| Hélder Silva                     | KEEP SOLUTIONS                                     |
+| Karin Bredenberg                 | National Archives of Sweden                        |
+| Carl Wilson                      | Open Preservation Foundation                       |
+
+
+## Reviewers
+
+| Name                             | Organisation                                       |
+| -------------------------------- | -------------------------------------------------- |
+| Jaime Kaminski                   | Brighton University                                     |
+| Karin Bredenberg                 | National Archives of Sweden                        |
+
+
 
 ## Front matter (TBD)
 
-* Title page
-* Authors and reviewers (past and present)
+* Authors and reviewers (past)
 * Revision history and statement of originality
 * Executive summary
 * Acknowledgments
