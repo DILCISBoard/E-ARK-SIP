@@ -59,15 +59,15 @@ The target audience for this specification is records creators, archival institu
 
 This document is part of a set of specifications that define a common understanding of the principles and requirements for interoperable Information Packages according to the OAIS reference model (see Figure 1).
 
-The Common Specification for Information Packages (CSIP) identifies and standardises the common aspects of all information packages (Submission, Archival and Dissemination Information Packages, i.e. SIP, AIP and DIP, respectively) which are equally relevant and implemented by different functional entities of the overall digital preservation process (i.e. pre-ingest, ingest, long-term preservation and access). 
+The Common Specification for Information Packages (CS IP) identifies and standardises the common aspects of all information packages (Submission, Archival and Dissemination Information Packages, i.e. SIP, AIP and DIP, respectively) which are equally relevant and implemented by different functional entities of the overall digital preservation process (i.e. pre-ingest, ingest, long-term preservation and access). 
 
-The current E-ARK SIP specification does not repeat the information presented in the CSIP. Only the information that is absolutely necessary to understand the SIP specification is utlised in this document. This means that in order to fully understand this specification it is essential that the user reads the CSIP.
+The current E-ARK SIP specification does not repeat the information presented in the CS IP. Only the information that is absolutely necessary to understand the SIP specification is utlised in this document. This means that in order to fully understand this specification it is essential that the user reads the CS IP.
 
 ![Set of E-ARK Specifications](images/specificationset.png)
 
 **Figure 1**: Relationships between all E-ARK specifications.
 
-In general, the E-ARK SIP specification reuses and applies all the requirements laid out by the CSIP. However, it extends it with aspects that are solely relevant to the process of transmitting and ingesting submission information into an OAIS environment. For example, the E-ARK SIP specification extends the CSIP with further requirements about submission agreements and information about the actors involved in the submission process.
+In general, the E-ARK SIP specification reuses and applies all the requirements laid out by the CS IP. However, it extends it with aspects that are solely relevant to the process of transmitting and ingesting submission information into an OAIS environment. For example, the E-ARK SIP specification extends the CS IP with further requirements about submission agreements and information about the actors involved in the submission process.
 
 An additional concept is also part of this set of specifications. That is the Content Information Type Specifications. These are content-dependent specifications that include detailed information on how content, metadata, and documentation for specific types of content (i.e. data) can be handled within the packages. Currently, there are three such specifications:
 
@@ -104,7 +104,7 @@ This document is based on, or influenced by, the following documents and best pr
 
 ## Structure
 
-The SIP specification follows a structure that is common to all Information Packages in the E-ARK set of specifications. The common structure is fully described in the Common Specification for Information Packages (see Section 4. CSIP structure).
+The SIP specification follows a structure that is common to all Information Packages in the E-ARK set of specifications. The common structure is fully described in the Common Specification for Information Packages (see Section 4. CS IP structure).
 
 In its simplest form, an SIP consists of metadata and zero or more representations, also composed of `data` and `metadata`, as seen in Figure 2. A package with zero representations means that it only includes metadata. This is a special type of Information Package that enables Producers to deliver updates to the metadata to previously ingested packages.
 
@@ -135,15 +135,15 @@ The details of the internal structure of an SIP including its `data` and `metada
 
 The Metadata Encoding and Transmission Standard (METS) is a standard for encoding descriptive, administrative, and structural metadata expressed using the XML Schema Language.
 
-The METS Schema for an E-ARK SIP is the same as for an E-ARK AIP or an E-ARK DIP. The actual requirements of the METS used in the E-ARK SIP are defined in the CSIP on section "5.3 Use of METS". However, there are some small differences between a METS instance of an E-ARK SIP and an E-ARK CSIP. Most of the differences consist of setting values of particular attributes, defining controlled vocabularies or making optional elements mandatory.
+The METS Schema for an E-ARK SIP is the same as for an E-ARK AIP or an E-ARK DIP. The actual requirements of the METS used in the E-ARK SIP are defined in the CS IP on section "5.3 Use of METS". However, there are some small differences between a METS instance of an E-ARK SIP and an E-ARK CS IP. Most of the differences consist of setting values of particular attributes, defining controlled vocabularies or making optional elements mandatory.
 
-These differences are manifested by means of a METS profile. The SIP METS profile extends the CSIP METS profile. As stated before, in this document only the differences between the SIP METS and the CSIP METS are highlighted. In order to fully understand how to create or interpret the METS file included within an SIP, it is necessary to read the CSIP.
+These differences are manifested by means of a METS profile. The SIP METS profile extends the CS IP METS profile. As stated before, in this document only the differences between the SIP METS and the CS IP METS are highlighted. In order to fully understand how to create or interpret the METS file included within an SIP, it is necessary to read the CS IP.
 
 ### Extended use of the METS root element (element `mets`)
 
 The root of a METS document can contain a number of optional attributes, namespaces (`xmlns:`), locations for external schemas (`xsi:`) and a number of other elements.
 
-The following table describes the main differences in the `mets` element between the E-ARK SIP and the CSIP.
+The following table describes the main differences in the `mets` element between the E-ARK SIP and the CS IP.
 
 | ID | Name & Location | Description & usage | Cardinality & Level |
 |----|-----------------|---------------------|-------------------- |
@@ -151,7 +151,7 @@ The following table describes the main differences in the `mets` element between
 | <a name="SIP2"></a>**SIP2** | **METS Profile** <br/> `mets/@PROFILE` | The value is set to "https://earksip.dilcis.eu/profile/E-ARK-SIP.xml". | **1..1** <br/> MUST |
 
 
-**Example:** METS root element example with values from E-ARK-SIP as well as CSIP.
+**Example:** METS root element example with values from E-ARK-SIP as well as CS IP.
 
 ```xml
 <mets:mets 
@@ -177,7 +177,7 @@ The `metsHdr` is also used to indicate the type of behaviour to be expected from
 
 It is also in the `metsHdr` that the Submission Agreement to which a particular SIP conforms can be identified (see `metsHdr/altrecordID/@TYPE=”SUBMISSIONAGREEMENT`). 
 
-The following table describes the main differences in the `metsHdr` between an E-ARK SIP and the CSIP.
+The following table describes the main differences in the `metsHdr` between an E-ARK SIP and the CS IP.
 
 | ID | Name & Location | Description & usage | Cardinality & Level |
 |----|-----------------|---------------------|--------------------|
@@ -212,7 +212,7 @@ The following table describes the main differences in the `metsHdr` between an E
 | <a name="SIP31"></a>**SIP31** | **Classification of the preservation agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The preservation agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
 
 
-**Example:** METS example of altrecordID's, and SIP agents following the SIP profile as well as CSIP
+**Example:** METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.
 
 ```xml
 <mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
@@ -249,7 +249,7 @@ The METS descriptive metadata section `<dmdSec>` is responsible for recording de
 
 The SIP specification itself does not prescribe of any particular metadata format. It is a role of the OAIS together with the Producer to set the rules in terms of descriptive metadata. These rules should be set and agreed on in the Submission Agreement. 
 
-In this regard, the SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.3 of the CSIP).
+In this regard, the SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.3 of the CS IP).
 
 ### Extended use of METS administrative metadata section (element `amdSec`)
 
@@ -257,7 +257,7 @@ The METS administrative metadata section `<amdSec>` is used to include or refere
 
 Although seldom used, preservation metadata can be included in an SIP. The guide on [Using PREMIS with METS](https://www.loc.gov/standards/premis/premis-mets.html) provides recommendations on how to use the `<amdSec>` element to reference PREMIS metadata. 
 
-The SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.4. of the CSIP).
+The SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.4. of the CS IP).
 
 
 ### Extended use of the METS file section (element `fileSec`) 
@@ -266,18 +266,18 @@ The METS file section element `<fileSec>` is used to describe all the components
 
 The main purpose of the METS file section is to serve as a "table of contents" or "manifest" for all the files included in the package, thus allowing the OAIS to validate the integrity and completeness of the files included in the package. This means that for all the files included in the package, their location and checksum need to be available and described in the `fileSec` element. That includes files in the `data` and in the `documentation` folders. 
 
-The following table describes the main differences in the `fileSec` between an E-ARK SIP and the CSIP.
+The following table describes the main differences in the `fileSec` between an E-ARK SIP and the CS IP.
 
 | ID | Name & Location | Description & usage | Cardinality & Level |
 |----|-----------------|---------------------| --------------------|
-| <a name="SIP32"></a>**SIP32** | **File format name** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATNAME` | Follows the requriments in the CSIP profile. <br/> Follows the requirements in the CSIP profile. <br/> A more detailed file format definition when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "Extensible Markup Language” <br/> Example: ”PDF/A” <br/> Example: ”ISO/IEC 26300:2006” | **0..1** <br/> MAY |
+| <a name="SIP32"></a>**SIP32** | **File format name** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATNAME` | Follows the requirements in the CS IP profile. <br/> Follows the requirements in the CS IP profile. <br/> A more detailed file format definition when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "Extensible Markup Language” <br/> Example: ”PDF/A” <br/> Example: ”ISO/IEC 26300:2006” | **0..1** <br/> MAY |
 | <a name="SIP33"></a>**SIP33** | **File format version** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATVERSION` | The version of the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "1.0” | **0..1** <br/> MAY |
 | <a name="SIP34"></a>**SIP34** | **File format registry** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATREGISTRY` | The name of the format registry used to identify the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "PRONOM” | **0..1** <br/> MAY |
 | <a name="SIP35"></a>**SIP35** | **File format registry key** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATKEY` | Key of the file format in the registry when use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "fmt/101” | **0..1** <br/> MAY |
 
 
 
-**Example:** METS example of an SIP with file information together with the info from CSIP.
+**Example:** METS example of an SIP with file information together with the info from the CS IP.
 
 ```xml
 <mets:file 
@@ -303,9 +303,9 @@ The following table describes the main differences in the `fileSec` between an E
 
 ### Extended use of the METS structural map (element `structMap`)
 
-The mandatory METS structural map element `<structMap>` is intended to provide an overview of the components included in the package. It can also link elements of that structure to associated content files and metadata. In the CSIP the `structMap` describes the higher-level structure of all the content in the root and may link to existing representations.
+The mandatory METS structural map element `<structMap>` is intended to provide an overview of the components included in the package. It can also link elements of that structure to associated content files and metadata. In the CS IP the `structMap` describes the higher-level structure of all the content in the root and may link to existing representations.
 
-The SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.6 of the CSIP)
+The SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.6 of the CS IP)
 
 ## Content Information Type Specifications
 
@@ -313,7 +313,7 @@ The concept of a Content Information Type Specification is essentially an extens
 
 A Content Information Type can be understood as a category of Content Information, for example, relational databases, scientific data or digitised maps. A Content Information Type Specification defines in technical terms how data and metadata (mainly in regard to the Information Object) should be formatted and placed within an Information Package in order to achieve interoperability in exchanging specific Content Information.
 
-The SIP presents no extensions or exceptions to the concept of Content Information Type as it is formalised in the Common Specification for Information Packages. More information on this subject can be found in sections 1.2, 1.3 and 6.1 of the CSIP.
+The SIP presents no extensions or exceptions to the concept of Content Information Type as it is formalised in the Common Specification for Information Packages. More information on this subject can be found in sections 1.2, 1.3 and 6.1 of the CS IP.
 
 ##	 Submission Agreement
 
@@ -568,15 +568,14 @@ Describes the type of a note for an agent. <br/>
 | <a name="SIP5"></a>**SIP5** | **Submission agreement** <br/> `metsHDR/altrecordID` | A reference to the Submission Agreement associated with the package. <br/> @TYPE is used with the value "SUBMISSIONAGREEMENT". <br/> Example: RA 13-2011/5329; 2012-04-12 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> null <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..1** <br/> MAY |
 | <a name="SIP6"></a>**SIP6** | **Previous Submission agreement** <br/> `metsHDR/altrecordID` | An optional reference to a previous submission agreement(s) which the information may have belonged to. <br/> @TYPE is used with the value "PREVIOUSSUBMISSIONAGREEMENT". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> null <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..*** <br/> MAY |
 | <a name="SIP7"></a>**SIP7** | **Archival reference code** <br/> `metsHDR/altrecordID` | An optional reference code indicating where in the archival hierarchy the package shall be placed in the OAIS. <br/> @TYPE is used with the value "REFERENCECODE". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..1** <br/> MAY |
-| <a name="SIP8"></a>**SIP8** | **Previous archival reference code** <br/> `metsHDR/altrecordID` | In case where the SIP originates from other institutions maintaining a reference code structure, this element can be used to record these reference codes and therefore support the provenance of the package when a whole archival description is not submitted with the submission. <br/> @TYPE is used with the value "PREVIOUSREFERENCECODE". <br/> Example: SE/FM/123/123.1/123.1.3 <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..*** <br/> MAY |
+| <a name="SIP8"></a>**SIP8** | **Previous archival reference code** <br/> `metsHDR/altrecordID` | In cases where the SIP originates from other institutions maintaining a reference code structure, this element can be used to record these reference codes and therefore support the provenance of the package when a whole archival description is not submitted with the submission. <br/> @TYPE is used with the value "PREVIOUSREFERENCECODE". <br/> Example: SE/FM/123/123.1/123.1.3 <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..*** <br/> MAY |
 | <a name="SIP9"></a>**SIP9** | **Archival creator agent** <br/> `metsHdr/agent` | The name of the organisation or person that originally created the data being transferred. <br/> Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..1** <br/> MAY |
-| <a name="SIP10"></a>**SIP10** | **Archvial creator agent role** <br/> `metsHdr/agent/@ROLE` | The role of the archvial creator is “ARCHIVIST”. | **1..1** <br/> MUST |
-| <a name="SIP11"></a>**SIP11** | **Archvial creator agent type** <br/> `metsHdr/agent/@TYPE` | The type of the archvial creator agent is “ORGANIZATION” or "INDIVIDUAL". | **1..1** <br/> MUST |
-| <a name="SIP12"></a>**SIP12** | **Archvial creator agent name** <br/> `metsHdr/agent/name` | The name of the organisation that originally created the data being transferred. <br/> Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..1** <br/> MAY |
-| <a name="SIP13"></a>**SIP13** | **Archvial creator agent additional information** <br/> `metsHdr/agent/note` | The archival creator agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
-| <a name="SIP14"></a>**SIP14** | **Classification of the archival creator agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The archvial creator agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
+| <a name="SIP10"></a>**SIP10** | **Archival creator agent role** <br/> `metsHdr/agent/@ROLE` | The role of the archival creator is “ARCHIVIST”. | **1..1** <br/> MUST |
+| <a name="SIP11"></a>**SIP11** | **Archival creator agent type** <br/> `metsHdr/agent/@TYPE` | The type of the archival creator agent is “ORGANIZATION” or "INDIVIDUAL". | **1..1** <br/> MUST |
+| <a name="SIP12"></a>**SIP12** | **Archival creator agent name** <br/> `metsHdr/agent/name` | The name of the organisation that originally created the data being transferred. <br/> Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..1** <br/> MAY || <a name="SIP13"></a>**SIP13** | **Archival creator agent additional information** <br/> `metsHdr/agent/note` | The archival creator agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
+| <a name="SIP14"></a>**SIP14** | **Classification of the archival creator agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The archival creator agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
 | <a name="SIP15"></a>**SIP15** | **Submitting agent** <br/> `metsHdr/agent` | The name of the organisation or person that submitting the package to the archive | **1..1** <br/> MUST |
-| <a name="SIP16"></a>**SIP16** | **Submitting agent role** <br/> `metsHdr/agent/@ROLE` | The role of the archvial creator is “CREATOR”. | **1..1** <br/> MUST |
+| <a name="SIP16"></a>**SIP16** | **Submitting agent role** <br/> `metsHdr/agent/@ROLE` | The role of the archival creator is “CREATOR”. | **1..1** <br/> MUST |
 | <a name="SIP17"></a>**SIP17** | **Submitting agent type** <br/> `metsHdr/agent/@TYPE` | The type of the submitting agent is “ORGANIZATION” or "INDIVIDUAL". | **1..1** <br/> MUST |
 | <a name="SIP18"></a>**SIP18** | **Submitting agent name** <br/> `metsHdr/agent/name` | Name of the organisation submitting the package to the archive. | **1..1** <br/> MAY |
 | <a name="SIP19"></a>**SIP19** | **Submitting agent additional information** <br/> `metsHdr/agent/note` | The submitting agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
@@ -592,7 +591,7 @@ Describes the type of a note for an agent. <br/>
 | <a name="SIP29"></a>**SIP29** | **Preservation agent name** <br/> `metsHdr/agent/name` | Name of the organisation preserving the package. | **1..1** <br/> MAY |
 | <a name="SIP30"></a>**SIP30** | **Preservation agent additional information** <br/> `metsHdr/agent/note` | The preservation agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
 | <a name="SIP31"></a>**SIP31** | **Classification of the preservation agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The preservation agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
-| <a name="SIP32"></a>**SIP32** | **File format name** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATNAME` | Follows the requriments in the CSIP profile. <br/> Follows the requriments in the CSIP profile. <br/> A more detailed file format definition when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "Extensible Markup Language” <br/> Example: ”PDF/A” <br/> Example: ”ISO/IEC 26300:2006” | **0..1** <br/> MAY |
+| <a name="SIP32"></a>**SIP32** | **File format name** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATNAME` | Follows the requirements in the CSIP profile. <br/> Follows the requirements in the CSIP profile. <br/> A more detailed file format definition when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "Extensible Markup Language” <br/> Example: ”PDF/A” <br/> Example: ”ISO/IEC 26300:2006” | **0..1** <br/> MAY |
 | <a name="SIP33"></a>**SIP33** | **File format version** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATVERSION` | The version of the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "1.0” | **0..1** <br/> MAY |
 | <a name="SIP34"></a>**SIP34** | **File format registry** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATREGISTRY` | The name of the format registry used to identify the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "PRONOM” | **0..1** <br/> MAY |
 | <a name="SIP35"></a>**SIP35** | **File format registry key** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATKEY` | Key of the file format in the registry when use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "fmt/101” | **0..1** <br/> MAY |
