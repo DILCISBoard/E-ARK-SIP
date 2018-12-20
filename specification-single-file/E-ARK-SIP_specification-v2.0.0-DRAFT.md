@@ -15,11 +15,12 @@ Published: December 20, 2018
 | Carl Wilson                      | Open Preservation Foundation                       |
 
 
-## Reviewer
+## Reviewers
 
 | Name                             | Organisation                                       |
 | -------------------------------- | -------------------------------------------------- |
-| Jaime Kaminski                   | Highbury Associates                                     |
+| Jaime Kaminski                   | Highbury Associates                                |
+| Luís Miguel Ferros               | KEEP SOLUTIONS                                     |
 
 
 
@@ -39,11 +40,11 @@ Published: December 20, 2018
 
 ## Introduction
 
-According to the Open Archival Information System Reference Model (OAIS) every submission of information to an archive occurs as one or more discrete transmissions of Submission Information Packages (SIP). Unfortunately, the OAIS itself does not specify how these information packages should look like. 
+According to the Open Archival Information System Reference Model (OAIS) every submission of information to an archive occurs as one or more discrete transmissions of Submission Information Packages (SIP). Unfortunately, the OAIS itself does not specify how these information packages should look like.
 
 The EU funded E-ARK project (2014-2017) first acknowledged this problem and started to develop a solution in the form of a package specification. This specification is now part of a set of specifications currently managed by an independent body named the Digital Information LifeCycle Interoperability Standards Board ([DILCIS Board](http://www.dilcis.eu)).
 
-### Scope and purpose 
+### Scope and purpose
 
 This document describes how to produce and parse E-ARK Submission Information Packages (SIP). The main objectives of this specification are to:
 
@@ -57,12 +58,13 @@ The target audience for this specification is records creators, archival institu
 
 ### Relationship to other E-ARK specifications
 
-This document is part of a set of specifications that define a common understanding of the principles and requirements for interoperable Information Packages according to the OAIS reference model (see Figure 1).
+This document is part of a set of specifications that define a common understanding of the principles and requirements for interoperable Information Packages according to the OAIS reference model (see [Figure 1](#fig1)).
 
-The Common Specification for Information Packages (CS IP) identifies and standardises the common aspects of all information packages (Submission, Archival and Dissemination Information Packages, i.e. SIP, AIP and DIP, respectively) which are equally relevant and implemented by different functional entities of the overall digital preservation process (i.e. pre-ingest, ingest, long-term preservation and access). 
+The Common Specification for Information Packages (CS IP) identifies and standardises the common aspects of all information packages (Submission, Archival and Dissemination Information Packages, i.e. SIP, AIP and DIP, respectively) which are equally relevant and implemented by different functional entities of the overall digital preservation process (i.e. pre-ingest, ingest, long-term preservation and access).
 
 The current E-ARK SIP specification does not repeat the information presented in the CS IP. Only the information that is absolutely necessary to understand the SIP specification is utlised in this document. This means that in order to fully understand this specification it is essential that the user reads the CS IP.
 
+<a name="fig1"></a>
 ![Set of E-ARK Specifications](images/specificationset.png)
 
 **Figure 1**: Relationships between all E-ARK specifications.
@@ -71,7 +73,7 @@ In general, the E-ARK SIP specification reuses and applies all the requirements 
 
 An additional concept is also part of this set of specifications. That is the Content Information Type Specifications. These are content-dependent specifications that include detailed information on how content, metadata, and documentation for specific types of content (i.e. data) can be handled within the packages. Currently, there are three such specifications:
 
-* E-ARK ERMS: Content Information Type specification for Electronic Records Management Systems; 
+* E-ARK ERMS: Content Information Type specification for Electronic Records Management Systems;
 * E-ARK Geodata: Content Information Type specification for geospatial information;
 * E-ARK SIARD (SIARD1, SIARD2 and SIARDDK): Content Information Type specification for the archiving, preservation and reuse of relational databases.
 
@@ -82,9 +84,9 @@ More information on Content Information Type specifications can be found in the 
 
 The OAIS reference model defines an SIP as:
 
-> An Information Package that is delivered by the Producer to the OAIS for use in the construction or update of one or more AIPs and/or the associated Descriptive Information. 
+> An Information Package that is delivered by the Producer to the OAIS for use in the construction or update of one or more AIPs and/or the associated Descriptive Information.
 
-The E-ARK SIP follows this definition and builds on the E-ARK Common Specification for Information Packages by extending it to support specific requirements related to the process of selecting, packaging, transmitting, receiving, validating and ingesting information originally maintained by a Producer. 
+The E-ARK SIP follows this definition and builds on the E-ARK Common Specification for Information Packages by extending it to support specific requirements related to the process of selecting, packaging, transmitting, receiving, validating and ingesting information originally maintained by a Producer.
 
 In summary, the SIP constitutes a package of information that is ready to be sent by a Producer to an Archive in order to be ingested by the OAIS.
 
@@ -95,9 +97,9 @@ This document is based on, or influenced by, the following documents and best pr
 * **E-ARK Deliverable D3.1 - Report on Available Best Practices**, 2014, [http://eark-project.com/resources/project-deliverables/6-d31-e-ark-report-on-available-best-practices](http://eark-project.com/resources/project-deliverables/6-d31-e-ark-report-on-available-best-practices)
 * **E-ARK Deliverable D2.1 - General pilot model and use case definition**, 2014, [http://eark-project.com/resources/project-deliverables/5-d21-e-ark-general-pilot-model-and-use-case-definition](http://eark-project.com/resources/project-deliverables/5-d21-e-ark-general-pilot-model-and-use-case-definition)
 * **FGS package structure**,  2013, [https://riksarkivet.se/Media/pdf-filer/Projekt/FGS_Earkiv_Paket.pdf](https://riksarkivet.se/Media/pdf-filer/Projekt/FGS_Earkiv_Paket.pdf)
-* **Reference Model for an Open Archival Information System (OAIS)**, 2012, [http://public.ccsds.org/Pubs/650x0m2.pdf](http://public.ccsds.org/Pubs/650x0m2.pdf)  
-* **Producer-Archive Interface Methodology Abstract Standard (PAIMAS)**, 2004, [http://public.ccsds.org/Pubs/651x0m1.pdf](http://public.ccsds.org/Pubs/651x0m1.pdf)
-* **Producer-Archive Interface Specification (PAIS) – CCSDS**, 2014, [http://public.ccsds.org/Pubs/651x1b1.pdf](http://public.ccsds.org/Pubs/651x1b1.pdf)
+* **Reference Model for an Open Archival Information System (OAIS)**, 2012, [https://public.ccsds.org/Pubs/650x0m2.pdf](https://public.ccsds.org/Pubs/650x0m2.pdf)  
+* **Producer-Archive Interface Methodology Abstract Standard (PAIMAS)**, 2004, [https://public.ccsds.org/Pubs/651x0m1.pdf](https://public.ccsds.org/Pubs/651x0m1.pdf)
+* **Producer-Archive Interface Specification (PAIS) – CCSDS**, 2014, [https://public.ccsds.org/Pubs/651x1b1.pdf](https://public.ccsds.org/Pubs/651x1b1.pdf)
 * **e-SENS (Electronic Simple European Networked Services) project**, [http://www.esens.eu/](http://www.esens.eu/)
 * **E-ARK Deliverable D3.2 - SIP Draft Specification**, 2015, [http://eark-project.com/resources/project-deliverables/17-d32-e-ark-sip-draft-specification](http://eark-project.com/resources/project-deliverables/17-d32-e-ark-sip-draft-specification)
 * **E-ARK Deliverable D3.3 - E-ARK SIP Pilot Specification**, 2016, [http://eark-project.com/resources/project-deliverables/51-d33pilotspec](http://eark-project.com/resources/project-deliverables/51-d33pilotspec)
@@ -106,8 +108,9 @@ This document is based on, or influenced by, the following documents and best pr
 
 The SIP specification follows a structure that is common to all Information Packages in the E-ARK set of specifications. The common structure is fully described in the Common Specification for Information Packages (see Section 4. CS IP structure).
 
-In its simplest form, an SIP consists of metadata and zero or more representations, also composed of `data` and `metadata`, as seen in Figure 2. A package with zero representations means that it only includes metadata. This is a special type of Information Package that enables Producers to deliver updates to the metadata to previously ingested packages.
+In its simplest form, an SIP consists of metadata and zero or more representations, also composed of `data` and `metadata`, as seen in [Figure 2](#fig2). A package with zero representations means that it only includes metadata. This is a special type of Information Package that enables Producers to deliver updates to the metadata to previously ingested packages.
 
+<a name="fig2"></a>
 ![SIP data model](images/image2.png)
 
 **Figure 2**: Simplified view of a package structure.
@@ -119,11 +122,12 @@ According to [PREMIS Version 3.0](http://www.loc.gov/standards/premis/v3/premis-
 
 As one SIP can contain more than one representation of the same intellectual entity, representations MUST be placed within distinct folders (i.e., `rep-001`, `rep-002`, `rep-n` under the ```representations``` folder). In contrast, metadata may exist within each representation folder or at the root level (next to the `representations` folder). Metadata can serve multiple purposes,  the most common one being the support for discoverability of resources within the OAIS (i.e. descriptive metadata).
 
-If metadata is stored at the root level of the package, then there is generally no need to include a `metadata` folder at the representation level. In such cases, the `metadata` folder under representations is considered optional. The SIP also accounts for the following additional folders that can exist both at the root level or under the `representations` folder (Figure 3):
+If metadata is stored at the root level of the package, then there is generally no need to include a `metadata` folder at the representation level. In such cases, the `metadata` folder under representations is considered optional. The SIP also accounts for the following additional folders that can exist both at the root level or under the `representations` folder ([Figure 3](#fig3)):
 
 * `documentation` – for including additional documentation about the `data` included in the package (e.g. a data dictionary for a SIARD file);
 * `schemas` – for storing schemas of XML files included in the data or metadata.
 
+<a name="fig3"></a>
 ![General SIP structure](images/fig_10_cs_ip_full.png "Example of the full use of the SIP structure.")
 
 **Figure 3:** Example of the full use of the SIP structure
@@ -154,12 +158,12 @@ The following table describes the main differences in the `mets` element between
 **Example:** METS root element example with values from E-ARK-SIP as well as CS IP.
 
 ```xml
-<mets:mets 
-	OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" 
-	LABEL="Accounting records of 2017" 
-	TYPE="OTHER" 
-	OTHERTYPE="Accounting" 
-	PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" 
+<mets:mets
+	OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182"
+	LABEL="Accounting records of 2017"
+	TYPE="OTHER"
+	OTHERTYPE="Accounting"
+	PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml"
 
 	schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd">
 </mets:mets>
@@ -170,12 +174,12 @@ The following table describes the main differences in the `mets` element between
 
 ### Extended use of the METS header (element `metsHdr`)
 
-The METS header element `<metsHdr>` includes information about the creator of the submission package, the original creator of the data, contact information of the person delivering the SIP, among other actors. These entities are typically called "agents" (see element `metsHdr/agent`). 
+The METS header element `<metsHdr>` includes information about the creator of the submission package, the original creator of the data, contact information of the person delivering the SIP, among other actors. These entities are typically called "agents" (see element `metsHdr/agent`).
 
 The `metsHdr` is also used to indicate the type of behaviour to be expected from the OAIS when processing a particular SIP. For example, one might indicate that an SIP should be used to "replace" a particular AIP in the repository or that an SIP is meant for "testing" purposes and therefore it should not create an AIP at the end of the ingest process (see attribute `metsHdr/@RECORDSTATUS`).
 
 
-It is also in the `metsHdr` that the Submission Agreement to which a particular SIP conforms can be identified (see `metsHdr/altrecordID/@TYPE=”SUBMISSIONAGREEMENT`). 
+It is also in the `metsHdr` that the Submission Agreement to which a particular SIP conforms can be identified (see `metsHdr/altrecordID/@TYPE=”SUBMISSIONAGREEMENT`).
 
 The following table describes the main differences in the `metsHdr` between an E-ARK SIP and the CS IP.
 
@@ -194,7 +198,7 @@ The following table describes the main differences in the `metsHdr` between an E
 | <a name="SIP13"></a>**SIP13** | **Archival creator agent additional information** <br/> `metsHdr/agent/note` | The archival creator agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
 | <a name="SIP14"></a>**SIP14** | **Classification of the archival creator agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The archival creator agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
 | <a name="SIP15"></a>**SIP15** | **Submitting agent** <br/> `metsHdr/agent` | The name of the organisation or person that submitting the package to the archive | **1..1** <br/> MUST |
-| <a name="SIP16"></a>**SIP16** | **Submitting agent role** <br/> `metsHdr/agent/@ROLE` | The role of the archvial creator is “CREATOR”. | **1..1** <br/> MUST |
+| <a name="SIP16"></a>**SIP16** | **Submitting agent role** <br/> `metsHdr/agent/@ROLE` | The role of the archival creator is “CREATOR”. | **1..1** <br/> MUST |
 | <a name="SIP17"></a>**SIP17** | **Submitting agent type** <br/> `metsHdr/agent/@TYPE` | The type of the submitting agent is “ORGANIZATION” or "INDIVIDUAL". | **1..1** <br/> MUST |
 | <a name="SIP18"></a>**SIP18** | **Submitting agent name** <br/> `metsHdr/agent/name` | Name of the organisation submitting the package to the archive. | **1..1** <br/> MAY |
 | <a name="SIP19"></a>**SIP19** | **Submitting agent additional information** <br/> `metsHdr/agent/note` | The submitting agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
@@ -245,26 +249,26 @@ The following table describes the main differences in the `metsHdr` between an E
 
 ### Extended use of the METS descriptive metadata section (element `dmdSec`)
 
-The METS descriptive metadata section `<dmdSec>` is responsible for recording descriptive metadata for all the data items included in the package. 
+The METS descriptive metadata section `<dmdSec>` is responsible for recording descriptive metadata for all the data items included in the package.
 
-The SIP specification itself does not prescribe of any particular metadata format. It is a role of the OAIS together with the Producer to set the rules in terms of descriptive metadata. These rules should be set and agreed on in the Submission Agreement. 
+The SIP specification itself does not prescribe of any particular metadata format. It is a role of the OAIS together with the Producer to set the rules in terms of descriptive metadata. These rules should be set and agreed on in the Submission Agreement.
 
 In this regard, the SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.3 of the CS IP).
 
 ### Extended use of METS administrative metadata section (element `amdSec`)
 
-The METS administrative metadata section `<amdSec>` is used to include or reference technical and preservation metadata. 
+The METS administrative metadata section `<amdSec>` is used to include or reference technical and preservation metadata.
 
-Although seldom used, preservation metadata can be included in an SIP. The guide on [Using PREMIS with METS](https://www.loc.gov/standards/premis/premis-mets.html) provides recommendations on how to use the `<amdSec>` element to reference PREMIS metadata. 
+Although seldom used, preservation metadata can be included in an SIP. The guide on [Using PREMIS with METS](https://www.loc.gov/standards/premis/premis-mets.html) provides recommendations on how to use the `<amdSec>` element to reference PREMIS metadata.
 
 The SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.4. of the CS IP).
 
 
-### Extended use of the METS file section (element `fileSec`) 
+### Extended use of the METS file section (element `fileSec`)
 
-The METS file section element `<fileSec>` is used to describe all the components included in the information package which have not been already included in the `amdSec` and `dmdSec` elements. 
+The METS file section element `<fileSec>` is used to describe all the components included in the information package which have not been already included in the `amdSec` and `dmdSec` elements.
 
-The main purpose of the METS file section is to serve as a "table of contents" or "manifest" for all the files included in the package, thus allowing the OAIS to validate the integrity and completeness of the files included in the package. This means that for all the files included in the package, their location and checksum need to be available and described in the `fileSec` element. That includes files in the `data` and in the `documentation` folders. 
+The main purpose of the METS file section is to serve as a "table of contents" or "manifest" for all the files included in the package, thus allowing the OAIS to validate the integrity and completeness of the files included in the package. This means that for all the files included in the package, their location and checksum need to be available and described in the `fileSec` element. That includes files in the `data`, `schemas` and in the `documentation` folders.
 
 The following table describes the main differences in the `fileSec` between an E-ARK SIP and the CS IP.
 
@@ -280,21 +284,21 @@ The following table describes the main differences in the `fileSec` between an E
 **Example:** METS example of an SIP with file information together with the info from the CS IP.
 
 ```xml
-<mets:file 
+<mets:file
 	ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A81"
-	SIZE="2554366" 
-	CREATED="2012-08-15T12:08:15.432+01:00" 
-	CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557" 
-	CHECKSUMTYPE="SHA-256" 
+	SIZE="2554366"
+	CREATED="2012-08-15T12:08:15.432+01:00"
+	CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557"
+	CHECKSUMTYPE="SHA-256"
 	MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-	FILEFORMATNAME="Microsoft Word for Windows" 
-	FILEFORMATVERSION="2007 onwards" 
-	FORMATREGISTRY="PRONOM" 
+	FILEFORMATNAME="Microsoft Word for Windows"
+	FILEFORMATVERSION="2007 onwards"
+	FORMATREGISTRY="PRONOM"
 	FORMATREGISTRYKEY="fmt/412">
-	
-  <mets:FLocat 
-		LOCTYPE="URL" 
-  		type="simple" 
+
+  <mets:FLocat
+		LOCTYPE="URL"
+  		type="simple"
   		href="documentation/example_file.docx">
   </mets:FLocat>
 </mets:file>
@@ -309,7 +313,7 @@ The SIP specification does not change or extend any of the requirements already 
 
 ## Content Information Type Specifications
 
-The concept of a Content Information Type Specification is essentially an extension method which allows for widening the interoperability scope of the E-ARK IPs into a content specific level. 
+The concept of a Content Information Type Specification is essentially an extension method which allows for widening the interoperability scope of the E-ARK IPs into a content specific level.
 
 A Content Information Type can be understood as a category of Content Information, for example, relational databases, scientific data or digitised maps. A Content Information Type Specification defines in technical terms how data and metadata (mainly in regard to the Information Object) should be formatted and placed within an Information Package in order to achieve interoperability in exchanging specific Content Information.
 
@@ -318,11 +322,11 @@ The SIP presents no extensions or exceptions to the concept of Content Informati
 ##	 Submission Agreement
 
 Interactions between Producers and the OAIS are often guided by a Submission Agreement, which establishes specific details about how these interactions should take place, e.g. the type of information expected to be exchanged, the metadata the Producer is expected to deliver, the logistics of the actual transfer, statements regarding access restrictions on the submitted material, etc.
- 
-Given the importance of the Submission Agreement, the E-ARK SIP specification provides a way of referring to it regardless of its form. A submission agreement can be delivered in digital (e.g. PDF or XML file) or in analogue forms (i.e. paper document). More information about how to reference the Submission Agreement within the SIP can be found in the section dedicated to the `metsHdr` element. 
 
-According to the [PAIMAS, 2004](http://public.ccsds.org/Pubs/651x0m1.pdf) standard a Submission Agreement should include a complete and precise definition of:
- 
+Given the importance of the Submission Agreement, the E-ARK SIP specification provides a way of referring to it regardless of its form. A submission agreement can be delivered in digital (e.g. PDF or XML file) or in analogue forms (i.e. paper document). More information about how to reference the Submission Agreement within the SIP can be found in the section dedicated to the `metsHdr` element.
+
+According to the [PAIMAS, 2004](https://public.ccsds.org/Pubs/651x0m1.pdf) standard a Submission Agreement should include a complete and precise definition of:
+
 - Information to be transferred (e.g. SIP contents, SIP packaging, data models, identification of the designated community, legal and contractual aspects);
 - Transfer definition (e.g. specification of the OAIS Data Submission Sessions);
 - Validation definition;
@@ -346,13 +350,13 @@ The recommended list of semantic elements is inspired by the PAIMAS requirements
 
 #### Change management
 
-* **Version/Revision** - Elements for tracking the changes in versions of the submission agreement. 
+* **Version/Revision** - Elements for tracking the changes in versions of the submission agreement.
 	* **Release date** - The date of the version.
 	* **Change authority** - The information about the person who changed the submission agreement (e.g. John Smith (The National Archives of Estonia)).
 	* **Change description**	- A short textual description of the change.
 	* **Section(s) affected**	- This element is meant for recording more detailed information about changes.
 
-	
+
 #### Producer, Archive and Designated Community
 
 * **Producer Organization**	- Elements describing the Producer.
@@ -382,7 +386,7 @@ The recommended list of semantic elements is inspired by the PAIMAS requirements
 		* **E-mail** - 	The e-mail of the contact person.
 		* **Additional Information**	 - Element for recording any additional information needed to describe the contact.
 * **Designated Community** - Elements describing the Designated Community.
-	* **Description** - The textual description of the skills and knowledge base of the designated community. 
+	* **Description** - The textual description of the skills and knowledge base of the designated community.
 	* **Individual Contacts** - Elements describing the individual contacts of the designated community.
 		* **Name** - The full name of the contact person.
 		* **Role** - The role of the contact person.
@@ -518,11 +522,11 @@ The recommended list of semantic elements is inspired by the PAIMAS requirements
 
 #### E-ARK SIP METS Extension
 
-**Location:**  <a href="https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd" >https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd</a> <br/> 
-**Context:** XML-schema for the attributes added by SIP <br/> 
-**Note:**   <br/> 
-An extension schema with the added attributes for use in this profile. <br/> 
-The schema is used with a namespace prefix of sip <br/> 
+**Location:**  <a href="https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd" >https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd</a> <br/>
+**Context:** XML-schema for the attributes added by SIP <br/>
+**Note:**   <br/>
+An extension schema with the added attributes for use in this profile. <br/>
+The schema is used with a namespace prefix of sip <br/>
 
 #### Controlled Vocabularies
 
@@ -530,31 +534,31 @@ The schema is used with a namespace prefix of sip <br/>
 
 #### Package status
 
-**Maintained By:** DILCIS Board <br/> 
-**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in @RECORDSTATUS <br/> 
-**Description:**   <br/> 
-Describes the status of the package. <br/> 
+**Maintained By:** DILCIS Board <br/>
+**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/>
+**Context:** Used in @RECORDSTATUS <br/>
+**Description:**   <br/>
+Describes the status of the package. <br/>
 
 
 <a name="VocabularyaltrecordIDTYPE"></a>
 #### Alternative record ID's
 
-**Maintained By:** DILCIS Board <br/> 
-**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in altrecordID/@TYPE <br/> 
-**Description:**   <br/> 
-Describes the type of the alternative record ID. <br/> 
+**Maintained By:** DILCIS Board <br/>
+**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/>
+**Context:** Used in altrecordID/@TYPE <br/>
+**Description:**   <br/>
+Describes the type of the alternative record ID. <br/>
 
 
 <a name="VocabularyNoteType"></a>
 #### Note type
 
-**Maintained By:** DILCIS Board <br/> 
-**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in @csip:NOTETYPE <br/> 
-**Description:**   <br/> 
-Describes the type of a note for an agent. <br/> 
+**Maintained By:** DILCIS Board <br/>
+**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/>
+**Context:** Used in @csip:NOTETYPE <br/>
+**Description:**   <br/>
+Describes the type of a note for an agent. <br/>
 
 
 ### Appendix D: A Full List of E-ARK SIP Requirements
@@ -573,6 +577,7 @@ Describes the type of a note for an agent. <br/>
 | <a name="SIP10"></a>**SIP10** | **Archival creator agent role** <br/> `metsHdr/agent/@ROLE` | The role of the archival creator is “ARCHIVIST”. | **1..1** <br/> MUST |
 | <a name="SIP11"></a>**SIP11** | **Archival creator agent type** <br/> `metsHdr/agent/@TYPE` | The type of the archival creator agent is “ORGANIZATION” or "INDIVIDUAL". | **1..1** <br/> MUST |
 | <a name="SIP12"></a>**SIP12** | **Archival creator agent name** <br/> `metsHdr/agent/name` | The name of the organisation that originally created the data being transferred. <br/> Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..1** <br/> MAY || <a name="SIP13"></a>**SIP13** | **Archival creator agent additional information** <br/> `metsHdr/agent/note` | The archival creator agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
+| <a name="SIP13"></a>**SIP13** | **Archival creator agent additional information** <br/> `metsHdr/agent/note` | The archival creator agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
 | <a name="SIP14"></a>**SIP14** | **Classification of the archival creator agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The archival creator agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
 | <a name="SIP15"></a>**SIP15** | **Submitting agent** <br/> `metsHdr/agent` | The name of the organisation or person that submitting the package to the archive | **1..1** <br/> MUST |
 | <a name="SIP16"></a>**SIP16** | **Submitting agent role** <br/> `metsHdr/agent/@ROLE` | The role of the archival creator is “CREATOR”. | **1..1** <br/> MUST |
@@ -624,7 +629,7 @@ URL: [http://www.loc.gov/standards/premis/premis_mets_checklist.pdf](http://www.
 3.	e-SENS (Electronic Simple European Networked Services) project, 2015,
 URL: [http://www.esens.eu/](http://www.esens.eu/)
 4.	Encoded Archival Context for Corporate Bodies, Persons, and Families, 2015, URL: [http://eac.staatsbibliothek-berlin.de](http://eac.staatsbibliothek-berlin.de)
-5.	FGS packet structure, 2013, 
+5.	FGS packet structure, 2013,
 URL: [https://riksarkivet.se/Media/pdf-filer/Projekt/FGS_Earkiv_Paket.pdf](https://riksarkivet.se/Media/pdf-filer/Projekt/FGS_Earkiv_Paket.pdf)
 6.	Guidelines for using PREMIS with METS for exchange, Revised September 17, 2008,
 URL: [http://www.loc.gov/standards/premis/guidelines-premismets.pdf](http://www.loc.gov/standards/premis/guidelines-premismets.pdf)
@@ -634,10 +639,10 @@ URL: [http://www.loc.gov/standards/premis/guidelines-premismets.pdf](http://www.
 10.	METS Profiles, 2012, URL: [http://www.loc.gov/standards/mets/mets-profiles.html](http://www.loc.gov/standards/mets/mets-profiles.html)
 11.	Producer, Submission Agreements: Glossary of Terms, 2015, URL: [http://sites.tufts.edu/dca/about-us/research-initiatives/taper-tufts-accessioning-program-for-electronic-records/project-documentation/submission-agreements-glossary-of-terms/](http://sites.tufts.edu/dca/about-us/research-initiatives/taper-tufts-accessioning-program-for-electronic-records/project-documentation/submission-agreements-glossary-of-terms/)
 12.	Producer-Archive Interface Methodology Abstract Standard (PAIMAS), 2004,  
-URL: [http://public.ccsds.org/Pubs/651x0m1.pdf](http://public.ccsds.org/Pubs/651x0m1.pdf)
+URL: [https://public.ccsds.org/Pubs/651x0m1.pdf](https://public.ccsds.org/Pubs/651x0m1.pdf)
 13.	Producer-Archive Interface Specification (PAIS) – CCSDS, 2014,
-URL: [http://public.ccsds.org/Pubs/651x1b1.pdf](http://public.ccsds.org/Pubs/651x1b1.pdf)
+URL: [https://public.ccsds.org/Pubs/651x1b1.pdf](https://public.ccsds.org/Pubs/651x1b1.pdf)
 14.	Records Creator, Submission Agreements: [Glossary of Terms, 2015, URL: http://sites.tufts.edu/dca/about-us/research-initiatives/taper-tufts-accessioning-program-for-electronic-records/project-documentation/submission-agreements-glossary-of-terms/](http://sites.tufts.edu/dca/about-us/research-initiatives/taper-tufts-accessioning-program-for-electronic-records/project-documentation/submission-agreements-glossary-of-terms/)
-15.	Reference Model for an Open Archival Information System (OAIS), 2012, 
-URL: [http://public.ccsds.org/Pubs/650x0m2.pdf](http://public.ccsds.org/Pubs/650x0m2.pdf)
+15.	Reference Model for an Open Archival Information System (OAIS), 2012,
+URL: [https://public.ccsds.org/Pubs/650x0m2.pdf](https://public.ccsds.org/Pubs/650x0m2.pdf)
 16. Lavoie B, The Open Archival Information System (OAIS) Reference Model: Introductory Guide (2nd Edition), 2014, [http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02](http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02)

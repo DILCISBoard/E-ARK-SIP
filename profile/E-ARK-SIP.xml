@@ -75,7 +75,7 @@
                         <dt>Cardinality</dt><dd>0..1</dd>
                     </dl>
                 </description>
-            </requirement>            
+            </requirement>
             <requirement ID="SIP2" REQLEVEL="MUST" EXAMPLES="metsRootElementExample1">
                 <description>
                     <head>METS Profile</head>
@@ -113,7 +113,7 @@
                     <head>Submission agreement</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">A reference to the Submission Agreement associated with the package.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">@TYPE is used with the value "SUBMISSIONAGREEMENT".</p>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Example: RA 13-2011/5329; 2012-04-12</p> 
+                    <p xmlns="http://www.w3.org/1999/xhtml">Example: RA 13-2011/5329; 2012-04-12</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Note: It is recommended to use a machine-readable format for a better description of a submission agreement.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">For example, the submission agreement developed by Docuteam GmbH <a href="http://www.loc.gov/standards/mets/profiles/00000041.xml">http://www.loc.gov/standards/mets/profiles/00000041.xml</a></p>
@@ -128,7 +128,7 @@
                     <head>Previous Submission agreement</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">An optional reference to a previous submission agreement(s) which the information may have belonged to.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">@TYPE is used with the value "PREVIOUSSUBMISSIONAGREEMENT".</p>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Example: FM 12-2387/12726, 2007-09-19</p> 
+                    <p xmlns="http://www.w3.org/1999/xhtml">Example: FM 12-2387/12726, 2007-09-19</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Note: It is recommended to use a machine-readable format for a better description of a submission agreement.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">For example, the submission agreement developed by Docuteam GmbH <a href="http://www.loc.gov/standards/mets/profiles/00000041.xml">http://www.loc.gov/standards/mets/profiles/00000041.xml</a></p>
@@ -143,7 +143,7 @@
                     <head>Archival reference code</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">An optional reference code indicating where in the archival hierarchy the package shall be placed in the OAIS.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">@TYPE is used with the value "REFERENCECODE".</p>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Example: FM 12-2387/12726, 2007-09-19</p> 
+                    <p xmlns="http://www.w3.org/1999/xhtml">Example: FM 12-2387/12726, 2007-09-19</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHDR/altrecordID</dd>
                         <dt>Cardinality</dt><dd>0..1</dd>
@@ -155,7 +155,7 @@
                     <head>Previous archival reference code</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">In case where the SIP originates from other institutions maintaining a reference code structure, this element can be used to record these reference codes and therefore support the provenance of the package when a whole archival description is not submitted with the submission.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">@TYPE is used with the value "PREVIOUSREFERENCECODE".</p>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Example: SE/FM/123/123.1/123.1.3</p> 
+                    <p xmlns="http://www.w3.org/1999/xhtml">Example: SE/FM/123/123.1/123.1.3</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHDR/altrecordID</dd>
                         <dt>Cardinality</dt><dd>0..*</dd>
@@ -175,8 +175,8 @@
             </requirement>
             <requirement ID="SIP10" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
                 <description>
-                    <head>Archvial creator agent role</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">The role of the archvial creator is “ARCHIVIST”.</p>
+                    <head>Archival creator agent role</head>
+                    <p xmlns="http://www.w3.org/1999/xhtml">The role of the archival creator is “ARCHIVIST”.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent/@ROLE</dd>
                         <dt>Cardinality</dt><dd>1..1</dd>
@@ -185,8 +185,8 @@
             </requirement>
             <requirement ID="SIP11" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
                 <description>
-                    <head>Archvial creator agent type</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">The type of the archvial creator agent is “ORGANIZATION” or "INDIVIDUAL".</p>
+                    <head>Archival creator agent type</head>
+                    <p xmlns="http://www.w3.org/1999/xhtml">The type of the archival creator agent is “ORGANIZATION” or "INDIVIDUAL".</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent/@TYPE</dd>
                         <dt>Cardinality</dt><dd>1..1</dd>
@@ -195,7 +195,7 @@
             </requirement>
             <requirement ID="SIP12" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
                 <description>
-                    <head>Archvial creator agent name</head>
+                    <head>Archival creator agent name</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation that originally created the data being transferred.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
@@ -206,7 +206,7 @@
             </requirement>
             <requirement ID="SIP13" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
                 <description>
-                    <head>Archvial creator agent additional information</head>
+                    <head>Archival creator agent additional information</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">The archival creator agent has a note providing a unique identification code for the archival creator.</p>
                      <dl xmlns="http://www.w3.org/1999/xhtml">
                          <dt>METS XPath</dt><dd>metsHdr/agent/note</dd>
@@ -217,7 +217,7 @@
             <requirement ID="SIP14" REQLEVEL="MUST" RELATEDMAT="VocabularyNoteType" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Classification of the archival creator agent additional information</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">The archvial creator agent note is typed with the value of "IDENTIFICATIONCODE".</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">The archival creator agent note is typed with the value of "IDENTIFICATIONCODE".</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent/note/@csip:NOTETYPE</dd>
                         <dt>Cardinality</dt><dd>1..1</dd>
@@ -237,7 +237,7 @@
             <requirement ID="SIP16" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Submitting agent role</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">The role of the archvial creator is “CREATOR”.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">The role of the archival creator is “CREATOR”.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent/@ROLE</dd>
                         <dt>Cardinality</dt><dd>1..1</dd>
@@ -399,7 +399,7 @@
             <requirement REQLEVEL="SHOULD">
                 <description>
                     <head>Descriptive metadata</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Follows the requriments in the CSIP profile.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">Follows the requirements in the CSIP profile.</p>
                 </description>
             </requirement>
         </dmdSec>
@@ -407,7 +407,7 @@
             <requirement REQLEVEL="SHOULD">
                 <description>
                     <head>Administrative metadata</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Follows the requriments in the CSIP profile.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">Follows the requirements in the CSIP profile.</p>
                 </description>
             </requirement>
         </amdSec>
@@ -463,7 +463,7 @@
             <requirement REQLEVEL="MUST">
                 <description>
                     <head>Structural description of the package</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Follows the requriments in the CSIP profile.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">Follows the requirements in the CSIP profile.</p>
                 </description>
             </requirement>
          </structMap>
@@ -488,21 +488,21 @@
         <content_files>
             <requirement>
                 <description>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Requriments not stated in CSIP or SIP</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">Requirements not stated in CSIP or SIP</p>
                 </description>
             </requirement>
         </content_files>
         <behavior_files>
             <requirement>
                 <description>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Requriments not stated in CSIP or SIP</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">Requirements not stated in CSIP or SIP</p>
                 </description>
             </requirement>
         </behavior_files>
         <metadata_files>
             <requirement>
                 <description>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Requriments not stated in CSIP or SIP</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">Requirements not stated in CSIP or SIP</p>
                 </description>
             </requirement>
         </metadata_files>
@@ -551,7 +551,7 @@
             PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml"
             xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd">
         </mets:mets>
-    </Example>    
+    </Example>
     <Example ID="metsHdrElementExample1" LABEL="METS example of altrecordID's, and SIP agents following the SIP profile as well as CSIP">
         <mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" csip:OAISPACKAGETYPE="SIP">
             <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
@@ -664,5 +664,5 @@
             </mets:structMap>
         </mets:mets>
     </Appendix>
-    
+
 </METS_Profile>
