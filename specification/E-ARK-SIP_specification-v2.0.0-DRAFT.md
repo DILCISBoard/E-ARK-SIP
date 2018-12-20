@@ -1,11 +1,5 @@
-# E-ARK SIP SPECIFICATION v2.0.0-DRAFT
 
-```
-Version: 2.0.0-DRAFT
-Published: December 20, 2018
-```
-
-## Authors
+**Authors**
 
 | Name                             | Organisation                                       |
 | -------------------------------- | -------------------------------------------------- |
@@ -15,7 +9,7 @@ Published: December 20, 2018
 | Carl Wilson                      | Open Preservation Foundation                       |
 
 
-## Reviewers
+**Reviewers**
 
 | Name                             | Organisation                                       |
 | -------------------------------- | -------------------------------------------------- |
@@ -23,28 +17,13 @@ Published: December 20, 2018
 | Luís Miguel Ferros               | KEEP SOLUTIONS                                     |
 
 
-
-## Front matter (TBD)
-
-* Authors and reviewers (past)
-* Revision history and statement of originality
-* Executive summary
-* Acknowledgments
-
-## Indexes (TBD)
-
-* Table of contents
-* List of tables
-* List of figures
-
-
-## Introduction
+#  Introduction
 
 According to the Open Archival Information System Reference Model (OAIS) every submission of information to an archive occurs as one or more discrete transmissions of Submission Information Packages (SIP). Unfortunately, the OAIS itself does not specify how these information packages should look like.
 
 The EU funded E-ARK project (2014-2017) first acknowledged this problem and started to develop a solution in the form of a package specification. This specification is now part of a set of specifications currently managed by an independent body named the Digital Information LifeCycle Interoperability Standards Board ([DILCIS Board](http://www.dilcis.eu)).
 
-### Scope and purpose
+##  Scope and purpose
 
 This document describes how to produce and parse E-ARK Submission Information Packages (SIP). The main objectives of this specification are to:
 
@@ -56,7 +35,7 @@ This document describes how to produce and parse E-ARK Submission Information Pa
 
 The target audience for this specification is records creators, archival institutions and software providers that are responsible with preparing, packaging, delivering and receiving packages of information to be archived in an OAIS, i.e. pre-ingest and ingest functional units.
 
-### Relationship to other E-ARK specifications
+## Relationship to other E-ARK specifications
 
 This document is part of a set of specifications that define a common understanding of the principles and requirements for interoperable Information Packages according to the OAIS reference model (see [Figure 1](#fig1)).
 
@@ -80,7 +59,7 @@ An additional concept is also part of this set of specifications. That is the Co
 More information on Content Information Type specifications can be found in the Common Specification for Information Packages or the individual Content Information Type specification documents published by the [DILCIS Board](http://www.dilcis.eu).
 
 
-### Definition of an SIP
+## Definition of an SIP
 
 The OAIS reference model defines an SIP as:
 
@@ -90,7 +69,7 @@ The E-ARK SIP follows this definition and builds on the E-ARK Common Specificati
 
 In summary, the SIP constitutes a package of information that is ready to be sent by a Producer to an Archive in order to be ingested by the OAIS.
 
-### Related work
+## Related work
 
 This document is based on, or influenced by, the following documents and best practices:
 
@@ -104,7 +83,7 @@ This document is based on, or influenced by, the following documents and best pr
 * **E-ARK Deliverable D3.2 - SIP Draft Specification**, 2015, [http://eark-project.com/resources/project-deliverables/17-d32-e-ark-sip-draft-specification](http://eark-project.com/resources/project-deliverables/17-d32-e-ark-sip-draft-specification)
 * **E-ARK Deliverable D3.3 - E-ARK SIP Pilot Specification**, 2016, [http://eark-project.com/resources/project-deliverables/51-d33pilotspec](http://eark-project.com/resources/project-deliverables/51-d33pilotspec)
 
-## Structure
+# Structure
 
 The SIP specification follows a structure that is common to all Information Packages in the E-ARK set of specifications. The common structure is fully described in the Common Specification for Information Packages (see Section 4. CS IP structure).
 
@@ -135,7 +114,7 @@ If metadata is stored at the root level of the package, then there is generally 
 The details of the internal structure of an SIP including its `data` and `metadata` folders can be further specified by Submission Agreements. These can exist for a particular submission, a special collection or a specific Producer.
 
 
-## METS
+# METS
 
 The Metadata Encoding and Transmission Standard (METS) is a standard for encoding descriptive, administrative, and structural metadata expressed using the XML Schema Language.
 
@@ -143,7 +122,7 @@ The METS Schema for an E-ARK SIP is the same as for an E-ARK AIP or an E-ARK DIP
 
 These differences are manifested by means of a METS profile. The SIP METS profile extends the CS IP METS profile. As stated before, in this document only the differences between the SIP METS and the CS IP METS are highlighted. In order to fully understand how to create or interpret the METS file included within an SIP, it is necessary to read the CS IP.
 
-### Extended use of the METS root element (element `mets`)
+## Extended use of the METS root element (element `mets`)
 
 The root of a METS document can contain a number of optional attributes, namespaces (`xmlns:`), locations for external schemas (`xsi:`) and a number of other elements.
 
@@ -159,19 +138,19 @@ The following table describes the main differences in the `mets` element between
 **Example:** METS root element example with values from E-ARK-SIP as well as CS IP.
 
 ```xml
-<mets:mets 
-	OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" 
-	LABEL="Accounting records of 2017" 
-	TYPE="OTHER" 
-	OTHERTYPE="Accounting" 
-	PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" 
-	
+<mets:mets
+	OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182"
+	LABEL="Accounting records of 2017"
+	TYPE="OTHER"
+	OTHERTYPE="Accounting"
+	PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml"
+
 	schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd">
 </mets:mets>
 ```
 
 
-### Extended use of the METS header (element `metsHdr`)
+## Extended use of the METS header (element `metsHdr`)
 
 The METS header element `<metsHdr>` includes information about the creator of the submission package, the original creator of the data, contact information of the person delivering the SIP, among other actors. These entities are typically called "agents" (see element `metsHdr/agent`).
 
@@ -253,7 +232,7 @@ The following table describes the main differences in the `metsHdr` between an E
 
 
 
-### Extended use of the METS descriptive metadata section (element `dmdSec`)
+## Extended use of the METS descriptive metadata section (element `dmdSec`)
 
 The METS descriptive metadata section `<dmdSec>` is responsible for recording descriptive metadata for all the data items included in the package.
 
@@ -261,7 +240,7 @@ The SIP specification itself does not prescribe of any particular metadata forma
 
 In this regard, the SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.3 of the CS IP).
 
-### Extended use of METS administrative metadata section (element `amdSec`)
+## Extended use of METS administrative metadata section (element `amdSec`)
 
 The METS administrative metadata section `<amdSec>` is used to include or reference technical and preservation metadata.
 
@@ -270,7 +249,7 @@ Although seldom used, preservation metadata can be included in an SIP. The guide
 The SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.4. of the CS IP).
 
 
-### Extended use of the METS file section (element `fileSec`)
+## Extended use of the METS file section (element `fileSec`)
 
 The METS file section element `<fileSec>` is used to describe all the components included in the information package which have not been already included in the `amdSec` and `dmdSec` elements.
 
@@ -294,21 +273,21 @@ The following table describes the main differences in the `fileSec` between an E
 **Example:** METS example of an SIP with file information together with the info from CSIP
 
 ```xml
-<mets:file 
-	ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A81" 
-	MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" 
-	SIZE="2554366" 
-	CREATED="2012-08-15T12:08:15.432+01:00" 
-	CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557" 
-	CHECKSUMTYPE="SHA-256" 
-	FILEFORMATNAME="Microsoft Word for Windows" 
-	FILEFORMATVERSION="2007 onwards" 
-	FORMATREGISTRY="PRONOM" 
+<mets:file
+	ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A81"
+	MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+	SIZE="2554366"
+	CREATED="2012-08-15T12:08:15.432+01:00"
+	CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557"
+	CHECKSUMTYPE="SHA-256"
+	FILEFORMATNAME="Microsoft Word for Windows"
+	FILEFORMATVERSION="2007 onwards"
+	FORMATREGISTRY="PRONOM"
 	FORMATREGISTRYKEY="fmt/412">
 
-  <mets:FLocat 
-  		LOCTYPE="URL" 
-  		type="simple" 
+  <mets:FLocat
+  		LOCTYPE="URL"
+  		type="simple"
   		href="Documentation/File.docx">
   </mets:FLocat>
 </mets:file>
@@ -317,13 +296,13 @@ The following table describes the main differences in the `fileSec` between an E
 
 
 
-### Extended use of the METS structural map (element `structMap`)
+## Extended use of the METS structural map (element `structMap`)
 
 The mandatory METS structural map element `<structMap>` is intended to provide an overview of the components included in the package. It can also link elements of that structure to associated content files and metadata. In the CS IP the `structMap` describes the higher-level structure of all the content in the root and may link to existing representations.
 
 The SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.6 of the CS IP)
 
-## Content Information Type Specifications
+# Content Information Type Specifications
 
 The concept of a Content Information Type Specification is essentially an extension method which allows for widening the interoperability scope of the E-ARK IPs into a content specific level.
 
@@ -349,18 +328,20 @@ This specification includes a list of semantic elements that should be present i
 
 The recommended list of semantic elements is inspired by the PAIMAS requirements and the [Submission Agreement template](https://www.ngdc.noaa.gov/wiki/images/f/f4/NOAA_Sub_Agreement.docx) provided by the National Oceanic and Atmospheric Administration (NOAA).
 
-## Appendices
- 
-### Appendix A: Submission Agreement semantic elements
+# Appendices
 
-#### Project information
+Supplementary information.
+
+## Appendix A: Submission Agreement semantic elements
+
+### Project information
 
 * **Project** -	Elements of a transfer project.
 	* 	**Project Name**	 - Name of the transfer project (e.g. Transfer I, 2016).
 	* 	**Project ID** - Identification code of the transfer project (e.g. 201601122044).
 
 
-#### Change management
+### Change management
 
 * **Version/Revision** - Elements for tracking the changes in versions of the submission agreement.
 	* **Release date** - The date of the version.
@@ -369,7 +350,7 @@ The recommended list of semantic elements is inspired by the PAIMAS requirements
 	* **Section(s) affected**	- This element is meant for recording more detailed information about changes.
 
 
-#### Producer, Archive and Designated Community
+### Producer, Archive and Designated Community
 
 * **Producer Organization**	- Elements describing the Producer.
 	* **Organization name** - **Elements describing the organisation**
@@ -406,7 +387,7 @@ The recommended list of semantic elements is inspired by the PAIMAS requirements
 		* **E-mail**	 - The e-mail of the contact person.
 		* **Additional Information**	 - Meant for recording any additional information needed to describe the contact.
 
-#### Submission Information Package (SIP)
+### Submission Information Package (SIP)
 
 * **Content and metadata** - Elements describing the content and metadata of the submission information package.
 	* **Description** - A description of data origination, content and coverage.
@@ -420,21 +401,21 @@ The recommended list of semantic elements is inspired by the PAIMAS requirements
 	* **Reference** - 	A reference to the full agreed data model description.
 	* **Additional Information** - 	A description of any other additional information (e.g. description of the physical folder structure of the SIP) related to the data model.
 
-#### Submission Session Information
+### Submission Session Information
 
 * **Submission Session** - Elements describing the agreements for the submission session.
 	* **Submission Method** - The description of the submission method (e.g. through a digital interface, a physical transfer).
 	* **Delivery Schedule** - A description of a delivery schedule (a submission session may have a routine or a complex schedule).
 	* **Data Submission Inventory**	 - A description of the complete inventory of data objects (and other items) in the submission session.
 
-#### Ingest
+### Ingest
 
 * **Submission Reception** - Elements describing the agreements for the ingest.
 	* **Validation**	 - A description of procedures for the quality assurance.
 	* **Error Handling** - A description of procedures for the error handling.
 	* **Receipt Confirmation** - A description of the receipt confirmation.
 
-#### Submission risks
+### Submission risks
 
 * **Risks**	- Elements describing the risks and mitigation options of the submission.
 	* **Risk Factor** - Meant for listing all risk factors (e.g. the designated community is not properly defined) of the submission.
@@ -443,7 +424,7 @@ The recommended list of semantic elements is inspired by the PAIMAS requirements
 
 
 
-### Appendix B: E-ARK Information Package METS example
+## Appendix B: E-ARK Information Package METS example
 
 
 
@@ -532,50 +513,50 @@ The recommended list of semantic elements is inspired by the PAIMAS requirements
 
 
 
-### Appendix C: External Schema
+## Appendix C: External Schema
 
-#### E-ARK SIP METS Extension
+### E-ARK SIP METS Extension
 
-**Location:**  <a href="https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd" >https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd</a> <br/> 
-**Context:** XML-schema for the attributes added by SIP <br/> 
-**Note:**   <br/> 
-An extension schema with the added attributes for use in this profile. <br/> 
-The schema is used with a namespace prefix of sip <br/> 
+**Location:**  <a href="https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd" >https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd</a> <br/>
+**Context:** XML-schema for the attributes added by SIP <br/>
+**Note:**   <br/>
+An extension schema with the added attributes for use in this profile. <br/>
+The schema is used with a namespace prefix of sip <br/>
 
-### Appendix D: Controlled Vocabularies
+## Appendix D: Controlled Vocabularies
 
 <a name="VocabularyRECORDSTATUS"></a>
-#### Package status
-**Maintained By:** DILCIS Board <br/> 
-**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in @RECORDSTATUS <br/> 
-**Description:**   <br/> 
-Describes the status of the package. <br/> 
+### Package status
+**Maintained By:** DILCIS Board <br/>
+**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/>
+**Context:** Used in @RECORDSTATUS <br/>
+**Description:**   <br/>
+Describes the status of the package. <br/>
 
 
 <a name="VocabularyaltrecordIDTYPE"></a>
-#### Alternative record ID's
-**Maintained By:** DILCIS Board <br/> 
-**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in altrecordID/@TYPE <br/> 
-**Description:**   <br/> 
-Describes the type of the alternative record ID. <br/> 
+### Alternative record ID's
+**Maintained By:** DILCIS Board <br/>
+**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/>
+**Context:** Used in altrecordID/@TYPE <br/>
+**Description:**   <br/>
+Describes the type of the alternative record ID. <br/>
 
 
 <a name="VocabularyNoteType"></a>
-#### Note type
-**Maintained By:** DILCIS Board <br/> 
-**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in @csip:NOTETYPE <br/> 
-**Description:**   <br/> 
-Describes the type of a note for an agent. <br/> 
+### Note type
+**Maintained By:** DILCIS Board <br/>
+**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/>
+**Context:** Used in @csip:NOTETYPE <br/>
+**Description:**   <br/>
+Describes the type of a note for an agent. <br/>
 
 
 
 
 
 
-### Appendix E: A Full List of E-ARK SIP Requirements
+## Appendix E: A Full List of E-ARK SIP Requirements
 | ID | Name & Location | Description & usage | Cardinality & Level |
 | --- | --------------- | ------------------- | ------------------- |
 | <a name="SIP1"></a>**SIP1** | **Package name** <br/> `mets/@LABEL` | An optional short text describing the contents of the package, e.g. “Accounting records of 2017". | **0..1** <br/> MAY |
@@ -616,23 +597,21 @@ Describes the type of a note for an agent. <br/>
 
 
 
-## Glossary
-
-| Archival creator                     | An organisation unit or individual that creates records and/or manages records during their active use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-|--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Archive                              | An organisation that intends to preserve information for Access and (re)use by a Designated Community.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Delivering organisation              | The organisation delivering an information package to the archive. For stating and extending the information use of the “Producer organisation name” and “Submitting organisation name” elements is recommended.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ERMS                                 | A type of content management software known as an Electronic Records Management System.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Information Package                  | A logical container composed of optional Content Information and optional associated Preservation Description Information. Associated with this Information Package is Packaging Information used to delimit and identify the Content Information and Package Description information used to facilitate searches for the Content Information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Ingest                               | The OAIS functional entity that contains the services and functions that accept Submission Information Packages from Producers, prepares Archival Information Packages for storage, and ensures that Archival Information Packages and their supporting Descriptive Information become established within the OAIS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| OAIS                                 | The Open Archival Information System is an archive (and a standard: ISO 14721:2003), consisting of an organisation of people and systems that has accepted the responsibility to preserve information and make it available for a Designated Community.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+# Glossary
+| Term | Definition |
+|------|------------|
+| Archival creator | An organisation unit or individual that creates records and/or manages records during their active use. |
+| Archive          | An organisation that intends to preserve information for Access and (re)use by a Designated Community. |
+| Delivering organisation              | The organisation delivering an information package to the archive. For stating and extending the information use of the “Producer organisation name” and “Submitting organisation name” elements is recommended. |
+| ERMS                                 | A type of content management software known as an Electronic Records Management System. |
+| Information Package                  | A logical container composed of optional Content Information and optional associated Preservation Description Information. Associated with this Information Package is Packaging Information used to delimit and identify the Content Information and Package Description information used to facilitate searches for the Content Information. |
+| Ingest                               | The OAIS functional entity that contains the services and functions that accept Submission Information Packages from Producers, prepares Archival Information Packages for storage, and ensures that Archival Information Packages and their supporting Descriptive Information become established within the OAIS. |
+| OAIS                                 | The Open Archival Information System is an archive (and a standard: ISO 14721:2003), consisting of an organisation of people and systems that has accepted the responsibility to preserve information and make it available for a Designated Community. |
 | Producing organisation               | The organisational unit or individual that has the authority to transfer records to an archive. Usually the producer is also the records creator but this is not always the case, sometimes the producer is different from the records creator. For example: An author dies and her literary executor gains the authority to transfer her papers to an archive. The author is the records creator and the literary executor is the producer. For example: Department X gets reorganised out of existence and Department Y, which takes over the functional responsibilities of Department X, gains the authority to transfer the records of Department X to the archive. Department X is the records creator and Department Y is the producer. Counter example: The Department of Widget Science transfers some of its own records to the archive. The Department of Widget Science is the records creator and the producer. |
-| Submission Information Package (SIP) | An Information Package that is delivered by the Producer to the OAIS for use in the construction or update of one or more AIPs and/or the associated Descriptive Information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Submitting organisation              | Name of the organisation submitting the package to the archive. Extends the delivery information since it may be the case that the content of a creator is held by another part of the organisation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Submission Information Package (SIP) | An Information Package that is delivered by the Producer to the OAIS for use in the construction or update of one or more AIPs and/or the associated Descriptive Information. |
+| Submitting organisation              | Name of the organisation submitting the package to the archive. Extends the delivery information since it may be the case that the content of a creator is held by another part of the organisation. |
 
-
-
-## Bibliography
+# Bibliography
 
 1.	A Checklist for Documenting PREMIS-METS Decisions in a METS Profile, 2010,
 URL: [http://www.loc.gov/standards/premis/premis_mets_checklist.pdf](http://www.loc.gov/standards/premis/premis_mets_checklist.pdf)
