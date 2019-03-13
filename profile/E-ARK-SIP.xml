@@ -118,7 +118,7 @@
                     <p xmlns="http://www.w3.org/1999/xhtml">Note: It is recommended to use a machine-readable format for a better description of a submission agreement.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">For example, the submission agreement developed by Docuteam GmbH <a href="http://www.loc.gov/standards/mets/profiles/00000041.xml">http://www.loc.gov/standards/mets/profiles/00000041.xml</a></p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
-                        <dt>METS XPath</dt><dd>metsHDR/altrecordID</dd>
+                        <dt>METS XPath</dt><dd>metsHdr/altrecordID</dd>
                         <dt>Cardinality</dt><dd>0..1</dd>
                     </dl>
                 </description>
@@ -133,7 +133,7 @@
                     <p xmlns="http://www.w3.org/1999/xhtml">Note: It is recommended to use a machine-readable format for a better description of a submission agreement.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">For example, the submission agreement developed by Docuteam GmbH <a href="http://www.loc.gov/standards/mets/profiles/00000041.xml">http://www.loc.gov/standards/mets/profiles/00000041.xml</a></p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
-                        <dt>METS XPath</dt><dd>metsHDR/altrecordID</dd>
+                        <dt>METS XPath</dt><dd>metsHdr/altrecordID</dd>
                         <dt>Cardinality</dt><dd>0..*</dd>
                     </dl>
                 </description>
@@ -145,7 +145,7 @@
                     <p xmlns="http://www.w3.org/1999/xhtml">@TYPE is used with the value "REFERENCECODE".</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Example: FM 12-2387/12726, 2007-09-19</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
-                        <dt>METS XPath</dt><dd>metsHDR/altrecordID</dd>
+                        <dt>METS XPath</dt><dd>metsHdr/altrecordID</dd>
                         <dt>Cardinality</dt><dd>0..1</dd>
                     </dl>
                 </description>
@@ -157,7 +157,7 @@
                     <p xmlns="http://www.w3.org/1999/xhtml">@TYPE is used with the value "PREVIOUSREFERENCECODE".</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Example: SE/FM/123/123.1/123.1.3</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
-                        <dt>METS XPath</dt><dd>metsHDR/altrecordID</dd>
+                        <dt>METS XPath</dt><dd>metsHdr/altrecordID</dd>
                         <dt>Cardinality</dt><dd>0..*</dd>
                     </dl>
                 </description>
@@ -165,7 +165,8 @@
             <requirement ID="SIP9" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Archival creator agent</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation or person that originally created the data being transferred.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">A wrapper element that enables to encode the name of the organisation or person that originally created the data being transferred. 
+Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent</dd>
@@ -539,7 +540,7 @@
             <p xmlns="http://www.w3.org/1999/xhtml">Do we need a note?</p>
         </note>
     </tool>
-    <Example ID="metsRootElementExample1" LABEL="METS root element example with values from E-ARK-SIP as well as CSIP.">
+    <Example ID="metsRootElementExample1" LABEL="METS root element example with values from E-ARK-SIP as well as CS IP.">
         <mets:mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:mets="http://www.loc.gov/METS/"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -552,7 +553,7 @@
             xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd">
         </mets:mets>
     </Example>
-    <Example ID="metsHdrElementExample1" LABEL="METS example of altrecordID's, and SIP agents following the SIP profile as well as CSIP">
+    <Example ID="metsHdrElementExample1" LABEL="METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.">
         <mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" csip:OAISPACKAGETYPE="SIP">
             <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
                 <mets:name>The Swedish health agency</mets:name>
@@ -576,13 +577,13 @@
             <mets:altrecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altrecordID>
         </mets:metsHdr>
     </Example>
-    <Example ID="fileSecExample1" LABEL="METS example of an SIP with file information together with the info from CSIP">
+    <Example ID="fileSecExample1" LABEL="METS example of an SIP with file information together with the info from CS IP.">
         <mets:file ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A81" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="2554366" CREATED="2012-08-15T12:08:15.432+01:00" CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557" CHECKSUMTYPE="SHA-256"
             sip:FILEFORMATNAME="Microsoft Word for Windows" sip:FILEFORMATVERSION="2007 onwards" sip:FORMATREGISTRY="PRONOM" sip:FORMATREGISTRYKEY="fmt/412">
                     <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="Documentation/File.docx"/>
         </mets:file>
     </Example>
-    <Appendix NUMBER="1" LABEL="Example of a whole METS document describing an submission information package with no representations">
+    <Appendix NUMBER="1" LABEL="Example of a whole METS document describing an submission information package with no representations.">
         <mets:mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:mets="http://www.loc.gov/METS/"
             xmlns:xlink="http://www.w3.org/1999/xlink"

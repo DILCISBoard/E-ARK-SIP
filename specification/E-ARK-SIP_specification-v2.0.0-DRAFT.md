@@ -126,7 +126,7 @@ These differences are manifested by means of a METS profile. The SIP METS profil
 
 The root of a METS document can contain a number of optional attributes, namespaces (`xmlns:`), locations for external schemas (`xsi:`) and a number of other elements.
 
-The following table describes the main differences in the `mets` element between the E-ARK SIP and the CS IP.
+The following table describes the differences in the `mets` element between the E-ARK SIP and the CS IP.
 
 | ID | Name & Location | Description & usage | Cardinality & Level |
 | --- | --------------- | ------------------- | ------------------- |
@@ -159,7 +159,7 @@ The `metsHdr` is also used to indicate the type of behaviour to be expected from
 
 It is also in the `metsHdr` that the Submission Agreement to which a particular SIP conforms can be identified (see `metsHdr/altrecordID/@TYPE=”SUBMISSIONAGREEMENT`).
 
-The following table describes the main differences in the `metsHdr` between an E-ARK SIP and the CS IP.
+The following table describes the differences in the `metsHdr` between an E-ARK SIP and the CS IP.
 
 
 | ID | Name & Location | Description & usage | Cardinality & Level |
@@ -195,11 +195,7 @@ The following table describes the main differences in the `metsHdr` between an E
 | <a name="SIP31"></a>**SIP31** | **Classification of the preservation agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The preservation agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
 
 
-
 **Example:** METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.
-
-
-**Example:** METS example of altrecordID's, and SIP agents following the SIP profile as well as CSIP
 
 ```xml
 <mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
@@ -229,9 +225,6 @@ The following table describes the main differences in the `metsHdr` between an E
 
 
 
-
-
-
 ## Extended use of the METS descriptive metadata section (element `dmdSec`)
 
 The METS descriptive metadata section `<dmdSec>` is responsible for recording descriptive metadata for all the data items included in the package.
@@ -255,7 +248,7 @@ The METS file section element `<fileSec>` is used to describe all the components
 
 The main purpose of the METS file section is to serve as a "table of contents" or "manifest" for all the files included in the package, thus allowing the OAIS to validate the integrity and completeness of the files included in the package. This means that for all the files included in the package, their location and checksum need to be available and described in the `fileSec` element. That includes files in the `data`, `schemas` and in the `documentation` folders.
 
-The following table describes the main differences in the `fileSec` between an E-ARK SIP and the CS IP.
+The following table describes the differences in the `fileSec` between an E-ARK SIP and the CS IP.
 
 
 | ID | Name & Location | Description & usage | Cardinality & Level |
@@ -268,9 +261,6 @@ The following table describes the main differences in the `fileSec` between an E
 
 
 **Example:** METS example of an SIP with file information together with the info from the CS IP.
-
-
-**Example:** METS example of an SIP with file information together with the info from CSIP
 
 ```xml
 <mets:file
@@ -428,7 +418,7 @@ Supplementary information.
 
 
 
-**Example 4:** Example of a whole METS document describing an submission information package with no representations
+**Example 4:** Example of a whole METS document describing an submission information package with no representations.
 
 ```xml
 <mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd">
@@ -598,6 +588,7 @@ Describes the type of a note for an agent. <br/>
 
 
 # Glossary
+
 | Term | Definition |
 |------|------------|
 | Archival creator | An organisation unit or individual that creates records and/or manages records during their active use. |
