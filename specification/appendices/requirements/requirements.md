@@ -1,5 +1,5 @@
 | ID | Name & Location | Description & usage | Cardinality & Level |
-| --- | --------------- | ------------------- | ------------------- |
+| -- | --------------- | ------------------- | ------------------- |
 | <a name="SIP1"></a>**SIP1** | **Package name** <br/> `mets/@LABEL` | An optional short text describing the contents of the package, e.g. “Accounting records of 2017". | **0..1** <br/> MAY |
 | <a name="SIP2"></a>**SIP2** | **METS Profile** <br/> `mets/@PROFILE` | The value is set to "https://earksip.dilcis.eu/profile/E-ARK-SIP.xml". | **1..1** <br/> MUST |
 | <a name="SIP3"></a>**SIP3** | **Package status** <br/> `metsHdr/@RECORDSTATUS` | A way of indicating the status of the package and to instruct the OAIS on how to properly handle the package. If not set, the expected behaviour is equal to NEW. <br/> **See also:** <a href="#VocabularyRECORDSTATUS" >Package status</a> | **0..1** <br/> MAY |
