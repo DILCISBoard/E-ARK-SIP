@@ -63,6 +63,15 @@
                 <p xmlns="http://www.w3.org/1999/xhtml">Describes the type of a note for an agent.</p>
             </description>
         </vocabulary>
+        <vocabulary ID="VocabularyOAISPackageType">
+            <name>OAIS Package type</name>
+            <maintenance_agency>DILCIS Board</maintenance_agency>
+            <URI>http://earkcsip.dilcis.eu/schema/</URI>
+            <context>Used in @csip:OAISPACKAGETYPE</context>
+            <description>
+                <p xmlns="http://www.w3.org/1999/xhtml">Describes the OAIS type the package belongs to in the OAIS reference model.</p>
+            </description>
+        </vocabulary>
     </controlled_vocabularies>
     <structural_requirements>
         <metsRootElement ID="metsRootElement">
