@@ -167,7 +167,6 @@
                     <head>Archival creator agent</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">A wrapper element that enables to encode the name of the organisation or person that originally created the data being transferred. 
 Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives.</p>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent</dd>
                         <dt>Cardinality</dt><dd>0..1</dd>
@@ -197,11 +196,11 @@ Please note that this might be different from the organisation which has been ch
             <requirement ID="SIP12" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Archival creator agent name</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation that originally created the data being transferred.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation(s) that originally created the data being transferred.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent/name</dd>
-                        <dt>Cardinality</dt><dd>0..1</dd>
+                        <dt>Cardinality</dt><dd>0..*</dd>
                     </dl>
                 </description>
             </requirement>
@@ -397,7 +396,7 @@ Please note that this might be different from the organisation which has been ch
             </requirement>
         </metsHdr>
         <dmdSec ID="dmdSecElement">
-            <requirement REQLEVEL="SHOULD">
+            <requirement ID="dummy1" REQLEVEL="SHOULD">
                 <description>
                     <head>Descriptive metadata</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">Follows the requirements in the CSIP profile.</p>
@@ -405,7 +404,7 @@ Please note that this might be different from the organisation which has been ch
             </requirement>
         </dmdSec>
         <amdSec ID="amdSecElement">
-            <requirement REQLEVEL="SHOULD">
+            <requirement ID="dummy2" REQLEVEL="SHOULD">
                 <description>
                     <head>Administrative metadata</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">Follows the requirements in the CSIP profile.</p>
@@ -416,7 +415,7 @@ Please note that this might be different from the organisation which has been ch
             <requirement ID="SIP32" REQLEVEL="MAY" EXAMPLES="fileSecExample1">
                 <description>
                     <head>File format name</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">A more detailed file format definition when the use of PREMIS has not been agreed upon in the submission agreement.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">An optional attribute may be used if the MIMETYPE is not sufficient for the purposes of processing the information package.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Example: "Extensible Markup Language”</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Example: ”PDF/A”</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Example: ”ISO/IEC 26300:2006”</p>
@@ -461,7 +460,7 @@ Please note that this might be different from the organisation which has been ch
             </requirement>
         </fileSec>
         <structMap ID="structMapElement">
-            <requirement REQLEVEL="MUST">
+            <requirement ID="dymmy3" REQLEVEL="MUST">
                 <description>
                     <head>Structural description of the package</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">Follows the requirements in the CSIP profile.</p>
@@ -469,7 +468,7 @@ Please note that this might be different from the organisation which has been ch
             </requirement>
          </structMap>
          <structLink ID="structLinkElement">
-            <requirement REQLEVEL="MAY">
+            <requirement ID="dymmy4"  REQLEVEL="MAY">
                 <description>
                     <head>structLink</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">Section not defined or used in CSIP or SIP, additional own uses may occur.</p>
@@ -477,7 +476,7 @@ Please note that this might be different from the organisation which has been ch
             </requirement>
         </structLink>
         <behaviorSec ID="behaviorSecElement">
-            <requirement REQLEVEL="MAY">
+            <requirement ID="dymmy5" REQLEVEL="MAY">
                 <description>
                     <head>behaviorSec</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">Section not defined or used in CSIP or SIP, additional own uses may occur.</p>
@@ -521,12 +520,27 @@ Please note that this might be different from the organisation which has been ch
     <tool>
         <!--  Karin: Completion of this needed or are they only present in the profiles for SIP/AIP/DIP? -->
         <name>RODA</name>
-        <URI>Link to it in Git?</URI>
+        <URI>http://github.com/keeps/roda/issues/new</URI>
         <description>
-            <p xmlns="http://www.w3.org/1999/xhtml">What the tool does.</p>
+            <p xmlns="http://www.w3.org/1999/xhtml">RODA is a digital repository solution that delivers functionality for all the main units of the OAIS reference model. RODA is capable of ingesting, managing and providing access to the various types of digital objects produced by large corporations or public bodies. RODA is based on open-source technologies and is supported by existing standards such as the Open Archival Information System (OAIS), Metadata Encoding and Transmission Standard (METS), Encoded Archival Description (EAD), Dublin Core (DC) and PREMIS (Preservation Metadata).</p>
         </description>
         <note>
-            <p xmlns="http://www.w3.org/1999/xhtml">Do we need a note?</p>
+            <p xmlns="http://www.w3.org/1999/xhtml">RODA is licensed under LGPLv3 for all source-code including interoperability libraries like SIP manipulation libraries.</p>
+        </note>
+    </tool>
+
+        <tool>
+        <!--  Karin: Completion of this needed or are they only present in the profiles for SIP/AIP/DIP? -->
+        <name>RODA-in</name>
+        <URI>https://rodain.roda-community.org</URI>
+        <description>
+            <p xmlns="http://www.w3.org/1999/xhtml">RODA-in is a tool specially designed for producers and archivists to create Submission Information Packages (SIP) ready to be submitted to an Open Archival Information System (OAIS). The tool creates SIPs from files and folders available on the local file system.</p>
+            <p xmlns="http://www.w3.org/1999/xhtml">
+            RODA-in supports several Submission Information Package formats such as BagIt, E-ARK SIP and the Hungarian SIP format.
+            </p>
+        </description>
+        <note>
+        <p xmlns="http://www.w3.org/1999/xhtml">RODA-in is licensed under LGPLv3.</p>
         </note>
     </tool>
     <tool>
