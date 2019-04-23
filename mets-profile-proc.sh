@@ -11,4 +11,6 @@ mkdir -p specification/appendices/examples
 mkdir -p specification/appendices/requirements
 mkdir -p specification/appendices/schema
 
-java -jar ../E-ARK-CSIP/utils/mets-profile-processor/target/mets-profile-proc.jar ./profile/E-ARK-SIP.xml
+cd utils/mets-profile-processor
+mvn clean package
+java -jar target/mets-profile-proc.jar ../../profile/E-ARK-SIP.xml
