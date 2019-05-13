@@ -1,20 +1,138 @@
+# I. ​Acknowledgements
 
-**Authors**
+The Common Specification for Information Packages was first developed within the E-ARK project in 2014 – 2017. E-ARK was an EC-funded pilot action project in the Competiveness and Innovation Programme 2007- 2013, Grant Agreement no. 620998 under the Policy Support Programme.
 
-| Name                             | Organisation                                       |
-| -------------------------------- | -------------------------------------------------- |
-| Miguel Ferreira                  | KEEP SOLUTIONS                                     |
-| Hélder Silva                     | KEEP SOLUTIONS                                     |
-| Karin Bredenberg                 | National Archives of Sweden                        |
-| Carl Wilson                      | Open Preservation Foundation                       |
+We would like to thank the National Archives of Sweden and Karin Bredenberg for their support and the availability of the Swedish national Common Specifications, upon which most of this document has been built.
+
+The authors of this deliverable would like to thank all national archives, tool developers and other stakeholders who provided valuable knowledge about their requirements for information packages and feedback to this specification!
 
 
-**Reviewers**
+# II. ​Contact & Feedback
 
-| Name                             | Organisation                                       |
-| -------------------------------- | -------------------------------------------------- |
-| Jaime Kaminski                   | Highbury Associates                                |
-| Luís Miguel Ferros               | KEEP SOLUTIONS                                     |
+The Common Specification for Information Packages is maintained by the Digital Information LifeCycle Interoperability Standard Board (DILCIS Board). For further information about the DILCIS Board or feedback on the current document please consult the website http://www.dilcis.eu/ or contact us at <dasboard@dlmforum.eu.>  
+
+
+# III. ​Authors
+
+| Name             | Organisation                 |
+| ---------------- | ---------------------------- |
+| Miguel Ferreira  | KEEP SOLUTIONS               |
+| Hélder Silva     | KEEP SOLUTIONS               |
+| Karin Bredenberg | National Archives of Sweden  |
+| Carl Wilson      | Open Preservation Foundation |
+
+
+# IV. ​Revision History
+
+| Revision No. | Date       | Authors(s)      | Organisation | Description                                |
+| ------------ | ---------- | --------------- | ------------ | ------------------------------------------ |
+| 2.0          | 2019-05-31 | Miguel Ferreira | KEEPS        | Version 2.0 of the specification published |
+
+
+
+# V. Relationship to other E-ARK specifications
+
+This specification is one of several interconnected specifications. The single most important aim and goal for all of the specifications combined is the provision of a common set of specifications for packaging digital information for archiving purposes. The specifications are based on common, international standards for transmitting, describing and preserving digital data. They are created to help data creators, software developers and digital archives to tackle the challenge of short, medium and long-term data management and reuse in a sustainable, authentic, cost-efficient, manageable and interoperable way. 
+
+The main standard which the specifications make use of and is built upon is the Reference model for an Open Archival Information System (OAIS)  ([OAIS Reference model](https://www.iso.org/standard/57284.html)) which has Information Packages as its basis. Familiarity with the core functional entities of OAIS is a prerequisite for understanding the specifications.  
+
+A visualization of the current specification network can be seen here:
+
+<a name="fig1"></a>
+![Set of E-ARK Specifications](images/Fig_1_SIP.svg "Relationships between all E-ARK specifications")
+
+**Figure 1**: Relationships between all E-ARK specifications.
+
+The purposes of the individual specifications (including this one) can be seen in the following table:
+
+
+<table>
+  <tr>
+   <td>Specification
+   </td>
+   <td>Aim and goals
+   </td>
+  </tr>
+  <tr>
+   <td>Common Specification for Information Packages
+   </td>
+   <td>This document introduces the concept of a Common Specification for Information Packages. It aims to serve three main purposes: 
+<ul>
+
+<li>Establish a common understanding of the requirements which need to be met in order to achieve interoperability of Information Packages; 
+
+<li>Establish a common base for the development of more specific Information Package definitions and tools within the digital preservation community; 
+
+<li>Propose the details of an XML-based implementation of the requirements using, to the largest possible extent, standards which are widely used in international digital preservation. 
+
+<p>
+Ultimately the goal of the Common Specification is to reach a level of interoperability between all Information Packages so that tools implementing the Common Specification can be taken up by institutions without needing major modifications or adaptations. 
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>E-ARK SIP
+   </td>
+   <td>The main aims and goals of this specification are to:
+<ul>
+
+<li>Define the general structure for a Submission Information Package format in a way that it is suitable for a wide variety of archival scenarios, e.g. document and image collections, databases or geographical data;
+
+<li>Enhance interoperability between Producers and Archives;
+
+<li>Recommend best practices regarding metadata, content and structure of Submission Information Packages.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>E-ARK AIP
+   </td>
+   <td>The main aims and goals of this specification are to:
+<ul>
+
+<li>To define a generic structure of the AIP format in a way that it is suitable for a wide variety of data types, such as document and image collections, archival records, databases or geographical data.
+
+<li>To recommend a set of metadata related to the structural and the preservation aspects of the AIP as implemented by the reference implementation (earkweb).
+
+<li>To ensure the format is also suitable to store large quantities of data.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>E-ARK DIP
+   </td>
+   <td>The main aims and goals of this specification are to:
+<ul>
+
+<li>To define a generic structure of the DIP format in a way that it is suitable for a wide variety of archival records, such as document and image collections, databases or geographical data.
+
+<li>To recommend a set of metadata related to the structural and the access aspects of the DIP.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Content Information Type Specifications
+   </td>
+   <td>The main aim and goal of a Content Information Type Specification is to:
+<ul>
+
+<li>define in technical terms how data and metadata must be formatted and placed within a CS IP Information Package in order to achieve interoperability in exchanging specific Content Information.
+
+<p>
+The number of possible Content Information Type Specifications is potentially unlimited. For at list of existing Content Information Type Specifications see [link], and read more about  Content Information Type Specifications in the Common Specification for Information Packages [link].
+</li>
+</ul>
+   </td>
+  </tr>
+</table>
+ 
+## Organizational anchorage
+
+This specification is maintained by the Digital Information LifeCycle Interoperability Standards Board (DILCIS Board, [http://dilcis.eu/](http://dilcis.eu/)). The DILCIS Board was created to enhance and maintain the draft specifications developed in the European Archival Records and Knowledge Preservation Project (E-ARK project, [http://eark-project.com/](http://eark-project.com/)) which concluded in January 2017. The Board consists of eight members, but there is no limitation on the number of participants taking part in the work. All Board documents and specifications are stored in GitHub ([https://github.com/DILCISBoard](https://github.com/DILCISBoard)) while published versions are made available on the Board webpage. Since 2018 the DILCIS Board has been responsible for the core specifications in the Connecting Europe Facility eArchiving Building Block[https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eArchiving](https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eArchiving)). 
 
 
 #  Introduction
@@ -31,32 +149,9 @@ This document describes how to produce and parse E-ARK Submission Information Pa
 * Enhance interoperability between Producers and Archives;
 * Recommend best practices regarding metadata, content and structure of Submission Information Packages.
 
-### Target audience
+## Target audience
 
 The target audience for this specification is records creators, archival institutions and software providers that are responsible with preparing, packaging, delivering and receiving packages of information to be archived in an OAIS, i.e. pre-ingest and ingest functional units.
-
-## Relationship to other E-ARK specifications
-
-This document is part of a set of specifications that define a common understanding of the principles and requirements for interoperable Information Packages according to the OAIS reference model (see [Figure 1](#fig1)).
-
-The Common Specification for Information Packages (CS IP) identifies and standardises the common aspects of all information packages (Submission, Archival and Dissemination Information Packages, i.e. SIP, AIP and DIP, respectively) which are equally relevant and implemented by different functional entities of the overall digital preservation process (i.e. pre-ingest, ingest, long-term preservation and access).
-
-The current E-ARK SIP specification does not repeat the information presented in the CS IP. Only the information that is absolutely necessary to understand the SIP specification is utlised in this document. This means that in order to fully understand this specification it is essential that the user reads the CS IP.
-
-<a name="fig1"></a>
-![Set of E-ARK Specifications](images/specificationset.png)
-
-**Figure 1**: Relationships between all E-ARK specifications.
-
-In general, the E-ARK SIP specification reuses and applies all the requirements laid out by the CS IP. However, it extends it with aspects that are solely relevant to the process of transmitting and ingesting submission information into an OAIS environment. For example, the E-ARK SIP specification extends the CS IP with further requirements about submission agreements and information about the actors involved in the submission process.
-
-An additional concept is also part of this set of specifications. That is the Content Information Type Specifications. These are content-dependent specifications that include detailed information on how content, metadata, and documentation for specific types of content (i.e. data) can be handled within the packages. Currently, there are three such specifications:
-
-* E-ARK ERMS: Content Information Type specification for Electronic Records Management Systems;
-* E-ARK Geodata: Content Information Type specification for geospatial information;
-* E-ARK SIARD (SIARD1, SIARD2 and SIARDDK): Content Information Type specification for the archiving, preservation and reuse of relational databases.
-
-More information on Content Information Type specifications can be found in the Common Specification for Information Packages or the individual Content Information Type specification documents published by the [DILCIS Board](http://www.dilcis.eu).
 
 
 ## Definition of an SIP
@@ -69,19 +164,6 @@ The E-ARK SIP follows this definition and builds on the E-ARK Common Specificati
 
 In summary, the SIP constitutes a package of information that is ready to be sent by a Producer to an Archive in order to be ingested by the OAIS.
 
-## Related work
-
-This document is based on, or influenced by, the following documents and best practices:
-
-* **E-ARK Deliverable D3.1 - Report on Available Best Practices**, 2014, [http://eark-project.com/resources/project-deliverables/6-d31-e-ark-report-on-available-best-practices](http://eark-project.com/resources/project-deliverables/6-d31-e-ark-report-on-available-best-practices)
-* **E-ARK Deliverable D2.1 - General pilot model and use case definition**, 2014, [http://eark-project.com/resources/project-deliverables/5-d21-e-ark-general-pilot-model-and-use-case-definition](http://eark-project.com/resources/project-deliverables/5-d21-e-ark-general-pilot-model-and-use-case-definition)
-* **FGS package structure**,  2013, [https://riksarkivet.se/Media/pdf-filer/Projekt/FGS_Earkiv_Paket.pdf](https://riksarkivet.se/Media/pdf-filer/Projekt/FGS_Earkiv_Paket.pdf)
-* **Reference Model for an Open Archival Information System (OAIS)**, 2012, [https://public.ccsds.org/Pubs/650x0m2.pdf](https://public.ccsds.org/Pubs/650x0m2.pdf)  
-* **Producer-Archive Interface Methodology Abstract Standard (PAIMAS)**, 2004, [https://public.ccsds.org/Pubs/651x0m1.pdf](https://public.ccsds.org/Pubs/651x0m1.pdf)
-* **Producer-Archive Interface Specification (PAIS) – CCSDS**, 2014, [https://public.ccsds.org/Pubs/651x1b1.pdf](https://public.ccsds.org/Pubs/651x1b1.pdf)
-* **e-SENS (Electronic Simple European Networked Services) project**, [http://www.esens.eu/](http://www.esens.eu/)
-* **E-ARK Deliverable D3.2 - SIP Draft Specification**, 2015, [http://eark-project.com/resources/project-deliverables/17-d32-e-ark-sip-draft-specification](http://eark-project.com/resources/project-deliverables/17-d32-e-ark-sip-draft-specification)
-* **E-ARK Deliverable D3.3 - E-ARK SIP Pilot Specification**, 2016, [http://eark-project.com/resources/project-deliverables/51-d33pilotspec](http://eark-project.com/resources/project-deliverables/51-d33pilotspec)
 
 # Structure
 
@@ -90,7 +172,7 @@ The SIP specification follows a structure that is common to all Information Pack
 In its simplest form, an SIP consists of metadata and zero or more representations, also composed of `data` and `metadata`, as seen in [Figure 2](#fig2). A package with zero representations means that it only includes metadata. This is a special type of Information Package that enables Producers to deliver updates to the metadata to previously ingested packages.
 
 <a name="fig2"></a>
-![SIP data model](images/image2.png)
+![SIP data model](images/Fig_2_SIP.svg)
 
 **Figure 2**: Simplified view of a package structure.
 
@@ -107,7 +189,7 @@ If metadata is stored at the root level of the package, then there is generally 
 * `schemas` – for storing schemas of XML files included in the data or metadata.
 
 <a name="fig3"></a>
-![General SIP structure](images/fig_10_cs_ip_full.png "Example of the full use of the SIP structure.")
+![General SIP structure](images/Fig_3_SIP.svg "Example of the full use of the SIP structure.")
 
 **Figure 3:** Example of the full use of the SIP structure
 
@@ -163,7 +245,7 @@ In this regard, the SIP specification does not change or extend any of the requi
 
 The METS administrative metadata section `<amdSec>` is used to include or reference technical and preservation metadata.
 
-Although seldom used, preservation metadata can be included in an SIP. The guide on [Using PREMIS with METS](https://www.loc.gov/standards/premis/premis-mets.html) provides recommendations on how to use the `<amdSec>` element to reference PREMIS metadata.
+Although seldom used, preservation metadata can be included in an SIP. The guide on [Using PREMIS with METS](https://www.loc.gov/standards/premis/premis-mets.html) provides recommendations on how to use the `<amdSec>` element to reference PREMIS metadata. Preservation metadata is typically used to record the history of preservation events that influence the state of the information package. Normally, these take place after the package has been ingested into a digital repository, however an example of preservation event that can occur prior to the ingest process is the digitization of analogue material. This event takes place before the information is ingested and can be included in an SIP.
 
 The SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.4. of the CS IP).
 
@@ -329,18 +411,18 @@ Supplementary information.
 
 # Glossary
 
-| Term | Definition |
-|------|------------|
-| Archival creator | An organisation unit or individual that creates records and/or manages records during their active use. |
-| Archive          | An organisation that intends to preserve information for Access and (re)use by a Designated Community. |
-| Delivering organisation              | The organisation delivering an information package to the archive. For stating and extending the information use of the “Producer organisation name” and “Submitting organisation name” elements is recommended. |
-| ERMS                                 | A type of content management software known as an Electronic Records Management System. |
-| Information Package                  | A logical container composed of optional Content Information and optional associated Preservation Description Information. Associated with this Information Package is Packaging Information used to delimit and identify the Content Information and Package Description information used to facilitate searches for the Content Information. |
-| Ingest                               | The OAIS functional entity that contains the services and functions that accept Submission Information Packages from Producers, prepares Archival Information Packages for storage, and ensures that Archival Information Packages and their supporting Descriptive Information become established within the OAIS. |
-| OAIS                                 | The Open Archival Information System is an archive (and a standard: ISO 14721:2003), consisting of an organisation of people and systems that has accepted the responsibility to preserve information and make it available for a Designated Community. |
+| Term                                 | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Archival creator                     | An organisation unit or individual that creates records and/or manages records during their active use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Archive                              | An organisation that intends to preserve information for Access and (re)use by a Designated Community.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Delivering organisation              | The organisation delivering an information package to the archive. For stating and extending the information use of the “Producer organisation name” and “Submitting organisation name” elements is recommended.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ERMS                                 | A type of content management software known as an Electronic Records Management System.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Information Package                  | A logical container composed of optional Content Information and optional associated Preservation Description Information. Associated with this Information Package is Packaging Information used to delimit and identify the Content Information and Package Description information used to facilitate searches for the Content Information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Ingest                               | The OAIS functional entity that contains the services and functions that accept Submission Information Packages from Producers, prepares Archival Information Packages for storage, and ensures that Archival Information Packages and their supporting Descriptive Information become established within the OAIS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| OAIS                                 | The Open Archival Information System is an archive (and a standard: ISO 14721:2003), consisting of an organisation of people and systems that has accepted the responsibility to preserve information and make it available for a Designated Community.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Producing organisation               | The organisational unit or individual that has the authority to transfer records to an archive. Usually the producer is also the records creator but this is not always the case, sometimes the producer is different from the records creator. For example: An author dies and her literary executor gains the authority to transfer her papers to an archive. The author is the records creator and the literary executor is the producer. For example: Department X gets reorganised out of existence and Department Y, which takes over the functional responsibilities of Department X, gains the authority to transfer the records of Department X to the archive. Department X is the records creator and Department Y is the producer. Counter example: The Department of Widget Science transfers some of its own records to the archive. The Department of Widget Science is the records creator and the producer. |
-| Submission Information Package (SIP) | An Information Package that is delivered by the Producer to the OAIS for use in the construction or update of one or more AIPs and/or the associated Descriptive Information. |
-| Submitting organisation              | Name of the organisation submitting the package to the archive. Extends the delivery information since it may be the case that the content of a creator is held by another part of the organisation. |
+| Submission Information Package (SIP) | An Information Package that is delivered by the Producer to the OAIS for use in the construction or update of one or more AIPs and/or the associated Descriptive Information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Submitting organisation              | Name of the organisation submitting the package to the archive. Extends the delivery information since it may be the case that the content of a creator is held by another part of the organisation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 # Bibliography
 
@@ -366,4 +448,11 @@ URL: [https://public.ccsds.org/Pubs/651x1b1.pdf](https://public.ccsds.org/Pubs/6
 14.	Records Creator, Submission Agreements: Glossary of Terms, 2015, URL: http://sites.tufts.edu/dca/about-us/research-initiatives/taper-tufts-accessioning-program-for-electronic-records/project-documentation/submission-agreements-glossary-of-terms/](http://sites.tufts.edu/dca/about-us/research-initiatives/taper-tufts-accessioning-program-for-electronic-records/project-documentation/submission-agreements-glossary-of-terms/)
 15.	Reference Model for an Open Archival Information System (OAIS), 2012,
 URL: [https://public.ccsds.org/Pubs/650x0m2.pdf](https://public.ccsds.org/Pubs/650x0m2.pdf)
-16. Lavoie B, The Open Archival Information System (OAIS) Reference Model: Introductory Guide (2nd Edition), 2014, URL: [http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02](http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02)
+1.  Lavoie B, The Open Archival Information System (OAIS) Reference Model: Introductory Guide (2nd Edition), 2014, URL: [http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02](http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02)
+
+
+
+/DILCISExtensionSIPMETS.xsd
+
+https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd
+https://dilcis.eu/XML/METS/DILCISExtensionSIPMETS.xsd
