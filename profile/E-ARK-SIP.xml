@@ -395,7 +395,7 @@
             </requirement>
         </metsHdr>
         <dmdSec ID="dmdSecElement">
-            <requirement ID="dummy1" REQLEVEL="SHOULD">
+            <requirement REQLEVEL="SHOULD">
                 <description>
                     <head>Descriptive metadata</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">Follows the requirements in the CSIP profile.</p>
@@ -403,7 +403,7 @@
             </requirement>
         </dmdSec>
         <amdSec ID="amdSecElement">
-            <requirement ID="dummy2" REQLEVEL="SHOULD">
+            <requirement REQLEVEL="SHOULD">
                 <description>
                     <head>Administrative metadata</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">Follows the requirements in the CSIP profile.</p>

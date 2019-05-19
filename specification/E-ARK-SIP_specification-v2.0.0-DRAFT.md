@@ -1,139 +1,6 @@
-# I. ​Acknowledgements
+# Preface
 
-The Common Specification for Information Packages was first developed within the E-ARK project in 2014 – 2017. E-ARK was an EC-funded pilot action project in the Competiveness and Innovation Programme 2007- 2013, Grant Agreement no. 620998 under the Policy Support Programme.
-
-We would like to thank the National Archives of Sweden and Karin Bredenberg for their support and the availability of the Swedish national Common Specifications, upon which most of this document has been built.
-
-The authors of this deliverable would like to thank all national archives, tool developers and other stakeholders who provided valuable knowledge about their requirements for information packages and feedback to this specification!
-
-
-# II. ​Contact & Feedback
-
-The Common Specification for Information Packages is maintained by the Digital Information LifeCycle Interoperability Standard Board (DILCIS Board). For further information about the DILCIS Board or feedback on the current document please consult the website http://www.dilcis.eu/ or contact us at <dasboard@dlmforum.eu.>  
-
-
-# III. ​Authors
-
-| Name             | Organisation                 |
-| ---------------- | ---------------------------- |
-| Miguel Ferreira  | KEEP SOLUTIONS               |
-| Hélder Silva     | KEEP SOLUTIONS               |
-| Karin Bredenberg | National Archives of Sweden  |
-| Carl Wilson      | Open Preservation Foundation |
-
-
-# IV. ​Revision History
-
-| Revision No. | Date       | Authors(s)      | Organisation | Description                                |
-| ------------ | ---------- | --------------- | ------------ | ------------------------------------------ |
-| 2.0          | 2019-05-31 | Miguel Ferreira | KEEPS        | Version 2.0 of the specification published |
-
-
-
-# V. Relationship to other E-ARK specifications
-
-This specification is one of several interconnected specifications. The single most important aim and goal for all of the specifications combined is the provision of a common set of specifications for packaging digital information for archiving purposes. The specifications are based on common, international standards for transmitting, describing and preserving digital data. They are created to help data creators, software developers and digital archives to tackle the challenge of short, medium and long-term data management and reuse in a sustainable, authentic, cost-efficient, manageable and interoperable way. 
-
-The main standard which the specifications make use of and is built upon is the Reference model for an Open Archival Information System (OAIS)  ([OAIS Reference model](https://www.iso.org/standard/57284.html)) which has Information Packages as its basis. Familiarity with the core functional entities of OAIS is a prerequisite for understanding the specifications.  
-
-A visualization of the current specification network can be seen here:
-
-<a name="fig1"></a>
-![Set of E-ARK Specifications](images/Fig_1_SIP.svg "Relationships between all E-ARK specifications")
-
-**Figure 1**: Relationships between all E-ARK specifications.
-
-The purposes of the individual specifications (including this one) can be seen in the following table:
-
-
-<table>
-  <tr>
-   <td>Specification
-   </td>
-   <td>Aim and goals
-   </td>
-  </tr>
-  <tr>
-   <td>Common Specification for Information Packages
-   </td>
-   <td>This document introduces the concept of a Common Specification for Information Packages. It aims to serve three main purposes: 
-<ul>
-
-<li>Establish a common understanding of the requirements which need to be met in order to achieve interoperability of Information Packages; 
-
-<li>Establish a common base for the development of more specific Information Package definitions and tools within the digital preservation community; 
-
-<li>Propose the details of an XML-based implementation of the requirements using, to the largest possible extent, standards which are widely used in international digital preservation. 
-
-<p>
-Ultimately the goal of the Common Specification is to reach a level of interoperability between all Information Packages so that tools implementing the Common Specification can be taken up by institutions without needing major modifications or adaptations. 
-</li>
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td>E-ARK SIP
-   </td>
-   <td>The main aims and goals of this specification are to:
-<ul>
-
-<li>Define the general structure for a Submission Information Package format in a way that it is suitable for a wide variety of archival scenarios, e.g. document and image collections, databases or geographical data;
-
-<li>Enhance interoperability between Producers and Archives;
-
-<li>Recommend best practices regarding metadata, content and structure of Submission Information Packages.
-</li>
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td>E-ARK AIP
-   </td>
-   <td>The main aims and goals of this specification are to:
-<ul>
-
-<li>To define a generic structure of the AIP format in a way that it is suitable for a wide variety of data types, such as document and image collections, archival records, databases or geographical data.
-
-<li>To recommend a set of metadata related to the structural and the preservation aspects of the AIP as implemented by the reference implementation (earkweb).
-
-<li>To ensure the format is also suitable to store large quantities of data.
-</li>
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td>E-ARK DIP
-   </td>
-   <td>The main aims and goals of this specification are to:
-<ul>
-
-<li>To define a generic structure of the DIP format in a way that it is suitable for a wide variety of archival records, such as document and image collections, databases or geographical data.
-
-<li>To recommend a set of metadata related to the structural and the access aspects of the DIP.
-</li>
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td>Content Information Type Specifications
-   </td>
-   <td>The main aim and goal of a Content Information Type Specification is to:
-<ul>
-
-<li>define in technical terms how data and metadata must be formatted and placed within a CS IP Information Package in order to achieve interoperability in exchanging specific Content Information.
-
-<p>
-The number of possible Content Information Type Specifications is potentially unlimited. For at list of existing Content Information Type Specifications see [link], and read more about  Content Information Type Specifications in the Common Specification for Information Packages [link].
-</li>
-</ul>
-   </td>
-  </tr>
-</table>
- 
-## Organizational anchorage
-
-This specification is maintained by the Digital Information LifeCycle Interoperability Standards Board (DILCIS Board, [http://dilcis.eu/](http://dilcis.eu/)). The DILCIS Board was created to enhance and maintain the draft specifications developed in the European Archival Records and Knowledge Preservation Project (E-ARK project, [http://eark-project.com/](http://eark-project.com/)) which concluded in January 2017. The Board consists of eight members, but there is no limitation on the number of participants taking part in the work. All Board documents and specifications are stored in GitHub ([https://github.com/DILCISBoard](https://github.com/DILCISBoard)) while published versions are made available on the Board webpage. Since 2018 the DILCIS Board has been responsible for the core specifications in the Connecting Europe Facility eArchiving Building Block[https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eArchiving](https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eArchiving)). 
-
+TBD
 
 #  Introduction
 
@@ -154,9 +21,9 @@ This document describes how to produce and parse E-ARK Submission Information Pa
 The target audience for this specification is records creators, archival institutions and software providers that are responsible with preparing, packaging, delivering and receiving packages of information to be archived in an OAIS, i.e. pre-ingest and ingest functional units.
 
 
-## Definition of an SIP
+## Definition of SIP
 
-The OAIS reference model defines an SIP as:
+The OAIS reference model defines a Submission Information Package (SIP) as:
 
 > An Information Package that is delivered by the Producer to the OAIS for use in the construction or update of one or more AIPs and/or the associated Descriptive Information.
 
