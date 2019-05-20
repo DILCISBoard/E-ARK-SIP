@@ -175,7 +175,7 @@
             <requirement ID="SIP10" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Archival creator agent role</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">The role of the archival creator is "ARCHIVIST".</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">The role of the person(s) or institution(s) responsible for the document/collection.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent/@ROLE</dd>
                         <dt>Cardinality</dt><dd>1..1</dd>
@@ -236,7 +236,7 @@
             <requirement ID="SIP16" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Submitting agent role</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">The role of the agent submitting the package is "SUBMITTER".</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">The role of the person(s) or institution(s) responsible for creating and/or submitting the package.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent/@ROLE</dd>
                         <dt>Cardinality</dt><dd>1..1</dd>
