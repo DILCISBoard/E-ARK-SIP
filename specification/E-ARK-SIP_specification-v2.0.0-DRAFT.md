@@ -34,7 +34,7 @@ In summary, the SIP constitutes a package of information that is ready to be sen
 
 # Structure
 
-The SIP specification follows a structure that is common to all Information Packages in the E-ARK set of specifications. The common structure is fully described in the Common Specification for Information Packages (see Section 4. CS IP structure).
+The SIP specification follows a structure that is common to all Information Packages in the E-ARK set of specifications. The common structure is fully described in the Common Specification for Information Packages (see Section 4. CSIP structure).
 
 In its simplest form, an SIP consists of metadata and zero or more representations, also composed of `data` and `metadata`, as seen in [Figure 2](#fig2). A package with zero representations means that it only includes metadata. This is a special type of Information Package that enables Producers to deliver updates to the metadata to previously ingested packages.
 
@@ -67,15 +67,15 @@ The details of the internal structure of an SIP including its `data` and `metada
 
 The Metadata Encoding and Transmission Standard (METS) is a standard for encoding descriptive, administrative, and structural metadata expressed using the XML Schema Language.
 
-The METS Schema for an E-ARK SIP is the same as for an E-ARK AIP or an E-ARK DIP. The actual requirements of the METS used in the E-ARK SIP are defined in the CS IP on section "5.3 Use of METS". However, there are some small differences between a METS instance of an E-ARK SIP and an E-ARK CS IP. Most of the differences consist of setting values of particular attributes, defining controlled vocabularies or making optional elements mandatory.
+The METS Schema for an E-ARK SIP is the same as for an E-ARK AIP or an E-ARK DIP. The actual requirements of the METS used in the E-ARK SIP are defined in the CSIP on section "5.3 Use of METS". However, there are some small differences between a METS instance of an E-ARK SIP and an E-ARK CSIP. Most of the differences consist of setting values of particular attributes, defining controlled vocabularies or making optional elements mandatory.
 
-These differences are manifested by means of a METS profile. The SIP METS profile extends the CS IP METS profile. As stated before, in this document only the differences between the SIP METS and the CS IP METS are highlighted. In order to fully understand how to create or interpret the METS file included within an SIP, it is necessary to read the CS IP.
+These differences are manifested by means of a METS profile. The SIP METS profile extends the CSIP METS profile. As stated before, in this document only the differences between the SIP METS and the CSIP METS are highlighted. In order to fully understand how to create or interpret the METS file included within an SIP, it is necessary to read the CSIP.
 
 ## Extended use of the METS root element (element `mets`)
 
 The root of a METS document can contain a number of optional attributes, namespaces (`xmlns:`), locations for external schemas (`xsi:`) and a number of other elements.
 
-The following table describes the differences in the `mets` element between the E-ARK SIP and the CS IP.
+The following table describes the differences in the `mets` element between the E-ARK SIP and the CSIP.
 
 {% include_relative implementation/metadata/mets/mets-root/requirements.md %}
 
@@ -91,7 +91,7 @@ The `metsHdr` is also used to indicate the type of behaviour to be expected from
 
 It is also in the `metsHdr` that the Submission Agreement to which a particular SIP conforms can be identified (see `metsHdr/altrecordID/@TYPE=”SUBMISSIONAGREEMENT`).
 
-The following table describes the differences in the `metsHdr` between an E-ARK SIP and the CS IP.
+The following table describes the differences in the `metsHdr` between an E-ARK SIP and the CSIP.
 
 
 {% include_relative implementation/metadata/mets/metshdr/requirements.md %}
@@ -106,7 +106,7 @@ The METS descriptive metadata section `<dmdSec>` is responsible for recording de
 
 The SIP specification itself does not prescribe of any particular metadata format. It is a role of the OAIS together with the Producer to set the rules in terms of descriptive metadata. These rules should be set and agreed on in the Submission Agreement.
 
-In this regard, the SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.3 of the CS IP).
+In this regard, the SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.3 of the CSIP).
 
 ## Extended use of METS administrative metadata section (element `amdSec`)
 
@@ -114,7 +114,7 @@ The METS administrative metadata section `<amdSec>` is used to include or refere
 
 Although seldom used, preservation metadata can be included in an SIP. The guide on [Using PREMIS with METS](https://www.loc.gov/standards/premis/premis-mets.html) provides recommendations on how to use the `<amdSec>` element to reference PREMIS metadata. Preservation metadata is typically used to record the history of preservation events that influence the state of the information package. Normally, these take place after the package has been ingested into a digital repository, however an example of preservation event that can occur prior to the ingest process is the digitization of analogue material. This event takes place before the information is ingested and can be included in an SIP.
 
-The SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.4. of the CS IP).
+The SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.4. of the CSIP).
 
 
 ## Extended use of the METS file section (element `fileSec`)
@@ -123,7 +123,7 @@ The METS file section element `<fileSec>` is used to describe all the components
 
 The main purpose of the METS file section is to serve as a "table of contents" or "manifest" for all the files included in the package, thus allowing the OAIS to validate the integrity and completeness of the files included in the package. This means that for all the files included in the package, their location and checksum need to be available and described in the `fileSec` element. That includes files in the `data`, `schemas` and in the `documentation` folders.
 
-The following table describes the differences in the `fileSec` between an E-ARK SIP and the CS IP.
+The following table describes the differences in the `fileSec` between an E-ARK SIP and the CSIP.
 
 
 {% include_relative implementation/metadata/mets/filesec/requirements.md %}
@@ -134,9 +134,9 @@ The following table describes the differences in the `fileSec` between an E-ARK 
 
 ## Extended use of the METS structural map (element `structMap`)
 
-The mandatory METS structural map element `<structMap>` is intended to provide an overview of the components included in the package. It can also link elements of that structure to associated content files and metadata. In the CS IP the `structMap` describes the higher-level structure of all the content in the root and may link to existing representations.
+The mandatory METS structural map element `<structMap>` is intended to provide an overview of the components included in the package. It can also link elements of that structure to associated content files and metadata. In the CSIP the `structMap` describes the higher-level structure of all the content in the root and may link to existing representations.
 
-The SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.6 of the CS IP)
+The SIP specification does not change or extend any of the requirements already defined by the Common Specification for Information Packages (for more information see section 5.3.6 of the CSIP)
 
 # Content Information Type Specifications
 
@@ -144,7 +144,7 @@ The concept of a Content Information Type Specification is essentially an extens
 
 A Content Information Type can be understood as a category of Content Information, for example, relational databases, scientific data or digitised maps. A Content Information Type Specification defines in technical terms how data and metadata (mainly in regard to the Information Object) should be formatted and placed within an Information Package in order to achieve interoperability in exchanging specific Content Information.
 
-The SIP presents no extensions or exceptions to the concept of Content Information Type as it is formalised in the Common Specification for Information Packages. More information on this subject can be found in sections 1.2, 1.3 and 6.1 of the CS IP.
+The SIP presents no extensions or exceptions to the concept of Content Information Type as it is formalised in the Common Specification for Information Packages. More information on this subject can be found in sections 1.2, 1.3 and 6.1 of the CSIP.
 
 ##	 Submission Agreement
 

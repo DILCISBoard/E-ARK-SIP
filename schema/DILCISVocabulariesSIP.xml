@@ -45,11 +45,11 @@
         </Entry>
         <Entry>
             <Term lang="en">REFERENCECODE</Term>
-            <Definition>The alternative record ID gives the archvial reference code for the content.</Definition>
+            <Definition>The alternative record ID gives the archival reference code for the content.</Definition>
         </Entry>
         <Entry>
             <Term lang="en">PREVIOUSREFERENCECODE</Term>
-            <Definition>The alternative record ID gives the previous archvial reference code for the content.</Definition>
+            <Definition>The alternative record ID gives the previous archival reference code for the content.</Definition>
         </Entry>
     </Vocabulary>
     <Vocabulary Name="VocabularyNoteType">
