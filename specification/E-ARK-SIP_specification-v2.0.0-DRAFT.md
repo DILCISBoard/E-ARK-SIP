@@ -1,7 +1,3 @@
-# Preface
-
-TBD
-
 #  Introduction
 
 According to the Open Archival Information System Reference Model (OAIS) every submission of information to an archive occurs as one or more discrete transmissions of Submission Information Packages (SIP). Unfortunately, the OAIS itself does not specify how these information packages should look like.
@@ -77,10 +73,10 @@ The root of a METS document can contain a number of optional attributes, namespa
 
 The following table describes the differences in the `mets` element between the E-ARK SIP and the CSIP.
 
-{% include_relative implementation/metadata/mets/mets-root/requirements.md %}
+!INCLUDE "implementation/metadata/mets/mets-root/requirements.md"
 
 
-{% include_relative implementation/metadata/mets/mets-root/examples.md %}
+!INCLUDE "implementation/metadata/mets/mets-root/examples.md"
 
 ## Extended use of the METS header (element `metsHdr`)
 
@@ -94,9 +90,9 @@ It is also in the `metsHdr` that the Submission Agreement to which a particular 
 The following table describes the differences in the `metsHdr` between an E-ARK SIP and the CSIP.
 
 
-{% include_relative implementation/metadata/mets/metshdr/requirements.md %}
+!INCLUDE "implementation/metadata/mets/metshdr/requirements.md"
 
-{% include_relative implementation/metadata/mets/metshdr/examples.md %}
+!INCLUDE "implementation/metadata/mets/metshdr/examples.md"
 
 
 
@@ -126,9 +122,9 @@ The main purpose of the METS file section is to serve as a "table of contents" o
 The following table describes the differences in the `fileSec` between an E-ARK SIP and the CSIP.
 
 
-{% include_relative implementation/metadata/mets/filesec/requirements.md %}
+!INCLUDE "implementation/metadata/mets/filesec/requirements.md"
 
-{% include_relative implementation/metadata/mets/filesec/examples.md %}
+!INCLUDE "implementation/metadata/mets/filesec/examples.md"
 
 
 
@@ -263,17 +259,17 @@ Supplementary information.
 ## Appendix B: E-ARK Information Package METS example
 
 
-{% include_relative appendices/examples/examples.md %}
+!INCLUDE "appendices/examples/examples.md"
 
 
 ## Appendix C: External Schema
 
-{% include_relative appendices/schema/schema.md %}
+!INCLUDE "appendices/schema/schema.md"
 
 
 ## Appendix E: A Full List of E-ARK SIP Requirements
 
-{% include_relative appendices/requirements/requirements.md %}
+!INCLUDE "appendices/requirements/requirements.md"
 
 
 # Glossary
@@ -308,7 +304,7 @@ URL: [http://www.loc.gov/standards/premis/guidelines-premismets.pdf](http://www.
 9.	METS Profile Components, 2011, URL: [http://www.loc.gov/standards/mets/profile_docs/components.html](http://www.loc.gov/standards/mets/profile_docs/components.html)
 10.	METS Profiles, 2012, URL: [http://www.loc.gov/standards/mets/mets-profiles.html](http://www.loc.gov/standards/mets/mets-profiles.html)
 11.	Producer, Submission Agreements: Glossary of Terms, 2015, URL: [http://sites.tufts.edu/dca/about-us/research-initiatives/taper-tufts-accessioning-program-for-electronic-records/project-documentation/submission-agreements-glossary-of-terms/](http://sites.tufts.edu/dca/about-us/research-initiatives/taper-tufts-accessioning-program-for-electronic-records/project-documentation/submission-agreements-glossary-of-terms/)
-12.	Producer-Archive Interface Methodology Abstract Standard (PAIMAS), 2004,  
+12.	Producer-Archive Interface Methodology Abstract Standard (PAIMAS), 2004,
 URL: [https://public.ccsds.org/Pubs/651x0m1.pdf](https://public.ccsds.org/Pubs/651x0m1.pdf)
 13.	Producer-Archive Interface Specification (PAIS) – CCSDS, 2014,
 URL: [https://public.ccsds.org/Pubs/651x1b1.pdf](https://public.ccsds.org/Pubs/651x1b1.pdf)

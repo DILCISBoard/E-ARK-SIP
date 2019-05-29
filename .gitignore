@@ -1,1 +1,5 @@
 .DS_Store
+.vagrant*
+.venv
+Gemfile.lock
+specification/eark-sip-pdf.md
