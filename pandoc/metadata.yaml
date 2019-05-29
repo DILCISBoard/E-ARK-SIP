@@ -1,0 +1,22 @@
+---
+title:  'E-ARK Submission Information Packages (SIP)'
+abstract: |
+        ABSTRACT HERE.
+margin-left:    1in
+margin-right:   1in
+
+version:	"2.0.0"
+date: "31.05.2019"
+titlepage: true
+titlepage-color: "186b9e"
+titlepage-text-color: "3adeca"
+titlepage-rule-color: "3adeca"
+titlepage-rule-height: 1
+logo:	../spec-publisher/pandoc/img/DILCISlogo.png
+toc-title:	'Table of contents'
+footer-center:	"Version "
+header-right:	DILCIS Board
+reference-section-title:	'Bibliography'
+autoSectionLabels: True
+listings-disable-line-numbers:	True
+...

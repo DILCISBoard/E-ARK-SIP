@@ -8,7 +8,7 @@ jdk:
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install -y texlive texlive-base texlive-latex-extra texlive-fonts-extra python-virtualenv
+  - sudo apt-get install -y texlive texlive-base texlive-latex-extra texlive-fonts-extra python-virtualenv librsvg2-bin
   - wget https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-linux.tar.gz
   - tar -xzvf pandoc-2.5-linux.tar.gz
   - rm pandoc-2.5-linux.tar.gz
@@ -16,37 +16,15 @@ before_install:
   - sudo chmod +x /opt/pandoc-2.5/bin/pandoc
   - sudo ln -s /opt/pandoc-2.5/bin/pandoc /usr/local/bin/pandoc
   - sudo ln -s /opt/pandoc-2.5/bin/pandoc-citeproc /usr/local/bin/pandoc-citeproc
-  - virtualenv -p python3 .venv/markdown
-  - source .venv/markdown/bin/activate
-  - pip install markdownPP
-  - deactivate
 
 script:
-  - cd utils/mets-profile-processor
+  - cd spec-publisher
   - mvn clean package
-  - java -jar target/mets-profile-proc.jar ../.././profile/E-ARK-SIP.xml
-  - cd ../..
-  - bundle install
-  - bundle exec jekyll build
-  - bundle exec htmlproofer ./_site --file-ignore /javadoc/ --only-4xx --check-html
-  - source .venv/markdown/bin/activate
-  - markdown-pp pandoc/pan-index.md -o pandoc/pdf.md
-  - deactivate
-  - >
-    pandoc  --include-before-body pandoc/include-before.tex
-    --reference-links
-    --filter pandoc-citeproc
-    --from markdown
-    --template pandoc/templates/eisvogel.latex
-    --listings
-    --toc
-    --number-sections
-    pandoc/pdf.md
-    pandoc/metadata.yaml
-    -o csip-specification.pdf
+  - java -jar target/mets-profile-proc.jar ../profile/E-ARK-SIP.xml
+  - cd ..
+  - bash create-pdf.sh
+  - bash create-site.sh
 
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
-    
