@@ -316,10 +316,3 @@ URL: [https://public.ccsds.org/Pubs/651x1b1.pdf](https://public.ccsds.org/Pubs/6
 15.	Reference Model for an Open Archival Information System (OAIS), 2012,
 URL: [https://public.ccsds.org/Pubs/650x0m2.pdf](https://public.ccsds.org/Pubs/650x0m2.pdf)
 1.  Lavoie B, The Open Archival Information System (OAIS) Reference Model: Introductory Guide (2nd Edition), 2014, URL: [http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02](http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02)
-
-
-
-/DILCISExtensionSIPMETS.xsd
-
-https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd
-https://dilcis.eu/XML/METS/DILCISExtensionSIPMETS.xsd
