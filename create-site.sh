@@ -28,3 +28,4 @@ cp -R spec-publisher/res/md/figs docs/
 cp -R profile docs/
 cp -R schema docs/
 cp -R archive docs/
+cp -R examples docs/

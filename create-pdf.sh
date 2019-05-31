@@ -2,10 +2,7 @@
 echo "Generating PDF document from markdown"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$SCRIPT_DIR" || exit
-bash "$SCRIPT_DIR/spec-publisher/utils/create-venv.sh"
-source "$SCRIPT_DIR/.venv/markdown/bin/activate"
-markdown-pp PDF.md -o docs/eark-sip-pdf.md -e tableofcontents
-deactivate
+
 if [ ! -d ~/.pandoc/templates ]
 then
   mkdir -p ~/.pandoc/templates
@@ -17,11 +14,20 @@ then
   mkdir -p "$SCRIPT_DIR/docs/pdf/"
 fi
 
+bash "$SCRIPT_DIR/spec-publisher/utils/create-venv.sh"
+source "$SCRIPT_DIR/.venv/markdown/bin/activate"
+markdown-pp PDF.md -o docs/eark-sip-pdf.md -e tableofcontents
+deactivate
+
 cd docs || exit
-pandoc  --from markdown-markdown_in_html_blocks \
+pandoc  --reference-links \
+        --filter pandoc-citeproc \
+        --from gfm \
         --template eisvogel \
         --listings \
         --toc \
         eark-sip-pdf.md \
-        "$SCRIPT_DIR/pandoc/metadata.yaml" \
-        -o "$SCRIPT_DIR/docs/pdf/eark-sip.pdf"
+        --metadata-file ../pandoc/metadata.yaml \
+        -o pdf/eark-sip.pdf
+
+cd "$SCRIPT_DIR" || exit

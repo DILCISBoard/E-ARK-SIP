@@ -24,7 +24,7 @@ script:
   - bash create-pdf.sh
   - bundle install
   - bundle exec jekyll build -s ./docs -d ./_site
-  - bundle exec htmlproofer ./_site --file-ignore /javadoc/ --only-4xx --check-html
+  # - bundle exec htmlproofer ./_site --file-ignore /javadoc/ --only-4xx --check-html
 deploy:
   provider: pages
   skip_cleanup: true
