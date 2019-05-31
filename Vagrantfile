@@ -82,8 +82,8 @@ Vagrant.configure("2") do |config|
     if [ ! -d /home/vagrant/.pandoc/templates ]
     then
       sudo -u vagrant mkdir -p /home/vagrant/.pandoc/templates
-      sudo -u vagrant cp /vagrant/spec-publisher/pandoc/templates/eisvogel.latex /home/vagrant/.pandoc/templates/eisvogel.latex
     fi
+    sudo -u vagrant cp /vagrant/spec-publisher/pandoc/templates/eisvogel.latex /home/vagrant/.pandoc/templates/eisvogel.latex
 
     cd /vagrant
     sudo -u vagrant /vagrant/create-site.sh
