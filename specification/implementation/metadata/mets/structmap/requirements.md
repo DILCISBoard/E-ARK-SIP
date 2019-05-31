@@ -1,3 +1,3 @@
 | ID | Name & Location | Description & usage | Cardinality & Level |
 | -- | --------------- | ------------------- | ------------------- |
-| <a name="dymmy3"></a>**dymmy3** | **Structural description of the package** <br/>  | Follows the requirements in the CSIP profile. |  <br/> MUST |
+| <a name="REF_CSIP_3"></a>**REF_CSIP_3** | **Structural description of the package** <br/>  | The DIP structMap element should comply with  <br/>  structMap requirements in the CSIP profile. |  <br/> SHOULD |

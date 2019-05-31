@@ -162,9 +162,11 @@ The recommended list of semantic elements is inspired by the PAIMAS requirements
 
 # Appendices
 
-Supplementary information.
+This section includes supplementary information that may help the reader to better understand this specification.
 
 ## Appendix A: Submission Agreement semantic elements
+
+The following list of semantic elements provide a starting point for anyone willing to prepare a Submission Agreement. This list is not prescriptive, or by any means complete. It merely serves the purpose of outlining the most relevant semantic elements that should be present in a Submission Agreement.
 
 ### Project information
 
@@ -254,8 +256,6 @@ Supplementary information.
 	* **Mitigation Option** - Meant for listing all mitigation options (e.g. define the designated community together with producers) for the risks.
 
 
-
-
 ## Appendix B: E-ARK Information Package METS example
 
 
@@ -311,4 +311,4 @@ URL: [https://public.ccsds.org/Pubs/651x1b1.pdf](https://public.ccsds.org/Pubs/6
 14.	Records Creator, Submission Agreements: Glossary of Terms, 2015, URL: http://sites.tufts.edu/dca/about-us/research-initiatives/taper-tufts-accessioning-program-for-electronic-records/project-documentation/submission-agreements-glossary-of-terms/](http://sites.tufts.edu/dca/about-us/research-initiatives/taper-tufts-accessioning-program-for-electronic-records/project-documentation/submission-agreements-glossary-of-terms/)
 15.	Reference Model for an Open Archival Information System (OAIS), 2012,
 URL: [https://public.ccsds.org/Pubs/650x0m2.pdf](https://public.ccsds.org/Pubs/650x0m2.pdf)
-1.  Lavoie B, The Open Archival Information System (OAIS) Reference Model: Introductory Guide (2nd Edition), 2014, URL: [http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02](http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02)
+16.  Lavoie B, The Open Archival Information System (OAIS) Reference Model: Introductory Guide (2nd Edition), 2014, URL: [http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02](http://www.dpconline.org/component/docman/doc_download/1359-dpctw14-02)

@@ -9,8 +9,8 @@ The schema is used with a namespace prefix of sip. <br/>
 
 ## Controlled Vocabularies
 
-<a name="VocabularyRECORDSTATUS"></a>
 ### Package status
+<a name="VocabularyRECORDSTATUS"></a>
 **Maintained By:** DILCIS Board <br/> 
 **Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
 **Context:** Used in @RECORDSTATUS <br/> 
@@ -18,8 +18,8 @@ The schema is used with a namespace prefix of sip. <br/>
 Describes the status of the package. <br/> 
 
 
-<a name="VocabularyaltrecordIDTYPE"></a>
 ### Alternative record ID's
+<a name="VocabularyaltrecordIDTYPE"></a>
 **Maintained By:** DILCIS Board <br/> 
 **Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
 **Context:** Used in altrecordID/@TYPE <br/> 
@@ -27,8 +27,8 @@ Describes the status of the package. <br/>
 Describes the type of the alternative record ID. <br/> 
 
 
-<a name="VocabularyNoteType"></a>
 ### Note type
+<a name="VocabularyNoteType"></a>
 **Maintained By:** DILCIS Board <br/> 
 **Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
 **Context:** Used in @csip:NOTETYPE <br/> 

@@ -11,7 +11,7 @@
     <mets:name>The agency, Personnel</mets:name>
     <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
   </mets:agent>
-  <mets:agent ROLE="CREATOR" TYPE="INDIVIDUAL">
+  <mets:agent ROLE="OTHER" TYPE="INDIVIDUAL" OTHERROLE="SUBMITTER">
     <mets:name>Sven Svensson</mets:name>
     <mets:note>Phone: 08-123456, Email: sven.svensson@mail.mail</mets:note>
   </mets:agent>
