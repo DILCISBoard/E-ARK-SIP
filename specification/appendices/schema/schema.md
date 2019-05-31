@@ -13,7 +13,7 @@ The schema is used with a namespace prefix of sip. <br/>
 <a name="VocabularyRECORDSTATUS"></a>
 **Maintained By:** DILCIS Board <br/> 
 **Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in @RECORDSTATUS <br/> 
+**Context:** Used in `@RECORDSTATUS` <br/> 
 **Description:**   <br/> 
 Describes the status of the package. <br/> 
 
@@ -22,7 +22,7 @@ Describes the status of the package. <br/>
 <a name="VocabularyaltrecordIDTYPE"></a>
 **Maintained By:** DILCIS Board <br/> 
 **Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in altrecordID/@TYPE <br/> 
+**Context:** Used in `altrecordID/@TYPE` <br/> 
 **Description:**   <br/> 
 Describes the type of the alternative record ID. <br/> 
 
@@ -31,7 +31,7 @@ Describes the type of the alternative record ID. <br/>
 <a name="VocabularyNoteType"></a>
 **Maintained By:** DILCIS Board <br/> 
 **Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in @csip:NOTETYPE <br/> 
+**Context:** Used in `@csip:NOTETYPE` <br/> 
 **Description:**   <br/> 
 Describes the type of a note for an agent. <br/> 
 
