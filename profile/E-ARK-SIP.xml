@@ -399,20 +399,20 @@
             </requirement>
         </metsHdr>
         <dmdSec ID="dmdSecElement">
-            <requirement REQLEVEL="SHOULD">
-                <description>
-                    <head>Descriptive metadata</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Follows the requirements in the CSIP profile.</p>
-                </description>
-            </requirement>
+          <requirement ID="REF_CSIP_1" REQLEVEL="SHOULD">
+              <description>
+                  <head>Descriptive metadata</head>
+                  <p xmlns="http://www.w3.org/1999/xhtml">The DIP dmdSec element should comply with <a href="http://earkcsip.dilcis.eu/#533-use-of-the-mets-descriptive-metadata-section-element-dmdsec"> dmdSec requirements in the CSIP profile.</a></p>
+              </description>
+          </requirement>
         </dmdSec>
         <amdSec ID="amdSecElement">
-            <requirement REQLEVEL="SHOULD">
-                <description>
-                    <head>Administrative metadata</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Follows the requirements in the CSIP profile.</p>
-                </description>
-            </requirement>
+          <requirement ID="REF_CSIP_2" REQLEVEL="SHOULD">
+              <description>
+                  <head>Administrative metadata</head>
+                  <p xmlns="http://www.w3.org/1999/xhtml">The DIP amdSec element should comply with <a href="http://earkcsip.dilcis.eu/#534-use-of-the-mets-administrative-metadata-section-element-amdsec"> amdSec requirements in the CSIP profile.</a></p>
+              </description>
+          </requirement>
         </amdSec>
         <fileSec ID="fileSecElement">
             <requirement ID="SIP32" REQLEVEL="MAY" EXAMPLES="fileSecExample1">
@@ -463,28 +463,32 @@
             </requirement>
         </fileSec>
         <structMap ID="structMapElement">
-            <requirement ID="dymmy3" REQLEVEL="MUST">
-                <description>
-                    <head>Structural description of the package</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Follows the requirements in the CSIP profile.</p>
-                </description>
-            </requirement>
+          <requirement ID="REF_CSIP_3"  REQLEVEL="SHOULD">
+              <description>
+                <head>Structural description of the package</head>
+                  <p xmlns="http://www.w3.org/1999/xhtml">The DIP structMap element should comply with <a href="http://earkcsip.dilcis.eu/#536-use-of-the-mets-structural-map-structmap"> structMap requirements in the CSIP profile.</a></p>
+              </description>
+          </requirement>
          </structMap>
          <structLink ID="structLinkElement">
-            <requirement ID="dymmy4"  REQLEVEL="MAY">
-                <description>
-                    <head>structLink</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Section not defined or used in CSIP or SIP, additional own uses may occur.</p>
-                </description>
-            </requirement>
-        </structLink>
+           <requirement REQLEVEL="MAY" ID="REF_METS_1">
+               <description>
+                   <head>structLink</head>
+                   <p xmlns="http://www.w3.org/1999/xhtml">Section not defined or used in CSIP, additional own uses may occur.</p>
+                   <p xmlns="http://www.w3.org/1999/xhtml">Information regarding the structural links is found in the <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
+                   <p xmlns="http://www.w3.org/1999/xhtml">Information regarding the structural links is found in the <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
+               </description>
+           </requirement>
+         </structLink>
         <behaviorSec ID="behaviorSecElement">
-            <requirement ID="dymmy5" REQLEVEL="MAY">
-                <description>
-                    <head>behaviorSec</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Section not defined or used in CSIP or SIP, additional own uses may occur.</p>
-                </description>
-            </requirement>
+          <requirement REQLEVEL="MAY" ID="REF_METS_2">
+              <description>
+                  <head>behaviorSec</head>
+                  <p xmlns="http://www.w3.org/1999/xhtml">Section not defined or used in CSIP, additional own uses may occur.</p>
+                  <p xmlns="http://www.w3.org/1999/xhtml">Information regarding the behavior section is found in the <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
+                  <p xmlns="http://www.w3.org/1999/xhtml">Information regarding the behavior section is found in the <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
+              </description>
+          </requirement>
         </behaviorSec>
     </structural_requirements>
     <technical_requirements>
