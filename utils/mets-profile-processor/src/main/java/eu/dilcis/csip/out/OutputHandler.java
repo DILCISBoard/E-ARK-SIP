@@ -42,6 +42,9 @@ public final class OutputHandler {
 	 */
 	private OutputHandler(final File outFile) throws IOException {
 		super();
+		if (!outFile.getParentFile().exists()) {
+			outFile.getParentFile().mkdirs();
+		}
 		File output = new File(outFile.getParentFile(), outFile.getName());
 		this.out = new FileWriter(output);
 	}
