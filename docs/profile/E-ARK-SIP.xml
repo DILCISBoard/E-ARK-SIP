@@ -684,7 +684,7 @@
                         LABEL="premis1.xml"/>
                 </mets:digiprovMD>
                 <mets:digiprovMD ID="uuid-48C18DD8-2561-4315-AC39-F941CBB138B3" CREATED="2018-04-24T14:47:52.783+01:00">
-                    <mets:mdRef 
+                    <mets:mdRef     
                         LOCTYPE="URL" 
                         xlink:type="simple" 
                         xlink:href="metadata/preservation/premis2.xml" 

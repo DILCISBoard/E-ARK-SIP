@@ -370,18 +370,8 @@ The following list of semantic elements provide a starting point for anyone will
 **Example 1:** Example of a whole METS document describing an submission information package with no representations.
 
 ```xml
-<mets:mets 
-  OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" 
-  LABEL="Accounting records of 2017" 
-  TYPE="OTHER" 
-  OTHERTYPE="Accounting" 
-  PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" 
-  schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd">
-  <mets:metsHdr 
-    CREATEDATE="2018-04-24T14:37:49.602+01:00" 
-    LASTMODDATE="2018-04-24T14:37:49.602+01:00" 
-    RECORDSTATUS="NEW" 
-    OAISPACKAGETYPE="SIP">
+<mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd">
+  <mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
     <mets:agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
       <mets:name>RODA-in</mets:name>
       <mets:note NOTETYPE="SOFTWARE VERSION">2.1.0-beta.7</mets:note>
