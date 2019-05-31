@@ -67,6 +67,7 @@ Vagrant.configure("2") do |config|
     apt-get -y update
     apt-get -y upgrade
     apt-get install -y texlive texlive-base texlive-latex-extra texlive-fonts-extra python-virtualenv librsvg2-bin
+
     if [ ! -d /opt/pandoc-2.5 ]
     then
       cd /tmp
@@ -77,11 +78,13 @@ Vagrant.configure("2") do |config|
       ln -s /opt/pandoc-2.5/bin/pandoc /usr/local/bin/pandoc
       ln -s /opt/pandoc-2.5/bin/pandoc-citeproc /usr/local/bin/pandoc-citeproc
     fi
+
     if [ ! -d /home/vagrant/.pandoc/templates ]
     then
       sudo -u vagrant mkdir -p /home/vagrant/.pandoc/templates
       sudo -u vagrant cp /vagrant/spec-publisher/pandoc/templates/eisvogel.latex /home/vagrant/.pandoc/templates/eisvogel.latex
     fi
+
     cd /vagrant
     sudo -u vagrant /vagrant/create-site.sh
     sudo -u vagrant /vagrant/create-pdf.sh
