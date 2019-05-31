@@ -1,0 +1,39 @@
+dist: trusty
+sudo: required
+language: java
+jdk:
+  - openjdk8
+  - oraclejdk8
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y texlive texlive-base texlive-latex-extra texlive-fonts-extra
+    python-virtualenv librsvg2-bin
+  - wget https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-linux.tar.gz
+  - tar -xzvf pandoc-2.5-linux.tar.gz
+  - rm pandoc-2.5-linux.tar.gz
+  - sudo mv pandoc-2.5 /opt
+  - sudo chmod +x /opt/pandoc-2.5/bin/pandoc
+  - sudo ln -s /opt/pandoc-2.5/bin/pandoc /usr/local/bin/pandoc
+  - sudo ln -s /opt/pandoc-2.5/bin/pandoc-citeproc /usr/local/bin/pandoc-citeproc
+script:
+  - cd spec-publisher
+  - mvn clean package
+  - java -jar target/mets-profile-proc.jar ../profile/E-ARK-SIP.xml
+  - cd ..
+  - bash create-site.sh
+  - bash create-pdf.sh
+  - bundle install
+  - bundle exec jekyll build -s ./docs -d ./_site
+  # - bundle exec htmlproofer ./_site --file-ignore /javadoc/ --only-4xx --check-html
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  keep_history: true
+  local_dir: docs
+  on:
+    branch: master
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: IB41ILrHNYZKfPO2MBP35MumT6klJkBkhz5vbZgM35eqslnrKJ5IKl1i1tmNTvF6fukxIQZy11UpPTVVHQ6oWOtIRw0xl1Vr0CYrB3rxqEYaQpFIt2EhkzG8c3n4VsiM28TBEiPhtVUGMEfqBSg1dlRIUjrZ0hMUSC1yjZeiF2ijY40DK0hUjLdV+OtrsfZyF5zMIAB5PtMCGL9JGAUjfBywO/tyh2VygVZgSaG5Dw09HMCAko5sIp92RB4pvbRtK9nL8qoU7/LGwyyCkOGQZjfyU1wuVu3VXkUIHKOz6wfpAGHSGZ1SGAIqjGRJMrF6f09Gn1vBqBH3CoVi63syn1FeUdealFtHJybo6ik9cfa1bXbn5fCS63nJ6gp9bO4Hp99Bl6G4LRtS38cPZe76lt/XgIfqJga4EQjNKY1KP9l/tMoI4mNQH+Bfh6cqn3Zb4TMuzgHqQIkAjbFdXLsrLTIgagX0pZvzIdrorOcHKJfva3feU1oFQ2aNVg2Dk4s9/RO1LDvqwcnR+mUoaKilFdyxatIs/dAC3qdm4/s113EhIuj8ymdNMnKjastVGxzJwd0wwNGTmFRiMjD9wzc9z+wyyocU67omKNg+Ym6W8C+G4Xp7LwTcq8ColD3UXjt2IBF/KXBs/uKyEnyZrTRB4QjYch+g0BZr0cM/VKBKic0=

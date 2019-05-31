@@ -1,0 +1,36 @@
+---
+title:  'E-ARK Submission Information Packages (SIP)'
+abstract: |
+        This document constitutes a specification on how to produce and parse
+        E-ARK Submission Information Packages (SIP). The main objectives of this
+        specification are to define the general structure for a Submission
+        Information Package format in a way that it is suitable for a wide
+        variety of archival scenarios, e.g. document and image collections,
+        databases or geographical data, etc.; enhance interoperability between
+        Producers and Archives and recommend best practices regarding metadata,
+        content and structure of Submission Information Packages.
+        The target audience for this specification is records creators, archival
+        institutions and software providers that are responsible with preparing,
+        packaging, delivering and receiving packages of information to be archived
+        in an Open Archival Information System Reference Model (OAIS),
+        i.e. pre-ingest and ingest functional units.
+margin-left:    1in
+margin-right:   1in
+
+date: "31.05.2019"
+toc-title:	'Table of contents'
+titlepage: true
+titlepage-color: "186b9e"
+titlepage-text-color: "3adeca"
+titlepage-rule-color: "3adeca"
+titlepage-rule-height: 1
+logo:	../spec-publisher/pandoc/img/DILCISlogo.png
+footer-center:	Version 2.0.0
+footer-left:	31.05.2019
+header-right:	DILCIS Board
+version:	2.0.0
+bibliography:	../pandoc/bibliography.bib
+reference-section-title:	'Bibliography'
+autoSectionLabels: True
+listings-disable-line-numbers:	True
+...
