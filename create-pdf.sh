@@ -19,12 +19,15 @@ source "$SCRIPT_DIR/.venv/markdown/bin/activate"
 markdown-pp PDF.md -o docs/eark-sip-pdf.md -e tableofcontents
 deactivate
 
+cd docs || exit
 pandoc  --reference-links \
         --filter pandoc-citeproc \
-        --from markdown \
+        --from gfm \
         --template eisvogel \
         --listings \
         --toc \
-        docs/eark-sip-pdf.md \
-        --metadata-file pandoc/metadata.yaml \
-        -o docs/pdf/eark-sip.pdf
+        eark-sip-pdf.md \
+        --metadata-file ../pandoc/metadata.yaml \
+        -o pdf/eark-sip.pdf
+
+cd "$SCRIPT_DIR" || exit

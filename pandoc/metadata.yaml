@@ -24,12 +24,12 @@ titlepage-color: "186b9e"
 titlepage-text-color: "3adeca"
 titlepage-rule-color: "3adeca"
 titlepage-rule-height: 1
-logo:	spec-publisher/pandoc/img/DILCISlogo.png
+logo:	../spec-publisher/pandoc/img/DILCISlogo.png
 footer-center:	Version 2.0.0
 footer-left:	31.05.2019
 header-right:	DILCIS Board
 version:	2.0.0
-bibliography:	pandoc/bibliography.bib
+bibliography:	../pandoc/bibliography.bib
 reference-section-title:	'Bibliography'
 autoSectionLabels: True
 listings-disable-line-numbers:	True
