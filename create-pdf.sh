@@ -20,9 +20,7 @@ markdown-pp PDF.md -o docs/eark-sip-pdf.md -e tableofcontents
 deactivate
 
 cd docs || exit
-pandoc  --reference-links \
-        --filter pandoc-citeproc \
-        --from gfm \
+pandoc  --from markdown \
         --template eisvogel \
         --listings \
         --toc \
