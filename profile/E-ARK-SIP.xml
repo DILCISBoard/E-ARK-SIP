@@ -612,7 +612,7 @@
             sip:FILEFORMATVERSION="2007 onwards"
             sip:FORMATREGISTRY="PRONOM"
             sip:FORMATREGISTRYKEY="fmt/412">
-            <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="Documentation/File.docx"/>
+            <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/File.docx"/>
         </mets:file>
     </Example>
     <Appendix NUMBER="1" LABEL="Example of a whole METS document describing an submission information package with no representations.">
@@ -720,7 +720,7 @@
                         sip:FILEFORMATVERSION="2007 onwards"
                         sip:FORMATREGISTRY="PRONOM"
                         sip:FORMATREGISTRYKEY="fmt/412">
-                        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="Documentation/File.docx"/>
+                        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/File.docx"/>
                     </mets:file>
                     <mets:file
                         ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A82"
@@ -733,7 +733,7 @@
                         sip:FILEFORMATVERSION="2007 onwards"
                         sip:FORMATREGISTRY="PRONOM"
                         sip:FORMATREGISTRYKEY="fmt/412">
-                        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="Documentation/File2.docx"/>
+                        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/File2.docx"/>
                     </mets:file>
                 </mets:fileGrp>
                 <mets:fileGrp ID="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86F" USE="Schemas">
@@ -766,7 +766,7 @@
                         sip:FILEFORMATVERSION="1.0"
                         sip:FORMATREGISTRY="PRONOM"
                         sip:FORMATREGISTRYKEY="fmt/101">
-                        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/Submission/Data/SIARD.xml"/>
+                        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/submission/data/SIARD.xml"/>
                     </mets:file>
                 </mets:fileGrp>
             </mets:fileSec>
