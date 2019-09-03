@@ -7,6 +7,10 @@ future: true
 jailed: false
 theme: jekyll-theme-primer
 gfm_quirks: paragraph_end
-exclude:
-  - specification
-  - contents.md
+repository: DILCISBoard/E-ARK-SIP
+plugins:
+- jekyll-github-metadata
+- jekyll-mentions
+- jekyll-redirect-from
+- jekyll-sitemap
+- jemoji
