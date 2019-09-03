@@ -770,7 +770,7 @@
                     </mets:file>
                 </mets:fileGrp>
             </mets:fileSec>
-            <mets:structMap ID="uuid-1465D250-0A24-4714-9555-5C1211722FB8" TYPE="PHYSICAL" LABEL="CSIP StructMap">
+            <mets:structMap ID="uuid-1465D250-0A24-4714-9555-5C1211722FB8" TYPE="PHYSICAL" LABEL="CSIP">
                 <mets:div ID="uuid-638362BC-65D9-4DA7-9457-5156B3965A18" LABEL="uuid-4422c185-5407-4918-83b1-7abfa77de182">
                     <mets:div
                         ID="uuid-A4E1C5B6-CD9B-43EF-8F0C-3FD3AB688F81"
