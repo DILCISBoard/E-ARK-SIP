@@ -29,7 +29,7 @@
     </profile_context>
     <external_schema>
         <name>E-ARK SIP METS Extension</name>
-            <URL>https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd</URL>
+        <URL>http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd</URL>
             <context>XML-schema for the attributes added by SIP</context>
             <note>
                 <p xmlns="http://www.w3.org/1999/xhtml">An extension schema with the added attributes for use in this profile.</p>
@@ -43,7 +43,7 @@
         <vocabulary ID="VocabularyRECORDSTATUS">
             <name>Package status</name>
             <maintenance_agency>DILCIS Board</maintenance_agency>
-            <URI>http://earksip.dilcis.eu/schema/</URI>
+            <URI>http://earksip.dilcis.eu/schema/SIPVocabularyRecordStatus.xml</URI>
             <context>Used in `@RECORDSTATUS`</context>
             <description>
                 <p xmlns="http://www.w3.org/1999/xhtml">Describes the status of the package.</p>
@@ -52,7 +52,7 @@
         <vocabulary ID="VocabularyaltrecordIDTYPE">
             <name>Alternative record ID's</name>
             <maintenance_agency>DILCIS Board</maintenance_agency>
-            <URI>http://earksip.dilcis.eu/schema/</URI>
+            <URI>http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml</URI>
             <context>Used in `altrecordID/@TYPE`</context>
             <description>
                 <p xmlns="http://www.w3.org/1999/xhtml">Describes the type of the alternative record ID.</p>
@@ -61,7 +61,7 @@
         <vocabulary ID="VocabularyNoteType">
             <name>Note type</name>
             <maintenance_agency>DILCIS Board</maintenance_agency>
-            <URI>http://earksip.dilcis.eu/schema/</URI>
+            <URI>http://earksip.dilcis.eu/schema/SIPVocabularyNoteType.xml</URI>
             <context>Used in `@csip:NOTETYPE`</context>
             <description>
                 <p xmlns="http://www.w3.org/1999/xhtml">Describes the type of a note for an agent.</p>
@@ -70,8 +70,8 @@
         <vocabulary ID="VocabularyOAISPackageType">
             <name>OAIS Package type</name>
             <maintenance_agency>DILCIS Board</maintenance_agency>
-            <URI>http://earkcsip.dilcis.eu/schema/</URI>
-            <context>Used in @csip:OAISPACKAGETYPE</context>
+            <URI>http://earkcsip.dilcis.eu/schema/CSIPVocabularyOAISPackageType.xml</URI>
+            <context>Used in `@csip:OAISPACKAGETYPE`</context>
             <description>
                 <p xmlns="http://www.w3.org/1999/xhtml">Describes the OAIS type the package belongs to in the OAIS reference model.</p>
             </description>
