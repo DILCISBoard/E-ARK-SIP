@@ -255,22 +255,17 @@ The following list of semantic elements provide a starting point for anyone will
 	* **Risk Factor** - Meant for listing all risk factors (e.g. the designated community is not properly defined) of the submission.
 	* **Mitigation Option** - Meant for listing all mitigation options (e.g. define the designated community together with producers) for the risks.
 
-
 ## Appendix B: E-ARK Information Package METS example
-
 
 !INCLUDE "appendices/examples/examples.md"
 
-
-## Appendix C: External Schema
+## Appendix C: External Schema and Vocabularies
 
 !INCLUDE "appendices/schema/schema.md"
-
 
 ## Appendix E: A Full List of E-ARK SIP Requirements
 
 !INCLUDE "appendices/requirements/requirements.md"
-
 
 # Glossary
 
