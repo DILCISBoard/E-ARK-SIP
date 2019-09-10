@@ -1,7 +1,7 @@
 ## External Schema
 
 ### E-ARK SIP METS Extension
-**Location:** [https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd](https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd)   
+**Location:** [http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd](http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd)   
 
 **Context:** XML-schema for the attributes added by SIP   
 
@@ -17,7 +17,7 @@ The schema is used with a namespace prefix of sip. <br/>
 
 **Maintained By:** DILCIS Board   
   
-**Location:** [http://earksip.dilcis.eu/schema/](http://earksip.dilcis.eu/schema/)   
+**Location:** [http://earksip.dilcis.eu/schema/SIPVocabularyRecordStatus.xml](http://earksip.dilcis.eu/schema/SIPVocabularyRecordStatus.xml)   
 
 **Context:** Used in `@RECORDSTATUS`   
   
@@ -31,7 +31,7 @@ Describes the status of the package.
 
 **Maintained By:** DILCIS Board   
   
-**Location:** [http://earksip.dilcis.eu/schema/](http://earksip.dilcis.eu/schema/)   
+**Location:** [http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml](http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml)   
 
 **Context:** Used in `altrecordID/@TYPE`   
   
@@ -45,7 +45,7 @@ Describes the type of the alternative record ID.
 
 **Maintained By:** DILCIS Board   
   
-**Location:** [http://earksip.dilcis.eu/schema/](http://earksip.dilcis.eu/schema/)   
+**Location:** [http://earksip.dilcis.eu/schema/SIPVocabularyNoteType.xml](http://earksip.dilcis.eu/schema/SIPVocabularyNoteType.xml)   
 
 **Context:** Used in `@csip:NOTETYPE`   
   
@@ -59,9 +59,9 @@ Describes the type of a note for an agent.
 
 **Maintained By:** DILCIS Board   
   
-**Location:** [http://earkcsip.dilcis.eu/schema/](http://earkcsip.dilcis.eu/schema/)   
+**Location:** [http://earkcsip.dilcis.eu/schema/CSIPVocabularyOAISPackageType.xml](http://earkcsip.dilcis.eu/schema/CSIPVocabularyOAISPackageType.xml)   
 
-**Context:** Used in @csip:OAISPACKAGETYPE   
+**Context:** Used in `@csip:OAISPACKAGETYPE`   
   
 **Description:**     
 
