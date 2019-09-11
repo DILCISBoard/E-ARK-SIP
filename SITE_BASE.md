@@ -1,6 +1,3 @@
----
-title: E-ARK Submission Information Package
----
 
 !TOC
 
