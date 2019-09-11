@@ -259,9 +259,13 @@ The following list of semantic elements provide a starting point for anyone will
 
 !INCLUDE "appendices/examples/examples.md"
 
-## Appendix C: External Schema and Vocabularies
+## Appendix C: External Schema
 
 !INCLUDE "appendices/schema/schema.md"
+
+## Appendix D: External Vocabularies
+
+!INCLUDE "appendices/vocabs/vocabs.md"
 
 ## Appendix E: A Full List of E-ARK SIP Requirements
 
