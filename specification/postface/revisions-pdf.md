@@ -89,7 +89,7 @@ II Revision History
 
   2.0.0   15.03.2019  Miguel Ferreira          KEEP         Updated to v2.0 with CSIP
 
-  2.0.1   09.09.2019  Karin                    ESS          Correction @LABEL and @USE attributes,
+  2.0.1   09.09.2019  Karin                    SNA          Correction @LABEL and @USE attributes,
                       Bredenberg                            typos, layout and PDF formatting.
 
 ---------------------------------------------------------------------------------------------------------------
