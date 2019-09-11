@@ -38,4 +38,4 @@ II Revision History
 | 1.3   | 13.01.2017 | Tarvo Kärberg | NAE | Small updates. |
 | 1.4   | 31.01.2017 | Tarvo Kärberg | NAE | Finalising the specification. |
 | 2.0.0 | 15.03.2019 | Miguel Ferreira | KEEPS | Updated to v2.0 with CSIP |
-| 2.0.1 | 09.09.2019 | Karin Bredenberg | ESS | Correction @LABEL and @USE attributes, typos, layout and PDF formatting. |
+| 2.0.1 | 09.09.2019 | Karin Bredenberg | SNA | Correction @LABEL and @USE attributes, typos, layout and PDF formatting. |
