@@ -4,6 +4,17 @@ I Authors
 
 | Name                             | Organisation                                       |
 | -------------------------------- | -------------------------------------------------- |
+| Miguel Ferreira                  | Keep Solutions (KEEPS)                             |
+| Hélder Silva                     | Keep Solutions (KEEPS)                             |
+| Karin Bredenberg                 | Swedish National Archives (NAS)                    |
+| Carl Wilson                      | Open Preservation Foundation                       |
+| Jaime Kaminski (reviewer)        | Highbury Associates                                |
+| Luís Miguel Ferros (reviewer)    | Keep Solutions (KEEPS)                             |
+
+### I.I. Contributors to previous version
+
+| Name                             | Organisation                                       |
+| -------------------------------- | -------------------------------------------------- |
 | Tarvo Kärberg                    | Estonian National Archives (NAE)                   |    
 | Anders Bo Nielsen                | Danish National Archives (DNA)                     |
 | Björn Skog                       | ES Solutions (ESS)                                 |
