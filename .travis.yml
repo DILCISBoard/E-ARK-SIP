@@ -21,9 +21,9 @@ script:
 - java -jar target/mets-profile-proc.jar ../profile/E-ARK-SIP.xml
 - cd ..
 - bash create-site.sh
-- bash create-pdf.sh
 - bundle install
 - bundle exec jekyll build -s ./docs -d ./_site
+- bash create-pdf.sh
 deploy:
   provider: pages
   skip_cleanup: true
