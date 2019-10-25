@@ -10,17 +10,17 @@
     xsi:schemaLocation="http://www.loc.gov/METS_Profile/v2 http://www.loc.gov/standards/mets/profile_docs/mets.profile.v2-0.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd"
     STATUS="provisional"
     REGISTRATION="unregistered"
-    ID="SIPV2.0.1">
+    ID="SIPV2.0.2">
     <URI LOCTYPE="URL" ASSIGNEDBY="local">https://earksip.dilcis.eu/profile/E-ARK-SIP.xml</URI>
-    <title>E-ARK SIP METS Profile</title>
-    <abstract>This is the extension of the E-ARK CSIP profile for creation of a E-ARK SIP.</abstract>
-    <date>2019-09-09T15:00:00</date>
+    <title>E-ARK SIP METS Profile 2.0</title>
+    <abstract>This is the extension of the E-ARK CS IP profile for creation of a E-ARK SIP.</abstract>
+    <date>2019-10-28T9:00:00</date>
     <contact>
         <institution>DILCIS Board</institution>
         <address>http://dilcis.eu/</address>
         <email>info@dilcis.eu</email>
     </contact>
-    <related_profile RELATIONSHIP="Extends" URI="https://earkcsip.dilcis.eu/profile/CSIP.xml">E-ARK CSIP METS Profile 2.0</related_profile>
+    <related_profile RELATIONSHIP="Extends" URI="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml">E-ARK CSIP METS Profile 2.0</related_profile>
     <profile_context>
         <resource_model>
           <head>E-ARK SIP profile</head>
@@ -29,12 +29,21 @@
     </profile_context>
     <external_schema>
         <name>E-ARK SIP METS Extension</name>
-            <URL>http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd</URL>
+            <URL>https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd</URL>
             <context>XML-schema for the attributes added by SIP</context>
             <note>
                 <p xmlns="http://www.w3.org/1999/xhtml">An extension schema with the added attributes for use in this profile.</p>
                 <p xmlns="http://www.w3.org/1999/xhtml">The schema is used with a namespace prefix of sip.</p>
             </note>
+    </external_schema>
+    <external_schema>
+        <name>E-ARK CSIP METS Extension</name>
+        <URL>http://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd</URL>
+        <context>XML-schema for the attributes added by CSIP</context>
+        <note>
+            <p xmlns="http://www.w3.org/1999/xhtml">An extension schema with the added attributes for use in this profile.</p>
+            <p xmlns="http://www.w3.org/1999/xhtml">The schema is identified using the namespace prefix csip.</p>
+        </note>
     </external_schema>
     <description_rules>
         <p xmlns="http://www.w3.org/1999/xhtml">The filepath must be decoded consistently throughout all file references within the information package.</p>
@@ -564,12 +573,13 @@
             xmlns:mets="http://www.loc.gov/METS/"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             xmlns:csip="https://dilcis.eu/XML/METS/CSIPExtensionMETS"
+            xmlns:sip="https://dilcis.eu/XML/METS/SIPExtensionMETS"
             OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182"
             LABEL="Accounting records of 2017"
             TYPE="OTHER"
             csip:OTHERTYPE="Accounting"
             PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml"
-            xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd">
+            xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
         </mets:mets>
     </Example>
     <Example ID="metsHdrElementExample1" LABEL="METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.">
@@ -621,12 +631,13 @@
             xmlns:mets="http://www.loc.gov/METS/"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             xmlns:csip="https://dilcis.eu/XML/METS/CSIPExtensionMETS"
+            xmlns:sip="https://dilcis.eu/XML/METS/SIPExtensionMETS"
             OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182"
             LABEL="Accounting records of 2017"
             TYPE="OTHER"
             csip:OTHERTYPE="Accounting"
             PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml"
-            xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd">
+            xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
             <mets:metsHdr
                 CREATEDATE="2018-04-24T14:37:49.602+01:00"
                 LASTMODDATE="2018-04-24T14:37:49.602+01:00"
