@@ -15,8 +15,8 @@ abstract: |
       packaging, delivering and receiving packages of information to be archived
       in an Open Archival Information System Reference Model (OAIS), i.e.
       pre-ingest and ingest functional units.
-version: 2.0.1
-date: 09.09.2019
+version: 2.0.2
+date: 28.10.2019
 ---
 
 {{ page.subtitle }}
@@ -113,6 +113,7 @@ Date: {{ page.date }}
 5.2\.  [Appendix B: E-ARK Information Package METS example](#appendixb:e-arkinformationpackagemetsexample)  
 5.3\.  [Appendix C: External Schema](#appendixc:externalschema)  
 5.3.1\.  [E-ARK SIP METS Extension](#e-arksipmetsextension)  
+5.3.2\.  [E-ARK CSIP METS Extension](#e-arkcsipmetsextension)  
 5.4\.  [Appendix D: External Vocabularies](#appendixd:externalvocabularies)  
 5.4.1\.  [Package status](#packagestatus)  
 5.4.2\.  [Alternative record ID's](#alternativerecordid's)  
@@ -220,7 +221,7 @@ The following table describes the differences in the `mets` element between the 
 **Example:** METS root element example with values from E-ARK-SIP as well as CS IP.
 
 ```xml
-<mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd">
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:csip="https://dilcis.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://dilcis.eu/XML/METS/SIPExtensionMETS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" csip:OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
 </mets:mets>
 ```
 
@@ -275,14 +276,14 @@ The following table describes the differences in the `metsHdr` between an E-ARK 
 **Example:** METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.
 
 ```xml
-<mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
+<mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" csip:OAISPACKAGETYPE="SIP">
   <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
     <mets:name>The Swedish health agency</mets:name>
-    <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</mets:note>
+    <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</mets:note>
   </mets:agent>
   <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
     <mets:name>The agency, Personnel</mets:name>
-    <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
+    <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
   </mets:agent>
   <mets:agent ROLE="OTHER" TYPE="INDIVIDUAL" OTHERROLE="SUBMITTER">
     <mets:name>Sven Svensson</mets:name>
@@ -290,7 +291,7 @@ The following table describes the differences in the `metsHdr` between an E-ARK 
   </mets:agent>
   <mets:agent ROLE="PRESERVATION" TYPE="ORGANIZATION">
     <mets:name>The archives</mets:name>
-    <mets:note NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
+    <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
   </mets:agent>
   <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altrecordID>
   <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altrecordID>
@@ -345,8 +346,8 @@ The following table describes the differences in the `fileSec` between an E-ARK 
 **Example:** METS example of an SIP with file information together with the info from CS IP.
 
 ```xml
-<mets:file ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A81" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="2554366" CREATED="2012-08-15T12:08:15.432+01:00" CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557" CHECKSUMTYPE="SHA-256" FILEFORMATNAME="Microsoft Word for Windows" FILEFORMATVERSION="2007 onwards" FORMATREGISTRY="PRONOM" FORMATREGISTRYKEY="fmt/412">
-  <mets:FLocat LOCTYPE="URL" type="simple" href="documentation/File.docx">
+<mets:file ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A81" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="2554366" CREATED="2012-08-15T12:08:15.432+01:00" CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557" CHECKSUMTYPE="SHA-256" sip:FILEFORMATNAME="Microsoft Word for Windows" sip:FILEFORMATVERSION="2007 onwards" sip:FORMATREGISTRY="PRONOM" sip:FORMATREGISTRYKEY="fmt/412">
+  <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/File.docx">
   </mets:FLocat>
 </mets:file>
 ```
@@ -513,19 +514,19 @@ The following list of semantic elements provide a starting point for anyone will
 **Example 1:** Example of a whole METS document describing an submission information package with no representations.
 
 ```xml
-<mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd">
-  <mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:csip="https://dilcis.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://dilcis.eu/XML/METS/SIPExtensionMETS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" csip:OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
+  <mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" csip:OAISPACKAGETYPE="SIP">
     <mets:agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
       <mets:name>RODA-in</mets:name>
-      <mets:note NOTETYPE="SOFTWARE VERSION">2.1.0-beta.7</mets:note>
+      <mets:note csip:NOTETYPE="SOFTWARE VERSION">2.1.0-beta.7</mets:note>
     </mets:agent>
     <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
       <mets:name>The Swedish health agency</mets:name>
-      <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</mets:note>
+      <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</mets:note>
     </mets:agent>
     <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
       <mets:name>The agency, Personnel</mets:name>
-      <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
+      <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
     </mets:agent>
     <mets:agent ROLE="CREATOR" TYPE="INDIVIDUAL">
       <mets:name>Sven Svensson</mets:name>
@@ -533,7 +534,7 @@ The following list of semantic elements provide a starting point for anyone will
     </mets:agent>
     <mets:agent ROLE="PRESERVATION" TYPE="ORGANIZATION">
       <mets:name>The archives</mets:name>
-      <mets:note NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
+      <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
     </mets:agent>
     <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altrecordID>
     <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altrecordID>
@@ -541,39 +542,39 @@ The following list of semantic elements provide a starting point for anyone will
     <mets:altrecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altrecordID>
   </mets:metsHdr>
   <mets:dmdSec ID="uuid-906F4F12-BA52-4779-AE2C-178F9206111F" CREATED="2018-04-24T14:37:49.609+01:00">
-    <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" MDTYPEVERSION="2002" type="simple" href="metadata/descriptive/ead2002.xml" SIZE="903" CREATED="2018-04-24T14:37:49.609+01:00" CHECKSUM="F24263BF09994749F335E1664DCE0086DB6DCA323FDB6996938BCD28EA9E8153" CHECKSUMTYPE="SHA-256">
+    <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" MDTYPEVERSION="2002" xlink:type="simple" xlink:href="metadata/descriptive/ead2002.xml" SIZE="903" CREATED="2018-04-24T14:37:49.609+01:00" CHECKSUM="F24263BF09994749F335E1664DCE0086DB6DCA323FDB6996938BCD28EA9E8153" CHECKSUMTYPE="SHA-256">
     </mets:mdRef>
   </mets:dmdSec>
   <mets:amdSec>
     <mets:digiprovMD ID="uuid-9124DA4D-3736-4F69-8355-EB79A22E943F" CREATED="2018-04-24T14:37:52.783+01:00">
-      <mets:mdRef LOCTYPE="URL" type="simple" href="metadata/preservation/premis1.xml" MDTYPE="PREMIS" MDTYPEVERSION="3.0" MIMETYPE="text/xml" SIZE="1211" CREATED="2018-04-24T14:37:52.783+01:00" CHECKSUM="8aa278038dbad54bbf142e7d72b493e2598a94946ea1304dc82a79c6b4bac3d5" CHECKSUMTYPE="SHA-256" LABEL="premis1.xml">
+      <mets:mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/premis1.xml" MDTYPE="PREMIS" MDTYPEVERSION="3.0" MIMETYPE="text/xml" SIZE="1211" CREATED="2018-04-24T14:37:52.783+01:00" CHECKSUM="8aa278038dbad54bbf142e7d72b493e2598a94946ea1304dc82a79c6b4bac3d5" CHECKSUMTYPE="SHA-256" LABEL="premis1.xml">
       </mets:mdRef>
     </mets:digiprovMD>
     <mets:digiprovMD ID="uuid-48C18DD8-2561-4315-AC39-F941CBB138B3" CREATED="2018-04-24T14:47:52.783+01:00">
-      <mets:mdRef LOCTYPE="URL" type="simple" href="metadata/preservation/premis2.xml" MDTYPE="PREMIS" MDTYPEVERSION="3.0" MIMETYPE="text/xml" SIZE="2854" CREATED="2018-04-24T14:37:52.783+01:00" CHECKSUM="d1dfa585dcc9d87268069dc58d5e47956434ec3db4087a75a3885d287f15126f" CHECKSUMTYPE="SHA-256" LABEL="premis2.xml">
+      <mets:mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/premis2.xml" MDTYPE="PREMIS" MDTYPEVERSION="3.0" MIMETYPE="text/xml" SIZE="2854" CREATED="2018-04-24T14:37:52.783+01:00" CHECKSUM="d1dfa585dcc9d87268069dc58d5e47956434ec3db4087a75a3885d287f15126f" CHECKSUMTYPE="SHA-256" LABEL="premis2.xml">
       </mets:mdRef>
     </mets:digiprovMD>
   </mets:amdSec>
   <mets:fileSec ID="uuid-CA580D47-8C8B-4E91-ABD5-142EBBE15B84">
     <mets:fileGrp ID="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86H" USE="Documentation">
-      <mets:file ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A81" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="2554366" CREATED="2012-08-15T12:08:15.432+01:00" CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557" CHECKSUMTYPE="SHA-256" FILEFORMATNAME="Microsoft Word for Windows" FILEFORMATVERSION="2007 onwards" FORMATREGISTRY="PRONOM" FORMATREGISTRYKEY="fmt/412">
-        <mets:FLocat LOCTYPE="URL" type="simple" href="documentation/File.docx">
+      <mets:file ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A81" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="2554366" CREATED="2012-08-15T12:08:15.432+01:00" CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557" CHECKSUMTYPE="SHA-256" sip:FILEFORMATNAME="Microsoft Word for Windows" sip:FILEFORMATVERSION="2007 onwards" sip:FORMATREGISTRY="PRONOM" sip:FORMATREGISTRYKEY="fmt/412">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/File.docx">
         </mets:FLocat>
       </mets:file>
-      <mets:file ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A82" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="2554366" CREATED="2012-08-15T12:08:15.432+01:00" CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557" CHECKSUMTYPE="SHA-256" FILEFORMATNAME="Microsoft Word for Windows" FILEFORMATVERSION="2007 onwards" FORMATREGISTRY="PRONOM" FORMATREGISTRYKEY="fmt/412">
-        <mets:FLocat LOCTYPE="URL" type="simple" href="documentation/File2.docx">
+      <mets:file ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A82" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="2554366" CREATED="2012-08-15T12:08:15.432+01:00" CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557" CHECKSUMTYPE="SHA-256" sip:FILEFORMATNAME="Microsoft Word for Windows" sip:FILEFORMATVERSION="2007 onwards" sip:FORMATREGISTRY="PRONOM" sip:FORMATREGISTRYKEY="fmt/412">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/File2.docx">
         </mets:FLocat>
       </mets:file>
     </mets:fileGrp>
     <mets:fileGrp ID="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86F" USE="Schemas">
-      <mets:file ID="uuid-A1B7B0DA-E129-48EF-B431-E553F2977FD6" MIMETYPE="application/xml" SIZE="123917" CREATED="2018-04-24T14:37:49.617+01:00" CHECKSUM="0BF9E16ADE296EF277C7B8E5D249D300F1E1EB59F2DCBD89644B676D66F72DCC" CHECKSUMTYPE="SHA-256" FILEFORMATNAME="XML Schema Definition" FORMATREGISTRY="PRONOM" FORMATREGISTRYKEY="x-fmt/280">
-        <mets:FLocat LOCTYPE="URL" type="simple" href="schemas/ead2002.xsd">
+      <mets:file ID="uuid-A1B7B0DA-E129-48EF-B431-E553F2977FD6" MIMETYPE="application/xml" SIZE="123917" CREATED="2018-04-24T14:37:49.617+01:00" CHECKSUM="0BF9E16ADE296EF277C7B8E5D249D300F1E1EB59F2DCBD89644B676D66F72DCC" CHECKSUMTYPE="SHA-256" sip:FILEFORMATNAME="XML Schema Definition" sip:FORMATREGISTRY="PRONOM" sip:FORMATREGISTRYKEY="x-fmt/280">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/ead2002.xsd">
         </mets:FLocat>
       </mets:file>
     </mets:fileGrp>
-    <mets:fileGrp ID="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86G" USE="Representations/Submission/Data" CONTENTINFORMATIONTYPE="SIARDDK">
-      <mets:file ID="uuid-EE23344D-4F64-40C1-8E18-75839EF661FD" MIMETYPE="application/xml" SIZE="1338744" CREATED="2018-04-24T14:37:49.617+01:00" CHECKSUM="7176A627870CFA3854468EC43C5A56F9BD8B30B50A983B8162BF56298A707667" CHECKSUMTYPE="SHA-256" ADMID="uuid-48C18DD8-2561-4315-AC39-F941CBB138B3 uuid-9124DA4D-3736-4F69-8355-EB79A22E943F" FILEFORMATNAME="Extensible Markup Language" FILEFORMATVERSION="1.0" FORMATREGISTRY="PRONOM" FORMATREGISTRYKEY="fmt/101">
-        <mets:FLocat LOCTYPE="URL" type="simple" href="representations/submission/data/SIARD.xml">
+    <mets:fileGrp ID="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86G" USE="Representations/Submission/Data" csip:CONTENTINFORMATIONTYPE="SIARDDK">
+      <mets:file ID="uuid-EE23344D-4F64-40C1-8E18-75839EF661FD" MIMETYPE="application/xml" SIZE="1338744" CREATED="2018-04-24T14:37:49.617+01:00" CHECKSUM="7176A627870CFA3854468EC43C5A56F9BD8B30B50A983B8162BF56298A707667" CHECKSUMTYPE="SHA-256" ADMID="uuid-48C18DD8-2561-4315-AC39-F941CBB138B3 uuid-9124DA4D-3736-4F69-8355-EB79A22E943F" sip:FILEFORMATNAME="Extensible Markup Language" sip:FILEFORMATVERSION="1.0" sip:FORMATREGISTRY="PRONOM" sip:FORMATREGISTRYKEY="fmt/101">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/submission/data/SIARD.xml">
         </mets:FLocat>
       </mets:file>
     </mets:fileGrp>
@@ -603,7 +604,7 @@ The following list of semantic elements provide a starting point for anyone will
 <a name="e-arksipmetsextension"></a>
 
 ### 5.3.1\. E-ARK SIP METS Extension
-**Location:** [http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd](http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd)   
+**Location:** [https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd](https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd)   
 
 **Context:** XML-schema for the attributes added by SIP   
 
@@ -611,6 +612,19 @@ The following list of semantic elements provide a starting point for anyone will
 
 An extension schema with the added attributes for use in this profile. <br/> 
 The schema is used with a namespace prefix of sip. <br/> 
+
+
+<a name="e-arkcsipmetsextension"></a>
+
+### 5.3.2\. E-ARK CSIP METS Extension
+**Location:** [http://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd](http://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd)   
+
+**Context:** XML-schema for the attributes added by CSIP   
+
+**Note:**     
+
+An extension schema with the added attributes for use in this profile. <br/> 
+The schema is identified using the namespace prefix csip. <br/> 
 
 
 <a name="appendixd:externalvocabularies"></a>
@@ -823,6 +837,7 @@ II Revision History
 | 1.4   | 31.01.2017 | Tarvo Kärberg | NAE | Finalising the specification. |
 | 2.0.0 | 15.03.2019 | Miguel Ferreira | KEEPS | Updated to v2.0 with CSIP |
 | 2.0.1 | 09.09.2019 | Karin Bredenberg | SNA | Correction @LABEL and @USE attributes, typos, layout and PDF formatting. |
+| 2.0.2 | 28.10.2019 | Karin Bredenberg | SYD | Fixed schema paths. |
 
 
 III Acknowledgements
