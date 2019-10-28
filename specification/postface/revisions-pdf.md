@@ -92,4 +92,7 @@ II Revision History
   2.0.1   09.09.2019  Karin                    SNA          Correction @LABEL and @USE attributes,
                       Bredenberg                            typos, layout and PDF formatting.
 
+  2.0.2   28.10.2019  Karin                    SYD          Fixed schema paths
+                      Bredenberg
+
 ---------------------------------------------------------------------------------------------------------------
