@@ -70,7 +70,7 @@
         <vocabulary ID="VocabularyNoteType">
             <name>Note type</name>
             <maintenance_agency>DILCIS Board</maintenance_agency>
-            <URI>http://earksip.dilcis.eu/schema/SIPVocabularyNoteType.xml</URI>
+            <URI>http://earkcsip.dilcis.eu/schema/CSIPVocabularyNoteType.xml</URI>
             <context>Used in `@csip:NOTETYPE`</context>
             <description>
                 <p xmlns="http://www.w3.org/1999/xhtml">Describes the type of a note for an agent.</p>
