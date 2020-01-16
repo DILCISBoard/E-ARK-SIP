@@ -140,7 +140,7 @@
                     <p xmlns="http://www.w3.org/1999/xhtml">Note: It is recommended to use a machine-readable format for a better description of a submission agreement.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">For example, the submission agreement developed by Docuteam GmbH <a href="http://www.loc.gov/standards/mets/profiles/00000041.xml">http://www.loc.gov/standards/mets/profiles/00000041.xml</a></p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
-                        <dt>METS XPath</dt><dd>metsHdr/altrecordID</dd>
+                        <dt>METS XPath</dt><dd>metsHdr/altRecordID</dd>
                         <dt>Cardinality</dt><dd>0..1</dd>
                     </dl>
                 </description>
@@ -155,7 +155,7 @@
                     <p xmlns="http://www.w3.org/1999/xhtml">Note: It is recommended to use a machine-readable format for a better description of a submission agreement.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">For example, the submission agreement developed by Docuteam GmbH <a href="http://www.loc.gov/standards/mets/profiles/00000041.xml">http://www.loc.gov/standards/mets/profiles/00000041.xml</a></p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
-                        <dt>METS XPath</dt><dd>metsHdr/altrecordID</dd>
+                        <dt>METS XPath</dt><dd>metsHdr/altRecordID</dd>
                         <dt>Cardinality</dt><dd>0..*</dd>
                     </dl>
                 </description>
@@ -167,7 +167,7 @@
                     <p xmlns="http://www.w3.org/1999/xhtml">`@TYPE` is used with the value "REFERENCECODE".</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Example: FM 12-2387/12726, 2007-09-19</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
-                        <dt>METS XPath</dt><dd>metsHdr/altrecordID</dd>
+                        <dt>METS XPath</dt><dd>metsHdr/altRecordID</dd>
                         <dt>Cardinality</dt><dd>0..1</dd>
                     </dl>
                 </description>
@@ -179,7 +179,7 @@
                     <p xmlns="http://www.w3.org/1999/xhtml">`@TYPE` is used with the value "PREVIOUSREFERENCECODE".</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Example: SE/FM/123/123.1/123.1.3</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
-                        <dt>METS XPath</dt><dd>metsHdr/altrecordID</dd>
+                        <dt>METS XPath</dt><dd>metsHdr/altRecordID</dd>
                         <dt>Cardinality</dt><dd>0..*</dd>
                     </dl>
                 </description>
@@ -541,7 +541,6 @@
         </note>
     </tool>
     <tool>
-        <!--  Karin: Completion of this needed or are they only present in the profiles for SIP/AIP/DIP? -->
         <name>RODA</name>
         <URI>http://github.com/keeps/roda</URI>
         <description>
@@ -552,7 +551,6 @@
         </note>
     </tool>
     <tool>
-        <!--  Karin: Completion of this needed or are they only present in the profiles for SIP/AIP/DIP? -->
         <name>RODA-in</name>
         <URI>https://rodain.roda-community.org</URI>
         <description>
@@ -661,18 +659,18 @@
                     <mets:name>The archives</mets:name>
                     <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
                 </mets:agent>
-                <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">
+                <mets:altRecordID TYPE="SUBMISSIONAGREEMENT">
                     http://submissionagreement.kb.se/dnr331-1144-2011/20120711/
-                </mets:altrecordID>
-                <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">
+                </mets:altRecordID>
+                <mets:altRecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">
                     FM 12-2387/12726, 2007-09-19
-                </mets:altrecordID>
-                <mets:altrecordID TYPE="REFERENCECODE">
+                </mets:altRecordID>
+                <mets:altRecordID TYPE="REFERENCECODE">
                     SE/RA/123456/24/P
-                </mets:altrecordID>
-                <mets:altrecordID TYPE="PREVIOUSREFERENCECODE">
+                </mets:altRecordID>
+                <mets:altRecordID TYPE="PREVIOUSREFERENCECODE">
                     SE/FM/123/123.1/123.1.3
-                </mets:altrecordID>
+                </mets:altRecordID>
             </mets:metsHdr>
             <mets:dmdSec ID="uuid-906F4F12-BA52-4779-AE2C-178F9206111F" CREATED="2018-04-24T14:37:49.609+01:00">
                 <mets:mdRef
