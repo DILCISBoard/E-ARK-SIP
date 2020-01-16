@@ -6,7 +6,7 @@ I Authors
 | -------------------------------- | -------------------------------------------------- |
 | Miguel Ferreira                  | Keep Solutions (KEEPS)                             |
 | Hélder Silva                     | Keep Solutions (KEEPS)                             |
-| Karin Bredenberg                 | Swedish National Archives (NAS)                    |
+| Karin Bredenberg                 | Kommunalförbundet Sydarkivera (SYD)                |
 | Carl Wilson                      | Open Preservation Foundation                       |
 | Jaime Kaminski (reviewer)        | Highbury Associates                                |
 | Luís Miguel Ferros (reviewer)    | Keep Solutions (KEEPS)                             |
@@ -21,7 +21,7 @@ I Authors
 | Gregor Zavrsnik                  | Slovenian National Archives (SNA)                  |
 | Helder Silva                     | Keep Solutions (KEEPS)                             |
 | Miguel Ferreira                  | Keep Solutions (KEEPS)                             |
-| Karin Bredenberg                 | Swedish National Archives (NAS)                    |
+| Karin Bredenberg                 | Kommunalförbundet Sydarkivera (SYD)                |
 | Kathrine Hougaard Edsen Johansen | Danish National Archives (DNA)                     |
 | Levente Szilágyi                 | National Archives of Hungary (NAH)                 |
 | Phillip Mike Tømmerholt          | Danish National Archives (DNA)                     |
