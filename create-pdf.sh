@@ -6,11 +6,12 @@ echo "Generating PDF from markdown"
 bash "$SCRIPT_DIR/spec-publisher/utils/create-venv.sh"
 
 command -v markdown-pp >/dev/null 2>&1 || {
-  tmpdir=$(dirname $(mktemp -u))
+  tmpdir=$(dirname "$(mktemp -u)")
+  # shellcheck source=/tmp/.venv-markdown/bin/activate
   source "$tmpdir/.venv-markdown/bin/activate"
 }
 echo " - MARKDOWN-PP: Processing postface markdown"
-cd "./specification/postface/"
+cd "./specification/postface/" || exit
 markdown-pp postface-pdf.md -o "$SCRIPT_DIR/docs/postface.md" -e tableofcontents
 
 cd "$SCRIPT_DIR/docs" || exit
@@ -54,7 +55,8 @@ fi
 cd "$SCRIPT_DIR" || exit
 
 command -v markdown-pp >/dev/null 2>&1 || {
-  tmpdir=$(dirname $(mktemp -u))
+  tmpdir=$(dirname "$(mktemp -u)")
+  # shellcheck source=/tmp/.venv-markdown/bin/activate
   source "$tmpdir/.venv-markdown/bin/activate"
 }
 echo " - MARKDOWN-PP: Preparing PDF markdown"
