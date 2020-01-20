@@ -15,8 +15,8 @@ abstract: |
       packaging, delivering and receiving packages of information to be archived
       in an Open Archival Information System Reference Model (OAIS), i.e.
       pre-ingest and ingest functional units.
-version: 2.0.2
-date: 28.10.2019
+version: 2.0.3
+date: 08.01.2020
 ---
 
 {{ page.subtitle }}
@@ -221,7 +221,7 @@ The following table describes the differences in the `mets` element between the 
 **Example:** METS root element example with values from E-ARK-SIP as well as CS IP.
 
 ```xml
-<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:csip="https://dilcis.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://dilcis.eu/XML/METS/SIPExtensionMETS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" csip:OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" csip:OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://DILCIS.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
 </mets:mets>
 ```
 
@@ -246,10 +246,10 @@ The following table describes the differences in the `mets` element between the 
     <mets:name>The archives</mets:name>
     <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
   </mets:agent>
-  <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altrecordID>
-  <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altrecordID>
-  <mets:altrecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altrecordID>
-  <mets:altrecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altrecordID>
+  <mets:altRecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altRecordID>
+  <mets:altRecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altRecordID>
+  <mets:altRecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altRecordID>
+  <mets:altRecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altRecordID>
 </mets:metsHdr>
 ```
 
@@ -272,10 +272,10 @@ The following table describes the differences in the `metsHdr` between an E-ARK 
 | ------- | ---------------------------- | ------------ |
 | <a name="SIP3"></a>**SIP3** | **Package status** <br/> `metsHdr/@RECORDSTATUS` <br/> A way of indicating the status of the package and to instruct the OAIS on how to properly handle the package. If not set, the expected behaviour is equal to NEW. <br/> **See also:** [Package status](#VocabularyRECORDSTATUS) | **0..1** <br/> MAY |
 | <a name="SIP4"></a>**SIP4** | **OAIS Package type information** <br/> `metsHdr/@csip:OAISPACKAGETYPE` <br/> `@csip:OAISPACKAGETYPE` is used with the value "SIP". <br/> **See also:** [OAIS Package type](#VocabularyOAISPackageType) | **1..1** <br/> MUST |
-| <a name="SIP5"></a>**SIP5** | **Submission agreement** <br/> `metsHdr/altrecordID` <br/> A reference to the Submission Agreement associated with the package. <br/> `@TYPE` is used with the value "SUBMISSIONAGREEMENT". <br/> Example: RA 13-2011/5329; 2012-04-12 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..1** <br/> MAY |
-| <a name="SIP6"></a>**SIP6** | **Previous Submission agreement** <br/> `metsHdr/altrecordID` <br/> An optional reference to a previous submission agreement(s) which the information may have belonged to. <br/> `@TYPE` is used with the value "PREVIOUSSUBMISSIONAGREEMENT". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..*** <br/> MAY |
-| <a name="SIP7"></a>**SIP7** | **Archival reference code** <br/> `metsHdr/altrecordID` <br/> An optional reference code indicating where in the archival hierarchy the package shall be placed in the OAIS. <br/> `@TYPE` is used with the value "REFERENCECODE". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..1** <br/> MAY |
-| <a name="SIP8"></a>**SIP8** | **Previous archival reference code** <br/> `metsHdr/altrecordID` <br/> In cases where the SIP originates from other institutions maintaining a reference code structure, this element can be used to record these reference codes and therefore support the provenance of the package when a whole archival description is not submitted with the submission. <br/> `@TYPE` is used with the value "PREVIOUSREFERENCECODE". <br/> Example: SE/FM/123/123.1/123.1.3 <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..*** <br/> MAY |
+| <a name="SIP5"></a>**SIP5** | **Submission agreement** <br/> `metsHdr/altRecordID` <br/> A reference to the Submission Agreement associated with the package. <br/> `@TYPE` is used with the value "SUBMISSIONAGREEMENT". <br/> Example: RA 13-2011/5329; 2012-04-12 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..1** <br/> MAY |
+| <a name="SIP6"></a>**SIP6** | **Previous Submission agreement** <br/> `metsHdr/altRecordID` <br/> An optional reference to a previous submission agreement(s) which the information may have belonged to. <br/> `@TYPE` is used with the value "PREVIOUSSUBMISSIONAGREEMENT". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..*** <br/> MAY |
+| <a name="SIP7"></a>**SIP7** | **Archival reference code** <br/> `metsHdr/altRecordID` <br/> An optional reference code indicating where in the archival hierarchy the package shall be placed in the OAIS. <br/> `@TYPE` is used with the value "REFERENCECODE". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..1** <br/> MAY |
+| <a name="SIP8"></a>**SIP8** | **Previous archival reference code** <br/> `metsHdr/altRecordID` <br/> In cases where the SIP originates from other institutions maintaining a reference code structure, this element can be used to record these reference codes and therefore support the provenance of the package when a whole archival description is not submitted with the submission. <br/> `@TYPE` is used with the value "PREVIOUSREFERENCECODE". <br/> Example: SE/FM/123/123.1/123.1.3 <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..*** <br/> MAY |
 | <a name="SIP9"></a>**SIP9** | **Archival creator agent** <br/> `metsHdr/agent` <br/> A wrapper element that enables to encode the name of the organisation or person that originally created the data being transferred. Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..1** <br/> MAY |
 | <a name="SIP10"></a>**SIP10** | **Archival creator agent role** <br/> `metsHdr/agent/@ROLE` <br/> The role of the person(s) or institution(s) responsible for the document/collection. | **1..1** <br/> MUST |
 | <a name="SIP11"></a>**SIP11** | **Archival creator agent type** <br/> `metsHdr/agent/@TYPE` <br/> The type of the archival creator agent is "ORGANIZATION" or "INDIVIDUAL". | **1..1** <br/> MUST |
@@ -542,7 +542,7 @@ The following list of semantic elements provide a starting point for anyone will
 **Example 1:** Example of a whole METS document describing an submission information package with no representations.
 
 ```xml
-<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:csip="https://dilcis.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://dilcis.eu/XML/METS/SIPExtensionMETS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" csip:OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" csip:OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://DILCIS.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
   <mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" csip:OAISPACKAGETYPE="SIP">
     <mets:agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
       <mets:name>RODA-in</mets:name>
@@ -564,10 +564,10 @@ The following list of semantic elements provide a starting point for anyone will
       <mets:name>The archives</mets:name>
       <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
     </mets:agent>
-    <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altrecordID>
-    <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altrecordID>
-    <mets:altrecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altrecordID>
-    <mets:altrecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altrecordID>
+    <mets:altRecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altRecordID>
+    <mets:altRecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altRecordID>
+    <mets:altRecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altRecordID>
+    <mets:altRecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altRecordID>
   </mets:metsHdr>
   <mets:dmdSec ID="uuid-906F4F12-BA52-4779-AE2C-178F9206111F" CREATED="2018-04-24T14:37:49.609+01:00">
     <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" MDTYPEVERSION="2002" xlink:type="simple" xlink:href="metadata/descriptive/ead2002.xml" SIZE="903" CREATED="2018-04-24T14:37:49.609+01:00" CHECKSUM="F24263BF09994749F335E1664DCE0086DB6DCA323FDB6996938BCD28EA9E8153" CHECKSUMTYPE="SHA-256">
@@ -699,7 +699,7 @@ Describes the type of the alternative record ID.
 
 **Maintained By:** DILCIS Board   
   
-**Location:** [http://earksip.dilcis.eu/schema/SIPVocabularyNoteType.xml](http://earksip.dilcis.eu/schema/SIPVocabularyNoteType.xml)   
+**Location:** [http://earkcsip.dilcis.eu/schema/CSIPVocabularyNoteType.xml](http://earkcsip.dilcis.eu/schema/CSIPVocabularyNoteType.xml)   
 
 **Context:** Used in `@csip:NOTETYPE`   
   
@@ -734,10 +734,10 @@ Describes the OAIS type the package belongs to in the OAIS reference model.
 | <a name="SIP2"></a>**SIP2** | **METS Profile** <br/> `mets/@PROFILE` <br/> The value is set to "https://earksip.dilcis.eu/profile/E-ARK-SIP.xml". | **1..1** <br/> MUST |
 | <a name="SIP3"></a>**SIP3** | **Package status** <br/> `metsHdr/@RECORDSTATUS` <br/> A way of indicating the status of the package and to instruct the OAIS on how to properly handle the package. If not set, the expected behaviour is equal to NEW. <br/> **See also:** [Package status](#VocabularyRECORDSTATUS) | **0..1** <br/> MAY |
 | <a name="SIP4"></a>**SIP4** | **OAIS Package type information** <br/> `metsHdr/@csip:OAISPACKAGETYPE` <br/> `@csip:OAISPACKAGETYPE` is used with the value "SIP". <br/> **See also:** [OAIS Package type](#VocabularyOAISPackageType) | **1..1** <br/> MUST |
-| <a name="SIP5"></a>**SIP5** | **Submission agreement** <br/> `metsHdr/altrecordID` <br/> A reference to the Submission Agreement associated with the package. <br/> `@TYPE` is used with the value "SUBMISSIONAGREEMENT". <br/> Example: RA 13-2011/5329; 2012-04-12 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..1** <br/> MAY |
-| <a name="SIP6"></a>**SIP6** | **Previous Submission agreement** <br/> `metsHdr/altrecordID` <br/> An optional reference to a previous submission agreement(s) which the information may have belonged to. <br/> `@TYPE` is used with the value "PREVIOUSSUBMISSIONAGREEMENT". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..*** <br/> MAY |
-| <a name="SIP7"></a>**SIP7** | **Archival reference code** <br/> `metsHdr/altrecordID` <br/> An optional reference code indicating where in the archival hierarchy the package shall be placed in the OAIS. <br/> `@TYPE` is used with the value "REFERENCECODE". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..1** <br/> MAY |
-| <a name="SIP8"></a>**SIP8** | **Previous archival reference code** <br/> `metsHdr/altrecordID` <br/> In cases where the SIP originates from other institutions maintaining a reference code structure, this element can be used to record these reference codes and therefore support the provenance of the package when a whole archival description is not submitted with the submission. <br/> `@TYPE` is used with the value "PREVIOUSREFERENCECODE". <br/> Example: SE/FM/123/123.1/123.1.3 <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..*** <br/> MAY |
+| <a name="SIP5"></a>**SIP5** | **Submission agreement** <br/> `metsHdr/altRecordID` <br/> A reference to the Submission Agreement associated with the package. <br/> `@TYPE` is used with the value "SUBMISSIONAGREEMENT". <br/> Example: RA 13-2011/5329; 2012-04-12 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..1** <br/> MAY |
+| <a name="SIP6"></a>**SIP6** | **Previous Submission agreement** <br/> `metsHdr/altRecordID` <br/> An optional reference to a previous submission agreement(s) which the information may have belonged to. <br/> `@TYPE` is used with the value "PREVIOUSSUBMISSIONAGREEMENT". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..*** <br/> MAY |
+| <a name="SIP7"></a>**SIP7** | **Archival reference code** <br/> `metsHdr/altRecordID` <br/> An optional reference code indicating where in the archival hierarchy the package shall be placed in the OAIS. <br/> `@TYPE` is used with the value "REFERENCECODE". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..1** <br/> MAY |
+| <a name="SIP8"></a>**SIP8** | **Previous archival reference code** <br/> `metsHdr/altRecordID` <br/> In cases where the SIP originates from other institutions maintaining a reference code structure, this element can be used to record these reference codes and therefore support the provenance of the package when a whole archival description is not submitted with the submission. <br/> `@TYPE` is used with the value "PREVIOUSREFERENCECODE". <br/> Example: SE/FM/123/123.1/123.1.3 <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..*** <br/> MAY |
 | <a name="SIP9"></a>**SIP9** | **Archival creator agent** <br/> `metsHdr/agent` <br/> A wrapper element that enables to encode the name of the organisation or person that originally created the data being transferred. Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..1** <br/> MAY |
 | <a name="SIP10"></a>**SIP10** | **Archival creator agent role** <br/> `metsHdr/agent/@ROLE` <br/> The role of the person(s) or institution(s) responsible for the document/collection. | **1..1** <br/> MUST |
 | <a name="SIP11"></a>**SIP11** | **Archival creator agent type** <br/> `metsHdr/agent/@TYPE` <br/> The type of the archival creator agent is "ORGANIZATION" or "INDIVIDUAL". | **1..1** <br/> MUST |
@@ -761,15 +761,15 @@ Describes the OAIS type the package belongs to in the OAIS reference model.
 | <a name="SIP29"></a>**SIP29** | **Preservation agent name** <br/> `metsHdr/agent/name` <br/> Name of the organisation preserving the package. | **1..1** <br/> MAY |
 | <a name="SIP30"></a>**SIP30** | **Preservation agent additional information** <br/> `metsHdr/agent/note` <br/> The preservation agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
 | <a name="SIP31"></a>**SIP31** | **Classification of the preservation agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` <br/> The preservation agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** [Note type](#VocabularyNoteType) | **1..1** <br/> MUST |
-| <a name="REF_CSIP_1"></a>**REF_CSIP_1** | **Descriptive metadata** <br/>  <br/> The DIP dmdSec element should comply with  <br/>  dmdSec requirements in the CSIP profile. |  <br/> SHOULD |
-| <a name="REF_CSIP_2"></a>**REF_CSIP_2** | **Administrative metadata** <br/>  <br/> The DIP amdSec element should comply with  <br/>  amdSec requirements in the CSIP profile. |  <br/> SHOULD |
+| <a name="REF_CSIP_1"></a>**REF_CSIP_1** | **Descriptive metadata** <br/>  <br/> The SIP dmdSec element should comply with  <br/>  dmdSec requirements in the CSIP profile. |  <br/> SHOULD |
+| <a name="REF_CSIP_2"></a>**REF_CSIP_2** | **Administrative metadata** <br/>  <br/> The SIP amdSec element should comply with  <br/>  amdSec requirements in the CSIP profile. |  <br/> SHOULD |
 | <a name="SIP32"></a>**SIP32** | **File format name** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATNAME` <br/> An optional attribute may be used if the MIMETYPE is not sufficient for the purposes of processing the information package. <br/> Example: "Extensible Markup Language" <br/> Example: "PDF/A" <br/> Example: "ISO/IEC 26300:2006" | **0..1** <br/> MAY |
 | <a name="SIP33"></a>**SIP33** | **File format version** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATVERSION` <br/> The version of the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "1.0" | **0..1** <br/> MAY |
 | <a name="SIP34"></a>**SIP34** | **File format registry** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATREGISTRY` <br/> The name of the format registry used to identify the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "PRONOM" | **0..1** <br/> MAY |
 | <a name="SIP35"></a>**SIP35** | **File format registry key** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATKEY` <br/> Key of the file format in the registry when use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "fmt/101" | **0..1** <br/> MAY |
-| <a name="REF_CSIP_3"></a>**REF_CSIP_3** | **Structural description of the package** <br/>  <br/> The DIP structMap element should comply with  <br/>  structMap requirements in the CSIP profile. |  <br/> SHOULD |
-| <a name="REF_METS_1"></a>**REF_METS_1** | **structLink** <br/>  <br/> Section not defined or used in CSIP, additional own uses may occur. <br/> Information regarding the structural links is found in the  <br/> METS Primer <br/> Information regarding the structural links is found in the  <br/> METS Primer |  <br/> MAY |
-| <a name="REF_METS_2"></a>**REF_METS_2** | **behaviorSec** <br/>  <br/> Section not defined or used in CSIP, additional own uses may occur. <br/> Information regarding the behavior section is found in the  <br/> METS Primer <br/> Information regarding the behavior section is found in the  <br/> METS Primer |  <br/> MAY |
+| <a name="REF_CSIP_3"></a>**REF_CSIP_3** | **Structural description of the package** <br/>  <br/> The SIP structMap element should comply with  <br/>  structMap requirements in the CSIP profile. |  <br/> SHOULD |
+| <a name="REF_METS_1"></a>**REF_METS_1** | **structLink** <br/>  <br/> Section not defined or used in CSIP, additional own uses may occur. <br/> Information regarding the structural links is found in the  <br/> METS Primer |  <br/> MAY |
+| <a name="REF_METS_2"></a>**REF_METS_2** | **behaviorSec** <br/>  <br/> Section not defined or used in CSIP, additional own uses may occur. <br/> Information regarding the behavior section is found in the  <br/> METS Primer |  <br/> MAY |
 
 <a name="glossary"></a>
 
@@ -800,7 +800,7 @@ I Authors
 | -------------------------------- | -------------------------------------------------- |
 | Miguel Ferreira                  | Keep Solutions (KEEPS)                             |
 | Hélder Silva                     | Keep Solutions (KEEPS)                             |
-| Karin Bredenberg                 | Swedish National Archives (NAS)                    |
+| Karin Bredenberg                 | Kommunalförbundet Sydarkivera (SYD)                |
 | Carl Wilson                      | Open Preservation Foundation                       |
 | Jaime Kaminski (reviewer)        | Highbury Associates                                |
 | Luís Miguel Ferros (reviewer)    | Keep Solutions (KEEPS)                             |
@@ -815,7 +815,7 @@ I Authors
 | Gregor Zavrsnik                  | Slovenian National Archives (SNA)                  |
 | Helder Silva                     | Keep Solutions (KEEPS)                             |
 | Miguel Ferreira                  | Keep Solutions (KEEPS)                             |
-| Karin Bredenberg                 | Swedish National Archives (NAS)                    |
+| Karin Bredenberg                 | Kommunalförbundet Sydarkivera (SYD)                |
 | Kathrine Hougaard Edsen Johansen | Danish National Archives (DNA)                     |
 | Levente Szilágyi                 | National Archives of Hungary (NAH)                 |
 | Phillip Mike Tømmerholt          | Danish National Archives (DNA)                     |
@@ -866,6 +866,7 @@ II Revision History
 | 2.0.0 | 15.03.2019 | Miguel Ferreira | KEEPS | Updated to v2.0 with CSIP |
 | 2.0.1 | 09.09.2019 | Karin Bredenberg | SNA | Correction @LABEL and @USE attributes, typos, layout and PDF formatting. |
 | 2.0.2 | 28.10.2019 | Karin Bredenberg | SYD | Fixed schema paths. |
+| 2.0.3 | 08.01.2020 | K. Bredenberg, C.Wilson | SYD & OPF | Fixed error in value list note type. |
 
 
 III Acknowledgements
