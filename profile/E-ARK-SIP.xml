@@ -778,25 +778,28 @@
                 </mets:fileGrp>
             </mets:fileSec>
             <mets:structMap ID="appdx1.struct" TYPE="PHYSICAL" LABEL="CSIP">
-                <mets:div ID="appdx1.div.struct" LABEL="uuid-4422c185-5407-4918-83b1-7abfa77de182">
-                    <mets:div
-                        ID="appdx1.div.md"
-                        LABEL="Metadata"
-                        ADMID="appdx1.digiprov-premis-file-1 appdx1.digiprov-premis-file-2"
-                        DMDID="dmdSecExample1"/>
-                    <mets:div
-                        ID="appdx1.div.doc"
-                        LABEL="Documentation"
-                        CONTENTIDS="appdx1.filegrp-doc"/>
-                    <mets:div
-                        ID="appdx1.div.schm"
-                        LABEL="Schemas"
-                        CONTENTIDS="appdx1.filegrp-schema"/>
-                    <mets:div
-                        ID="appdx1.div.reps"
-                        LABEL="Representations"
-                        CONTENTIDS="appdx1.filegrp.data" />
+              <mets:div ID="appdx1.div.struct" LABEL="uuid-4422c185-5407-4918-83b1-7abfa77de182">
+                <mets:div
+                    ID="appdx1.div.md"
+                    LABEL="Metadata"
+                    ADMID="appdx1.digiprov-premis-file-1 appdx1.digiprov-premis-file-2"
+                    DMDID="dmdSecExample1"/>
+                <mets:div
+                    ID="appdx1.div.doc"
+                    LABEL="Documentation">
+                  <mets:fptr FILEID="appdx1.filegrp-doc"/>
                 </mets:div>
+                <mets:div
+                    ID="appdx1.div.schm"
+                    LABEL="Schemas">
+                    <mets:fptr FILEID="appdx1.filegrp-schema"/>
+                </mets:div>
+                <mets:div
+                    ID="appdx1.div.reps"
+                    LABEL="Representations">
+                    <mets:fptr FILEID="appdx1.filegrp.data"/>
+                </mets:div>
+              </mets:div>
             </mets:structMap>
         </mets:mets>
     </Appendix>
