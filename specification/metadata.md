@@ -16,5 +16,5 @@ abstract: |
       in an Open Archival Information System Reference Model (OAIS), i.e.
       pre-ingest and ingest functional units.
 version: 2.0.4
-date: 01.06.2020
+date: 12.06.2020
 ---
