@@ -69,11 +69,11 @@ markdown-pp SITE.md -o ./docs/index.md
 
 rm /tmp/site.md
 
-cp -R specification/images docs/
-cp -R spec-publisher/res/md/figs docs/
 cp -Rf spec-publisher/site/* docs/
 find ./docs/_* -type f -exec sed -i 's/CSIP/SIP/' {} \;
 find ./docs/_* -type f -exec sed -i 's/csip/sip/' {} \;
+cp -R specification/images docs/
+cp -R spec-publisher/res/md/figs docs/
 cp -R profile docs/
 cp -R schema docs/
 cp -R archive docs/
