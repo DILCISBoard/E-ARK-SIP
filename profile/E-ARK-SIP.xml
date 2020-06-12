@@ -14,7 +14,7 @@
     <URI LOCTYPE="URL" ASSIGNEDBY="local">https://earksip.dilcis.eu/profile/E-ARK-SIP.xml</URI>
     <title>E-ARK SIP METS Profile 2.0</title>
     <abstract>This is the extension of the E-ARK CS IP profile for creation of a E-ARK SIP.</abstract>
-    <date>2020-06-01T12:00:00</date>
+    <date>2020-06-12T09:00:00</date>
     <contact>
         <institution>DILCIS Board</institution>
         <address>http://dilcis.eu/</address>
@@ -248,7 +248,7 @@
             <requirement ID="SIP15" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Submitting agent</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation or person that submitting the package to the archive.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation or person submitting the package to the archive.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent</dd>
                         <dt>Cardinality</dt><dd>1..1</dd>
