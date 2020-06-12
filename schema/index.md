@@ -1,7 +1,7 @@
 ---
-title: CSIP Associated Schema Files
+title: SIP Associated Schema Files
 ---
-CSIP Associated Schema Files
+SIP Associated Schema Files
 =======================
 
 - [METS XSD Schema](./mets.xsd)
