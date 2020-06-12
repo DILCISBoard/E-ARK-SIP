@@ -16,16 +16,17 @@ script:
 - java -jar target/mets-profile-proc.jar ../profile/E-ARK-CSIP.xml
 - cd ..
 - docker run -it --rm -v "$PWD:/source" -u "$(id -u):$(id -g)" --entrypoint /source/create-pdf.sh eark4all/spec-pdf-publisher
+- mkdir site
+- docker run -it --rm -v "$PWD"/docs:/usr/src/app -v "$PWD"/site:/_site -u "$(id -u):$(id -g)" starefossen/github-pages jekyll build -d /_site
 - bundle install
-- bundle exec jekyll build -s ./docs -d ./_site
-- bundle exec htmlproofer ./_site --file-ignore /javadoc/ --only-4xx --check-html
+- bundle exec htmlproofer ./site --file-ignore /javadoc/ --only-4xx --check-html
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: "$GH_TOKEN"
   keep_history: true
-  local_dir: docs
-  fqdn: earksip.dilcis.eu
+  local_dir: site
+  fqdn: "$CNAME"
   on:
     branch: master
 env:
