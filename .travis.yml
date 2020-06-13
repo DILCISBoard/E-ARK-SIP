@@ -20,6 +20,8 @@ script:
 - docker run -it --rm -v "$PWD"/docs:/usr/src/app -v "$PWD"/site:/_site -u "$(id -u):$(id -g)" starefossen/github-pages jekyll build -d /_site
 - bundle install
 - bundle exec htmlproofer ./site --file-ignore /javadoc/ --only-4xx --check-html
+- ls -alh ./docs
+- ls -alh ./site
 - grep -i "github.com" --group-separator"===== GH REF =====" -n -B 1 -A 1 site/index.html
 deploy:
   provider: pages
