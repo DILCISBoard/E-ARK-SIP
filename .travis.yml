@@ -13,7 +13,7 @@ script:
 - git stash
 - git checkout feat/pdf-publication
 - mvn clean package
-- java -jar target/mets-profile-proc.jar ../profile/E-ARK-CSIP.xml
+- java -jar target/mets-profile-proc.jar ../profile/E-ARK-SIP.xml
 - cd ..
 - docker run -it --rm -v "$PWD:/source" -u "$(id -u):$(id -g)" --entrypoint /source/create-pdf.sh eark4all/spec-pdf-publisher
 - mkdir site
