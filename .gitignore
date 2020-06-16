@@ -1,5 +1,15 @@
-.DS_Store
+# Site publication file
+docs/
+site/
+Gemfile.lock
+**/_site
+.classpath
+.project
+.settings
+**/*.jar
+**/target
+**/bin
+**/*.class
 .vagrant*
 .venv
-Gemfile.lock
-specification/eark-sip-pdf.md
+vendor

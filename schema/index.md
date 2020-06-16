@@ -1,12 +1,12 @@
 ---
-title: CSIP Associated Schema Files
+title: SIP Associated Schema Files
 ---
-CSIP Associated Schema Files
+SIP Associated Schema Files
 =======================
 
 - [METS XSD Schema](./mets.xsd)
   Version 1.12 of the METS schema
-- [DILCIS METS Extensions](./DILCISExtensionMETS.xsd)
+- [DILCIS METS Extensions](./DILCISExtensionSIPMETS.xsd)
   Enumerated restrictions and types for attributes:
   + `CONTENTINFORMATIONTYPE`
   + `OTHERCONTENTTYPESPECIFICATION`

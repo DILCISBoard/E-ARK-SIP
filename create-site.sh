@@ -26,6 +26,36 @@ then
   rm docs/index.md
 fi
 
+if [ -d ./docs/_data ]
+then
+  echo " - removing existing menu data"
+  rm -rf ./docs/_data
+fi
+
+if [ -d ./docs/_includes ]
+then
+  echo " - removing existing includes"
+  rm -rf ./docs/_includes
+fi
+
+if [ -d ./docs/_layouts ]
+then
+  echo " - removing existing layouts"
+  rm -rf ./docs/_layouts
+fi
+
+if [ -d ./docs/img ]
+then
+  echo " - removing existing images"
+  rm -rf ./docs/img
+fi
+
+if [ -d ./docs/css ]
+then
+  echo " - removing existing css"
+  rm -rf ./docs/css
+fi
+
 bash "$SCRIPT_DIR/spec-publisher/utils/create-venv.sh"
 command -v markdown-pp >/dev/null 2>&1 || {
   tmpdir=$(dirname "$(mktemp -u)")
@@ -39,6 +69,9 @@ markdown-pp SITE.md -o ./docs/index.md
 
 rm /tmp/site.md
 
+cp -Rf spec-publisher/site/* docs/
+find ./docs/_* -type f -exec sed -i 's/CSIP/SIP/' {} \;
+find ./docs/_* -type f -exec sed -i 's/csip/sip/' {} \;
 cp -R specification/images docs/
 cp -R spec-publisher/res/md/figs docs/
 cp -R profile docs/
