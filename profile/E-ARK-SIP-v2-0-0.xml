@@ -4,23 +4,23 @@
     xmlns="http://www.loc.gov/METS_Profile/v2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:mets="http://www.loc.gov/METS/"
-    xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS"
-    xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS"
+    xmlns:csip="https://dilcis.eu/XML/METS/CSIPExtensionMETS"
+    xmlns:sip="https://dilcis.eu/XML/METS/SIPExtensionMETS"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xsi:schemaLocation="http://www.loc.gov/METS_Profile/v2 http://www.loc.gov/standards/mets/profile_docs/mets.profile.v2-0.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd"
     STATUS="provisional"
     REGISTRATION="unregistered"
-    ID="SIPV2.0.4">
+    ID="SIPV2.0.0-DRAFT">
     <URI LOCTYPE="URL" ASSIGNEDBY="local">https://earksip.dilcis.eu/profile/E-ARK-SIP.xml</URI>
     <title>E-ARK SIP METS Profile 2.0</title>
     <abstract>This is the extension of the E-ARK CS IP profile for creation of a E-ARK SIP.</abstract>
-    <date>2020-06-12T09:00:00</date>
+    <date>2018-11-28T15:00:00</date>
     <contact>
         <institution>DILCIS Board</institution>
         <address>http://dilcis.eu/</address>
         <email>info@dilcis.eu</email>
     </contact>
-    <related_profile RELATIONSHIP="Extends" URI="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml">E-ARK CSIP METS Profile 2.0</related_profile>
+    <related_profile RELATIONSHIP="Extends" URI="https://earkcsip.dilcis.eu/profile/CSIP.xml">E-ARK CSIP METS Profile 2.0</related_profile>
     <profile_context>
         <resource_model>
           <head>E-ARK SIP profile</head>
@@ -29,21 +29,12 @@
     </profile_context>
     <external_schema>
         <name>E-ARK SIP METS Extension</name>
-            <URL>https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd</URL>
+            <URL>https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd</URL>
             <context>XML-schema for the attributes added by SIP</context>
             <note>
                 <p xmlns="http://www.w3.org/1999/xhtml">An extension schema with the added attributes for use in this profile.</p>
                 <p xmlns="http://www.w3.org/1999/xhtml">The schema is used with a namespace prefix of sip.</p>
             </note>
-    </external_schema>
-    <external_schema>
-        <name>E-ARK CSIP METS Extension</name>
-        <URL>http://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd</URL>
-        <context>XML-schema for the attributes added by CSIP</context>
-        <note>
-            <p xmlns="http://www.w3.org/1999/xhtml">An extension schema with the added attributes for use in this profile.</p>
-            <p xmlns="http://www.w3.org/1999/xhtml">The schema is identified using the namespace prefix csip.</p>
-        </note>
     </external_schema>
     <description_rules>
         <p xmlns="http://www.w3.org/1999/xhtml">The filepath must be decoded consistently throughout all file references within the information package.</p>
@@ -52,7 +43,7 @@
         <vocabulary ID="VocabularyRECORDSTATUS">
             <name>Package status</name>
             <maintenance_agency>DILCIS Board</maintenance_agency>
-            <URI>http://earksip.dilcis.eu/schema/SIPVocabularyRecordStatus.xml</URI>
+            <URI>http://earksip.dilcis.eu/schema/</URI>
             <context>Used in `@RECORDSTATUS`</context>
             <description>
                 <p xmlns="http://www.w3.org/1999/xhtml">Describes the status of the package.</p>
@@ -61,7 +52,7 @@
         <vocabulary ID="VocabularyaltrecordIDTYPE">
             <name>Alternative record ID's</name>
             <maintenance_agency>DILCIS Board</maintenance_agency>
-            <URI>http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml</URI>
+            <URI>http://earksip.dilcis.eu/schema/</URI>
             <context>Used in `altrecordID/@TYPE`</context>
             <description>
                 <p xmlns="http://www.w3.org/1999/xhtml">Describes the type of the alternative record ID.</p>
@@ -70,7 +61,7 @@
         <vocabulary ID="VocabularyNoteType">
             <name>Note type</name>
             <maintenance_agency>DILCIS Board</maintenance_agency>
-            <URI>http://earkcsip.dilcis.eu/schema/CSIPVocabularyNoteType.xml</URI>
+            <URI>http://earksip.dilcis.eu/schema/</URI>
             <context>Used in `@csip:NOTETYPE`</context>
             <description>
                 <p xmlns="http://www.w3.org/1999/xhtml">Describes the type of a note for an agent.</p>
@@ -79,8 +70,8 @@
         <vocabulary ID="VocabularyOAISPackageType">
             <name>OAIS Package type</name>
             <maintenance_agency>DILCIS Board</maintenance_agency>
-            <URI>http://earkcsip.dilcis.eu/schema/CSIPVocabularyOAISPackageType.xml</URI>
-            <context>Used in `@csip:OAISPACKAGETYPE`</context>
+            <URI>http://earkcsip.dilcis.eu/schema/</URI>
+            <context>Used in @csip:OAISPACKAGETYPE</context>
             <description>
                 <p xmlns="http://www.w3.org/1999/xhtml">Describes the OAIS type the package belongs to in the OAIS reference model.</p>
             </description>
@@ -140,7 +131,7 @@
                     <p xmlns="http://www.w3.org/1999/xhtml">Note: It is recommended to use a machine-readable format for a better description of a submission agreement.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">For example, the submission agreement developed by Docuteam GmbH <a href="http://www.loc.gov/standards/mets/profiles/00000041.xml">http://www.loc.gov/standards/mets/profiles/00000041.xml</a></p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
-                        <dt>METS XPath</dt><dd>metsHdr/altRecordID</dd>
+                        <dt>METS XPath</dt><dd>metsHdr/altrecordID</dd>
                         <dt>Cardinality</dt><dd>0..1</dd>
                     </dl>
                 </description>
@@ -155,7 +146,7 @@
                     <p xmlns="http://www.w3.org/1999/xhtml">Note: It is recommended to use a machine-readable format for a better description of a submission agreement.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">For example, the submission agreement developed by Docuteam GmbH <a href="http://www.loc.gov/standards/mets/profiles/00000041.xml">http://www.loc.gov/standards/mets/profiles/00000041.xml</a></p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
-                        <dt>METS XPath</dt><dd>metsHdr/altRecordID</dd>
+                        <dt>METS XPath</dt><dd>metsHdr/altrecordID</dd>
                         <dt>Cardinality</dt><dd>0..*</dd>
                     </dl>
                 </description>
@@ -167,7 +158,7 @@
                     <p xmlns="http://www.w3.org/1999/xhtml">`@TYPE` is used with the value "REFERENCECODE".</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Example: FM 12-2387/12726, 2007-09-19</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
-                        <dt>METS XPath</dt><dd>metsHdr/altRecordID</dd>
+                        <dt>METS XPath</dt><dd>metsHdr/altrecordID</dd>
                         <dt>Cardinality</dt><dd>0..1</dd>
                     </dl>
                 </description>
@@ -179,7 +170,7 @@
                     <p xmlns="http://www.w3.org/1999/xhtml">`@TYPE` is used with the value "PREVIOUSREFERENCECODE".</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Example: SE/FM/123/123.1/123.1.3</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
-                        <dt>METS XPath</dt><dd>metsHdr/altRecordID</dd>
+                        <dt>METS XPath</dt><dd>metsHdr/altrecordID</dd>
                         <dt>Cardinality</dt><dd>0..*</dd>
                     </dl>
                 </description>
@@ -248,7 +239,7 @@
             <requirement ID="SIP15" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Submitting agent</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation or person submitting the package to the archive.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation or person that submitting the package to the archive.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent</dd>
                         <dt>Cardinality</dt><dd>1..1</dd>
@@ -420,7 +411,7 @@
           <requirement ID="REF_CSIP_1" REQLEVEL="SHOULD">
               <description>
                   <head>Descriptive metadata</head>
-                  <p xmlns="http://www.w3.org/1999/xhtml">The SIP dmdSec element should comply with <a href="http://earkcsip.dilcis.eu/#533-use-of-the-mets-descriptive-metadata-section-element-dmdsec"> dmdSec requirements in the CSIP profile.</a></p>
+                  <p xmlns="http://www.w3.org/1999/xhtml">The DIP dmdSec element should comply with <a href="http://earkcsip.dilcis.eu/#533-use-of-the-mets-descriptive-metadata-section-element-dmdsec"> dmdSec requirements in the CSIP profile.</a></p>
               </description>
           </requirement>
         </dmdSec>
@@ -428,7 +419,7 @@
           <requirement ID="REF_CSIP_2" REQLEVEL="SHOULD">
               <description>
                   <head>Administrative metadata</head>
-                  <p xmlns="http://www.w3.org/1999/xhtml">The SIP amdSec element should comply with <a href="http://earkcsip.dilcis.eu/#534-use-of-the-mets-administrative-metadata-section-element-amdsec"> amdSec requirements in the CSIP profile.</a></p>
+                  <p xmlns="http://www.w3.org/1999/xhtml">The DIP amdSec element should comply with <a href="http://earkcsip.dilcis.eu/#534-use-of-the-mets-administrative-metadata-section-element-amdsec"> amdSec requirements in the CSIP profile.</a></p>
               </description>
           </requirement>
         </amdSec>
@@ -484,7 +475,7 @@
           <requirement ID="REF_CSIP_3"  REQLEVEL="SHOULD">
               <description>
                 <head>Structural description of the package</head>
-                  <p xmlns="http://www.w3.org/1999/xhtml">The SIP structMap element should comply with <a href="http://earkcsip.dilcis.eu/#536-use-of-the-mets-structural-map-structmap"> structMap requirements in the CSIP profile.</a></p>
+                  <p xmlns="http://www.w3.org/1999/xhtml">The DIP structMap element should comply with <a href="http://earkcsip.dilcis.eu/#536-use-of-the-mets-structural-map-structmap"> structMap requirements in the CSIP profile.</a></p>
               </description>
           </requirement>
          </structMap>
@@ -493,6 +484,7 @@
                <description>
                    <head>structLink</head>
                    <p xmlns="http://www.w3.org/1999/xhtml">Section not defined or used in CSIP, additional own uses may occur.</p>
+                   <p xmlns="http://www.w3.org/1999/xhtml">Information regarding the structural links is found in the <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
                    <p xmlns="http://www.w3.org/1999/xhtml">Information regarding the structural links is found in the <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
                </description>
            </requirement>
@@ -503,7 +495,8 @@
                   <head>behaviorSec</head>
                   <p xmlns="http://www.w3.org/1999/xhtml">Section not defined or used in CSIP, additional own uses may occur.</p>
                   <p xmlns="http://www.w3.org/1999/xhtml">Information regarding the behavior section is found in the <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
-            </description>
+                  <p xmlns="http://www.w3.org/1999/xhtml">Information regarding the behavior section is found in the <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
+              </description>
           </requirement>
         </behaviorSec>
     </structural_requirements>
@@ -541,6 +534,7 @@
         </note>
     </tool>
     <tool>
+        <!--  Karin: Completion of this needed or are they only present in the profiles for SIP/AIP/DIP? -->
         <name>RODA</name>
         <URI>http://github.com/keeps/roda</URI>
         <description>
@@ -551,6 +545,7 @@
         </note>
     </tool>
     <tool>
+        <!--  Karin: Completion of this needed or are they only present in the profiles for SIP/AIP/DIP? -->
         <name>RODA-in</name>
         <URI>https://rodain.roda-community.org</URI>
         <description>
@@ -568,14 +563,13 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:mets="http://www.loc.gov/METS/"
             xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS"
-            xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS"
+            xmlns:csip="https://dilcis.eu/XML/METS/CSIPExtensionMETS"
             OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182"
             LABEL="Accounting records of 2017"
             TYPE="OTHER"
             csip:OTHERTYPE="Accounting"
             PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml"
-            xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://DILCIS.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
+            xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd">
         </mets:mets>
     </Example>
     <Example ID="metsHdrElementExample1" LABEL="METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.">
@@ -600,15 +594,15 @@
                 <mets:name>The archives</mets:name>
                 <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
             </mets:agent>
-            <mets:altRecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altRecordID>
-            <mets:altRecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altRecordID>
-            <mets:altRecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altRecordID>
-            <mets:altRecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altRecordID>
+            <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altrecordID>
+            <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altrecordID>
+            <mets:altrecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altrecordID>
+            <mets:altrecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altrecordID>
         </mets:metsHdr>
     </Example>
     <Example ID="fileSecExample1" LABEL="METS example of an SIP with file information together with the info from CS IP.">
         <mets:file
-            ID="docx-file"
+            ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A81"
             MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
             SIZE="2554366"
             CREATED="2012-08-15T12:08:15.432+01:00"
@@ -618,7 +612,7 @@
             sip:FILEFORMATVERSION="2007 onwards"
             sip:FORMATREGISTRY="PRONOM"
             sip:FORMATREGISTRYKEY="fmt/412">
-            <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/File.docx"/>
+            <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="Documentation/File.docx"/>
         </mets:file>
     </Example>
     <Appendix NUMBER="1" LABEL="Example of a whole METS document describing an submission information package with no representations.">
@@ -626,14 +620,13 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:mets="http://www.loc.gov/METS/"
             xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS"
-            xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS"
+            xmlns:csip="https://dilcis.eu/XML/METS/CSIPExtensionMETS"
             OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182"
             LABEL="Accounting records of 2017"
             TYPE="OTHER"
             csip:OTHERTYPE="Accounting"
             PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml"
-            xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://DILCIS.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
+            xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd">
             <mets:metsHdr
                 CREATEDATE="2018-04-24T14:37:49.602+01:00"
                 LASTMODDATE="2018-04-24T14:37:49.602+01:00"
@@ -659,20 +652,20 @@
                     <mets:name>The archives</mets:name>
                     <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
                 </mets:agent>
-                <mets:altRecordID TYPE="SUBMISSIONAGREEMENT">
+                <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">
                     http://submissionagreement.kb.se/dnr331-1144-2011/20120711/
-                </mets:altRecordID>
-                <mets:altRecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">
+                </mets:altrecordID>
+                <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">
                     FM 12-2387/12726, 2007-09-19
-                </mets:altRecordID>
-                <mets:altRecordID TYPE="REFERENCECODE">
+                </mets:altrecordID>
+                <mets:altrecordID TYPE="REFERENCECODE">
                     SE/RA/123456/24/P
-                </mets:altRecordID>
-                <mets:altRecordID TYPE="PREVIOUSREFERENCECODE">
+                </mets:altrecordID>
+                <mets:altrecordID TYPE="PREVIOUSREFERENCECODE">
                     SE/FM/123/123.1/123.1.3
-                </mets:altRecordID>
+                </mets:altrecordID>
             </mets:metsHdr>
-            <mets:dmdSec ID="dmdSecExample1" CREATED="2018-04-24T14:37:49.609+01:00">
+            <mets:dmdSec ID="uuid-906F4F12-BA52-4779-AE2C-178F9206111F" CREATED="2018-04-24T14:37:49.609+01:00">
                 <mets:mdRef
                     LOCTYPE="URL"
                     MDTYPE="EAD"
@@ -685,7 +678,7 @@
                     CHECKSUMTYPE="SHA-256"/>
             </mets:dmdSec>
             <mets:amdSec>
-                <mets:digiprovMD ID="appdx1.digiprov-premis-file-1" CREATED="2018-04-24T14:37:52.783+01:00">
+                <mets:digiprovMD ID="uuid-9124DA4D-3736-4F69-8355-EB79A22E943F" CREATED="2018-04-24T14:37:52.783+01:00">
                     <mets:mdRef
                         LOCTYPE="URL"
                         xlink:type="simple"
@@ -699,7 +692,7 @@
                         CHECKSUMTYPE="SHA-256"
                         LABEL="premis1.xml"/>
                 </mets:digiprovMD>
-                <mets:digiprovMD ID="appdx1.digiprov-premis-file-2" CREATED="2018-04-24T14:47:52.783+01:00">
+                <mets:digiprovMD ID="uuid-48C18DD8-2561-4315-AC39-F941CBB138B3" CREATED="2018-04-24T14:47:52.783+01:00">
                     <mets:mdRef
                         LOCTYPE="URL"
                         xlink:type="simple"
@@ -714,10 +707,10 @@
                         LABEL="premis2.xml"/>
                 </mets:digiprovMD>
             </mets:amdSec>
-            <mets:fileSec ID="appdx1.filesec-docx-file-1">
-                <mets:fileGrp ID="appdx1.filegrp-doc" USE="Documentation">
+            <mets:fileSec ID="uuid-CA580D47-8C8B-4E91-ABD5-142EBBE15B84">
+                <mets:fileGrp ID="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86H" USE="Documentation">
                     <mets:file
-                        ID="appdx1.docx-file"
+                        ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A81"
                         MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                         SIZE="2554366"
                         CREATED="2012-08-15T12:08:15.432+01:00"
@@ -727,10 +720,10 @@
                         sip:FILEFORMATVERSION="2007 onwards"
                         sip:FORMATREGISTRY="PRONOM"
                         sip:FORMATREGISTRYKEY="fmt/412">
-                        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/File.docx"/>
+                        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="Documentation/File.docx"/>
                     </mets:file>
                     <mets:file
-                        ID="appdx1.file-2-docx"
+                        ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A82"
                         MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                         SIZE="2554366"
                         CREATED="2012-08-15T12:08:15.432+01:00"
@@ -740,12 +733,12 @@
                         sip:FILEFORMATVERSION="2007 onwards"
                         sip:FORMATREGISTRY="PRONOM"
                         sip:FORMATREGISTRYKEY="fmt/412">
-                        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/File2.docx"/>
+                        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="Documentation/File2.docx"/>
                     </mets:file>
                 </mets:fileGrp>
-                <mets:fileGrp ID="appdx1.filegrp-schema" USE="Schemas">
+                <mets:fileGrp ID="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86F" USE="Schemas">
                     <mets:file
-                        ID="appdx1.file.ead"
+                        ID="uuid-A1B7B0DA-E129-48EF-B431-E553F2977FD6"
                         MIMETYPE="application/xml"
                         SIZE="123917"
                         CREATED="2018-04-24T14:37:49.617+01:00"
@@ -758,48 +751,45 @@
                     </mets:file>
                 </mets:fileGrp>
                 <mets:fileGrp
-                    ID="appdx1.filegrp.data"
+                    ID="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86G"
                     USE="Representations/Submission/Data"
                     csip:CONTENTINFORMATIONTYPE="SIARDDK">
                     <mets:file
-                        ID="appdx1.file.siard"
+                        ID="uuid-EE23344D-4F64-40C1-8E18-75839EF661FD"
                         MIMETYPE="application/xml"
                         SIZE="1338744"
                         CREATED="2018-04-24T14:37:49.617+01:00"
                         CHECKSUM="7176A627870CFA3854468EC43C5A56F9BD8B30B50A983B8162BF56298A707667"
                         CHECKSUMTYPE="SHA-256"
-                        ADMID="appdx1.digiprov-premis-file-2 appdx1.digiprov-premis-file-1"
+                        ADMID="uuid-48C18DD8-2561-4315-AC39-F941CBB138B3 uuid-9124DA4D-3736-4F69-8355-EB79A22E943F"
                         sip:FILEFORMATNAME="Extensible Markup Language"
                         sip:FILEFORMATVERSION="1.0"
                         sip:FORMATREGISTRY="PRONOM"
                         sip:FORMATREGISTRYKEY="fmt/101">
-                        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/submission/data/SIARD.xml"/>
+                        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/Submission/Data/SIARD.xml"/>
                     </mets:file>
                 </mets:fileGrp>
             </mets:fileSec>
-            <mets:structMap ID="appdx1.struct" TYPE="PHYSICAL" LABEL="CSIP">
-              <mets:div ID="appdx1.div.struct" LABEL="uuid-4422c185-5407-4918-83b1-7abfa77de182">
-                <mets:div
-                    ID="appdx1.div.md"
-                    LABEL="Metadata"
-                    ADMID="appdx1.digiprov-premis-file-1 appdx1.digiprov-premis-file-2"
-                    DMDID="dmdSecExample1"/>
-                <mets:div
-                    ID="appdx1.div.doc"
-                    LABEL="Documentation">
-                  <mets:fptr FILEID="appdx1.filegrp-doc"/>
+            <mets:structMap ID="uuid-1465D250-0A24-4714-9555-5C1211722FB8" TYPE="PHYSICAL" LABEL="CSIP StructMap">
+                <mets:div ID="uuid-638362BC-65D9-4DA7-9457-5156B3965A18" LABEL="uuid-4422c185-5407-4918-83b1-7abfa77de182">
+                    <mets:div
+                        ID="uuid-A4E1C5B6-CD9B-43EF-8F0C-3FD3AB688F81"
+                        LABEL="Metadata"
+                        ADMID="uuid-9124DA4D-3736-4F69-8355-EB79A22E943F uuid-48C18DD8-2561-4315-AC39-F941CBB138B3"
+                        DMDID="uuid-906F4F12-BA52-4779-AE2C-178F9206111F"/>
+                    <mets:div
+                        ID="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86I"
+                        LABEL="Documentation"
+                        CONTENTIDS="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86H"/>
+                    <mets:div
+                        ID="uuid-26757DC2-4C0F-4431-85B5-5943D1AB5CA3"
+                        LABEL="Schemas"
+                        CONTENTIDS="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86F"/>
+                    <mets:div
+                        ID="uuid-35CB3341-D731-4AC3-9622-DB8901CD6736"
+                        LABEL="Representations"
+                        CONTENTIDS="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86G" />
                 </mets:div>
-                <mets:div
-                    ID="appdx1.div.schm"
-                    LABEL="Schemas">
-                    <mets:fptr FILEID="appdx1.filegrp-schema"/>
-                </mets:div>
-                <mets:div
-                    ID="appdx1.div.reps"
-                    LABEL="Representations">
-                    <mets:fptr FILEID="appdx1.filegrp.data"/>
-                </mets:div>
-              </mets:div>
             </mets:structMap>
         </mets:mets>
     </Appendix>
