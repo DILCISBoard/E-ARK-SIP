@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 2021-10-15 E-ARK SIP METS Profile 2.1 -->
 <!-- Draft of E-ARK SIP METS Profile 2.0 -->
 <METS_Profile
     xmlns="http://www.loc.gov/METS_Profile/v2"
@@ -11,17 +10,17 @@
     xsi:schemaLocation="http://www.loc.gov/METS_Profile/v2 http://www.loc.gov/standards/mets/profile_docs/mets.profile.v2-0.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd"
     STATUS="provisional"
     REGISTRATION="unregistered"
-    ID="SIPV2.1.0">
+    ID="SIPV2.0.4">
     <URI LOCTYPE="URL" ASSIGNEDBY="local">https://earksip.dilcis.eu/profile/E-ARK-SIP.xml</URI>
-    <title>E-ARK SIP METS Profile 2.1</title>
+    <title>E-ARK SIP METS Profile 2.0</title>
     <abstract>This is the extension of the E-ARK CS IP profile for creation of a E-ARK SIP.</abstract>
-    <date>2021-10-15T09:00:00</date>
+    <date>2020-06-12T09:00:00</date>
     <contact>
         <institution>DILCIS Board</institution>
         <address>http://dilcis.eu/</address>
         <email>info@dilcis.eu</email>
     </contact>
-    <related_profile RELATIONSHIP="Extends" URI="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml">E-ARK CSIP METS Profile 2.1</related_profile>
+    <related_profile RELATIONSHIP="Extends" URI="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml">E-ARK CSIP METS Profile 2.0</related_profile>
     <profile_context>
         <resource_model>
           <head>E-ARK SIP profile</head>
@@ -215,14 +214,14 @@
                     </dl>
                 </description>
             </requirement>
-            <requirement ID="SIP12" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
+            <requirement ID="SIP12" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Archival creator agent name</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation(s) that originally created the data being transferred.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent/name</dd>
-                        <dt>Cardinality</dt><dd>1..1</dd>
+                        <dt>Cardinality</dt><dd>0..*</dd>
                     </dl>
                 </description>
             </requirement>
@@ -249,7 +248,7 @@
             <requirement ID="SIP15" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Submitting agent</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">A wrapper element that enables to encode the name of the organisation or person submitting the package to the archive.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation or person submitting the package to the archive.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent</dd>
                         <dt>Cardinality</dt><dd>1..1</dd>
@@ -276,7 +275,7 @@
                     </dl>
                 </description>
             </requirement>
-            <requirement ID="SIP18" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
+            <requirement ID="SIP18" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Submitting agent name</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">Name of the organisation submitting the package to the archive.</p>
@@ -309,7 +308,7 @@
             <requirement ID="SIP21" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Contact person agent</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">A wrapper element that enables to encode the name of the contact person for the submission.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">Contact person for the submission.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent</dd>
                         <dt>Cardinality</dt><dd>0..*</dd>
@@ -359,7 +358,7 @@
             <requirement ID="SIP26" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Preservation agent</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">A wrapper element that enables to encode the name of the organisation or person that preserves the package.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">The organisation or person that preserves the package.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent</dd>
                         <dt>Cardinality</dt><dd>0..1</dd>
@@ -386,7 +385,7 @@
                     </dl>
                 </description>
             </requirement>
-            <requirement ID="SIP29" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
+            <requirement ID="SIP29" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Preservation agent name</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">Name of the organisation preserving the package.</p>
