@@ -214,14 +214,14 @@
                     </dl>
                 </description>
             </requirement>
-            <requirement ID="SIP12" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
+            <requirement ID="SIP12" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Archival creator agent name</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation(s) that originally created the data being transferred.</p>
                     <p xmlns="http://www.w3.org/1999/xhtml">Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent/name</dd>
-                        <dt>Cardinality</dt><dd>0..*</dd>
+                        <dt>Cardinality</dt><dd>1..1</dd>
                     </dl>
                 </description>
             </requirement>
