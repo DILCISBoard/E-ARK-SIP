@@ -248,7 +248,7 @@
             <requirement ID="SIP15" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Submitting agent</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation or person submitting the package to the archive.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">A wrapper element that enables to encode the name of the organisation or person submitting the package to the archive.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent</dd>
                         <dt>Cardinality</dt><dd>1..1</dd>
@@ -275,7 +275,7 @@
                     </dl>
                 </description>
             </requirement>
-            <requirement ID="SIP18" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
+            <requirement ID="SIP18" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Submitting agent name</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">Name of the organisation submitting the package to the archive.</p>
@@ -308,7 +308,7 @@
             <requirement ID="SIP21" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Contact person agent</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">Contact person for the submission.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">A wrapper element that enables to encode the name of the contact person for the submission.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent</dd>
                         <dt>Cardinality</dt><dd>0..*</dd>
@@ -358,7 +358,7 @@
             <requirement ID="SIP26" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Preservation agent</head>
-                    <p xmlns="http://www.w3.org/1999/xhtml">The organisation or person that preserves the package.</p>
+                    <p xmlns="http://www.w3.org/1999/xhtml">A wrapper element that enables to encode the name of the organisation or person that preserves the package.</p>
                     <dl xmlns="http://www.w3.org/1999/xhtml">
                         <dt>METS XPath</dt><dd>metsHdr/agent</dd>
                         <dt>Cardinality</dt><dd>0..1</dd>
@@ -385,7 +385,7 @@
                     </dl>
                 </description>
             </requirement>
-            <requirement ID="SIP29" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
+            <requirement ID="SIP29" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
                 <description>
                     <head>Preservation agent name</head>
                     <p xmlns="http://www.w3.org/1999/xhtml">Name of the organisation preserving the package.</p>
