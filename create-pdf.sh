@@ -62,8 +62,8 @@ command -v markdown-pp >/dev/null 2>&1 || {
 echo " - MARKDOWN-PP: Preparing PDF markdown"
 markdown-pp PDF.md -o docs/eark-sip-pdf.md -e tableofcontents
 
-cp -R specification/images docs/
-cp -R spec-publisher/res/md/figs docs/
+cp -Rf specification/images docs/
+cp -Rf spec-publisher/res/md/figs docs/
 
 cd docs || exit
 
