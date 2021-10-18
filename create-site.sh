@@ -62,7 +62,7 @@ then
   rm -rf ./docs/release-notes
 fi
 mkdir ./docs/release-notes
-cp ./RELEASENOTES.md ./docs/release-notes/index.md
+cp -f ./RELEASENOTES.md ./docs/release-notes/index.md
 
 bash "$SCRIPT_DIR/spec-publisher/utils/create-venv.sh"
 command -v markdown-pp >/dev/null 2>&1 || {
@@ -80,9 +80,9 @@ rm /tmp/site.md
 cp -Rf spec-publisher/site/* docs/
 find ./docs/_* -type f -exec sed -i 's/CSIP/SIP/' {} \;
 find ./docs/_* -type f -exec sed -i 's/csip/sip/' {} \;
-cp -R specification/images docs/
-cp -R spec-publisher/res/md/figs docs/
-cp -R profile docs/
-cp -R schema docs/
-cp -R archive docs/
-cp -R examples docs/
+cp -Rf specification/images docs/
+cp -Rf spec-publisher/res/md/figs docs/
+cp -Rf profile docs/
+cp -Rf schema docs/
+cp -Rf archive docs/
+cp -Rf examples docs/
