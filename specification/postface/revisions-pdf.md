@@ -102,4 +102,8 @@ II Revision History
                       C. Wilson, &             OPF          output display update
                       J. Kaminski              HIGH                      
 
+  2.1.0   15.10.2021  K.Bredenberg &           SYD          Update of specification to version 2.1.
+                      C. Wilson                OPF          Changed the cardinality of agent elements
+                                                            to follow METS and added more agents examples.
+
 ---------------------------------------------------------------------------------------------------------------
