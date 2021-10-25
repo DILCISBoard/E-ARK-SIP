@@ -23,6 +23,41 @@ to change the meaning of the specification.
 ### Administrative:
 Standard changes between versions, e.g. version number and release date.
 
+Version 2.1.0
+-------------
+October 15th 2021
+
+### Specification Changes
+Update of specification to version 2.1. The agent elements have been updated regarding cardinality to fully follow METS and more agents examples have been added.
+
+#### Major
+None
+
+#### Minor
+None
+
+#### Corrections
+- Creation of METS profile for SIP version 2.1 [[#103][]].
+- Update of cardinality for agent sub elements and addition of agent examples [[#100][], [[#101][], [[#102][], [[#104][], [[#105][]].
+
+#### Administrative
+- Version number increment and revision history [[#106][]], [[#108][]].
+
+### Web site and PDF presentation
+- Uniform site structure and DILCIS branding:
+  + Update to the common introduction [[#106][]].
+  + Update to publication process [[#106][]].
+  + Removal of redundant files, stale token and force copies of all collateral [[#106][]].
+
+[#108]: https://github.com/DILCISBoard/E-ARK-SIP/pull/108
+[#106]: https://github.com/DILCISBoard/E-ARK-SIP/pull/106
+[#105]: https://github.com/DILCISBoard/E-ARK-SIP/pull/105
+[#104]: https://github.com/DILCISBoard/E-ARK-SIP/pull/104
+[#103]: https://github.com/DILCISBoard/E-ARK-SIP/pull/103
+[#102]: https://github.com/DILCISBoard/E-ARK-SIP/issues/102
+[#101]: https://github.com/DILCISBoard/E-ARK-SIP/issues/101
+[#100]: https://github.com/DILCISBoard/E-ARK-SIP/issues/100
+
 Version 2.0.4
 -------------
 June 12th 2020
