@@ -42,3 +42,4 @@ II Revision History
 | 2.0.2 | 28.10.2019 | Karin Bredenberg | SYD | Fixed schema paths. |
 | 2.0.3 | 08.01.2020 | K. Bredenberg, C.Wilson | SYD & OPF | Fixed error in value list note type. |
 | 2.0.4 | 12.06.2020 | K. Bredenberg, C.Wilson & J. Kaminski | SYD, OPF & HIGH | Update in example ID:s, preface text and output display update |
+| 2.1.0 | 15.10.2021 | K. Bredenberg, C.Wilson | SYD & OPF | Update of specification to version 2.1. Changed the cardinality of agent elements to follow METS and added more agents examples. |
