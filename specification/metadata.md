@@ -15,6 +15,6 @@ abstract: |
       packaging, delivering and receiving packages of information to be archived
       in an Open Archival Information System Reference Model (OAIS), i.e.
       pre-ingest and ingest functional units.
-version: 2.1.0
-date: 15.10.2021
+version: ${RELEASE_VERSION}
+date: ${RELEASE_DATE}
 ---
