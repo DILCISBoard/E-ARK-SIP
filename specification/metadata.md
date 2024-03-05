@@ -2,19 +2,7 @@
 title: E-ARK SIP
 subtitle: Specification for Submission Information Packages
 abstract: |
-      This document constitutes a specification on how to produce and parse
-      E-ARK Submission Information Packages (SIP). The main objectives of this
-      specification are to define the general structure for a Submission
-      Information Package format in a way that it is suitable for a wide
-      variety of archival scenarios, e.g. document and image collections,
-      databases or geographical data, etc.; enhance interoperability between
-      Producers and Archives and recommend best practices regarding metadata,
-      content and structure of Submission Information Packages. The target
-      audience for this specification is records creators, archival
-      institutions and software providers that are responsible with preparing,
-      packaging, delivering and receiving packages of information to be archived
-      in an Open Archival Information System Reference Model (OAIS), i.e.
-      pre-ingest and ingest functional units.
+This document provides a comprehensive specification for the creation and parsing of E-ARK Submission Information Packages (SIP). Its primary goals include outlining a general-purpose structure for Submission Information Packages that accommodates a diverse array of archival materials—such as document and image collections, databases, and geographical data. Additionally, it aims to improve interoperability between Producers and Archives by recommending best practices for metadata, content, and the structural organization of Submission Information Packages. This specification is designed for a broad audience, including record creators, archival institutions, and software providers tasked with the preparation, packaging, delivery, and reception of information packages for archiving within an Open Archival Information System (OAIS), specifically targeting the pre-ingest and ingest stages.
 version: ${RELEASE_VERSION}
 date: ${RELEASE_DATE}
 ---

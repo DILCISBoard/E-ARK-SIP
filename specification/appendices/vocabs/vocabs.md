@@ -1,55 +1,55 @@
-
 ### Package status
+
 <a name="VocabularyRECORDSTATUS"></a>
 
-**Maintained By:** DILCIS Board   
+**Maintained By:** DILCIS Board
 
-**Location:** [http://earksip.dilcis.eu/schema/SIPVocabularyRecordStatus.xml](http://earksip.dilcis.eu/schema/SIPVocabularyRecordStatus.xml)   
+**Location:** [http://earksip.dilcis.eu/schema/SIPVocabularyRecordStatus.xml](http://earksip.dilcis.eu/schema/SIPVocabularyRecordStatus.xml)
 
-**Context:** Used in `@RECORDSTATUS`   
+**Context:** Used in `@RECORDSTATUS`
 
-**Description:**     
+**Description:**
 
-Describes the status of the package.  
-
+Describes the status of the package.
 
 ### Alternative record ID's
+
 <a name="VocabularyaltrecordIDTYPE"></a>
 
-**Maintained By:** DILCIS Board   
+**Maintained By:** DILCIS Board
 
-**Location:** [http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml](http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml)   
+**Location:** [http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml](http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml)
 
-**Context:** Used in `altrecordID/@TYPE`   
+**Context:** Used in `altrecordID/@TYPE`
 
-**Description:**     
+**Description:**
 
-Describes the type of the alternative record ID.  
-
+Describes the type of the alternative record ID.
 
 ### Note type
+
 <a name="VocabularyNoteType"></a>
 
-**Maintained By:** DILCIS Board   
+**Maintained By:** DILCIS Board
 
-**Location:** [http://earkcsip.dilcis.eu/schema/CSIPVocabularyNoteType.xml](http://earkcsip.dilcis.eu/schema/CSIPVocabularyNoteType.xml)   
+**Location:** [http://earkcsip.dilcis.eu/schema/CSIPVocabularyNoteType.xml](http://earkcsip.dilcis.eu/schema/CSIPVocabularyNoteType.xml)
 
-**Context:** Used in `@csip:NOTETYPE`   
+**Context:** Used in `@csip:NOTETYPE`
 
-**Description:**     
+**Description:**
 
-Describes the type of a note for an agent.  
-
+Describes the type of a note for an agent.
 
 ### OAIS Package type
+
 <a name="VocabularyOAISPackageType"></a>
 
-**Maintained By:** DILCIS Board   
+**Maintained By:** DILCIS Board
 
-**Location:** [http://earkcsip.dilcis.eu/schema/CSIPVocabularyOAISPackageType.xml](http://earkcsip.dilcis.eu/schema/CSIPVocabularyOAISPackageType.xml)   
+**Location:** [http://earkcsip.dilcis.eu/schema/CSIPVocabularyOAISPackageType.xml](http://earkcsip.dilcis.eu/schema/CSIPVocabularyOAISPackageType.xml)
 
-**Context:** Used in `@csip:OAISPACKAGETYPE`   
+**Context:** Used in `@csip:OAISPACKAGETYPE`
 
-**Description:**     
+**Description:**
 
-Describes the OAIS type the package belongs to in the OAIS reference model.  
+Describes the OAIS type the package belongs to in the OAIS reference model.
