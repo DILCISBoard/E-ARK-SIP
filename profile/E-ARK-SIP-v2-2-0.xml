@@ -382,8 +382,8 @@
 			<requirement ID="SIP19" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
 				<description>
 					<head>Submitting agent additional information</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The submitting agent has a note providing a unique identification code for the archival
-						creator.</p>
+					<p xmlns="http://www.w3.org/1999/xhtml">The submitting agent has a note providing a unique identification code for the
+						submitter.</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>dependsOn</dt>
 						<dd>SIP15</dd>
