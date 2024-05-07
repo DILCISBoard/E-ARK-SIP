@@ -14,11 +14,11 @@
             <Definition>Extends the previous delivery.</Definition>
         </Entry>
         <Entry>
-            <Term lang="en">REPLEACEMENT</Term>
+            <Term lang="en">REPLACEMENT</Term>
             <Definition>Replaces a previous delivery.</Definition>
         </Entry>
         <Entry>
-            <Term lang="eb">TEST</Term>
+            <Term lang="en">TEST</Term>
             <Definition>A test delivery. No AIP should be created.</Definition>
         </Entry>
         <Entry>

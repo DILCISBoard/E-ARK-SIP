@@ -1,6 +1,4 @@
 # Site publication file
-docs/
-site/
 Gemfile.lock
 **/_site
 .classpath
