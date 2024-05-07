@@ -1,22 +1,19 @@
-!INCLUDE "specification/metadata.md"
+---
+!INCLUDE "../../metadata.yaml"
+---
 
-{{ page.subtitle }}
-================
+# {{ page.subtitle }}
 
-!INCLUDE "spec-publisher/res/md/common-intro.md"
+!INCLUDE "preface.md"
 
-{{ page.title }}
-================
+# {{ page.title }}
 
-{{ page.subtitle }}
--------------------
+## {{ page.subtitle }}
 
 Version: {{ page.version }}
 
 Date: {{ page.date }}
 
-!INCLUDE "/tmp/site.md"
+!INCLUDE "body_toc.md"
 
-!INCLUDE "specification/bibliography.md"
-
-!INCLUDE "specification/postface/postface.md"
+!INCLUDE "postface.md"
