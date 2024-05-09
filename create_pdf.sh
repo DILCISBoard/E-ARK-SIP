@@ -6,7 +6,7 @@ cp -rf "$SCRIPT_DIR/spec-publisher/pandoc/img" "$SCRIPT_DIR/doc/pdf/"
 cp -rf "$SCRIPT_DIR/spec-publisher/res/md/figs" "$SCRIPT_DIR/doc/pdf/"
 cp -rf "$SCRIPT_DIR/specification/images" "$SCRIPT_DIR/doc/pdf/"
 
-
+bash "$SCRIPT_DIR/spec-publisher/scripts/create-venv.sh"
 command -v markdown-pp >/dev/null 2>&1 || {
   tmpdir=$(dirname "$(mktemp -u)")
   # shellcheck source=/tmp/.venv-markdown/bin/activate
