@@ -9,7 +9,7 @@ II Revision History
 
   0.2     13.11.2014  Tarvo Kärberg            NAE          Updating content.
 
-  0.3     02.12.2014  Tarvo Kärberg            NAE          Updating content.   
+  0.3     02.12.2014  Tarvo Kärberg            NAE          Updating content.
 
   0.4     17.01.2015  Tarvo Kärberg            NAE          Updating content.
 
@@ -100,10 +100,14 @@ II Revision History
 
   2.0.4   12.06.2020  K.Bredenberg,            SYD          Update in example ID:s, preface text and
                       C. Wilson, &             OPF          output display update
-                      J. Kaminski              HIGH                      
+                      J. Kaminski              HIGH
 
   2.1.0   15.10.2021  K.Bredenberg &           SYD          Update of specification to version 2.1.
                       C. Wilson                OPF          Changed the cardinality of agent elements
                                                             to follow METS and added more agents examples.
+
+  2.2.0   17.05.2024  Miguel Ferreira          KEEPS        Fixes to elements cardinality. Versioning of
+                                                            the METS profile. Overall improvements to the
+                                                            specification text.
 
 ---------------------------------------------------------------------------------------------------------------
