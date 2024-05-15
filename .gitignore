@@ -1,6 +1,7 @@
 # Site publication file
-Gemfile.lock
+**/Gemfile.lock
 **/_site
+
 .classpath
 .project
 .settings
@@ -11,3 +12,4 @@ Gemfile.lock
 .vagrant*
 .venv
 vendor
+.vscode
