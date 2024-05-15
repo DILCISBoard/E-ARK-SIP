@@ -13,7 +13,7 @@ command -v markdown-pp >/dev/null 2>&1 || {
   source "$tmpdir/.venv-markdown/bin/activate"
 }
 echo " - MARKDOWN-PP: Processing postface markdown"
-cd "./specification/postface/" || exit
+cd "$SCRIPT_DIR/specification/postface/" || exit
 markdown-pp postface-pdf.md -o "$SCRIPT_DIR/doc/pdf/postface.md" -e tableofcontents
 
 cd "$SCRIPT_DIR/doc/pdf" || exit
@@ -41,11 +41,12 @@ command -v markdown-pp >/dev/null 2>&1 || {
   source "$tmpdir/.venv-markdown/bin/activate"
 }
 
+cd "$SCRIPT_DIR/doc/pdf" || exit
+
 echo " - MARKDOWN-PP: Preparing PDF markdown"
 markdown-pp PDF.md -o eark-sip-pdf.md -e tableofcontents
 sed -i 's%fig_2_csip_scope.svg%fig_2_csip_scope.png%' eark-sip-pdf.md
 
-cd "$SCRIPT_DIR/doc/pdf" || exit
 
 
 if [ -d "$SCRIPT_DIR/site/pdf" ]
