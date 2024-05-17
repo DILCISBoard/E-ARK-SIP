@@ -1,0 +1,79 @@
+---
+preface:
+  - name: common-intro
+    type: file
+    source: spec-publisher/res/md/common-intro.md
+
+body:
+  - name: introduction
+    type: file
+    source: specification/introduction.md
+
+  - name: metadata-root-requirments
+    heading: Mets Root Element Requirements
+    type: requirements
+    section: metsRootElement
+    examples: true
+
+  - name: mets-header
+    type: file
+    source: specification/mets_header.md
+
+  - name: metadata-metsHdr-requirments
+    heading: Mets Header Element Requirements
+    type: requirements
+    section: metsHdr
+    examples: true
+
+  - name: mets-filesec
+    type: file
+    source: specification/mets_filesec.md
+
+  - name: metadata-filesec-requirements
+    heading: Mets FileSec Element Requirements
+    type: requirements
+    section: fileSec
+    examples: true
+
+  - name: cits
+    type: file
+    source: specification/cits.md
+
+  - name: glossary
+    type: file
+    source: specification/glossary.md
+
+  - name: biblography
+    type: file
+    source: specification/biblography.md
+
+appendices:
+  - name: semantic
+    heading: "Submission Agreement semantic elements"
+    label: "A"
+    type: file
+    source: "specification/appendix_a.md"
+
+  - name: mets.examples
+    heading: "E-ARK Information Package METS Example"
+    label: "B"
+    type: mets
+    section: Appendix
+
+  - name: mets.schema
+    heading: "External Schema"
+    label: "C"
+    type: mets
+    section: external_schema
+
+  - name: mets.vocabs
+    heading: "External Vocabularies"
+    label: "D"
+    type: mets
+    section: vocabulary
+
+  - name: mets.metadata.requirments
+    heading: "E-ARK SIP Metadata Requirements"
+    label: "E"
+    type: mets
+    section: requirements
