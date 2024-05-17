@@ -9,6 +9,10 @@ title: Archived Versions of the SIP Specification
 
 ## Archived Versions
 
+### 2.1.x
+
+- [PDF Version 2.1.0](/v2_1/eark-sip-v2-1-0.pdf) 15-10-2021
+
 ### 2.0.x
 
 - [PDF Version 2.0.4](v2_0/eark-sip-v2-0-4.pdf) 12-06-2020
@@ -16,7 +20,6 @@ title: Archived Versions of the SIP Specification
 - [PDF Version 2.0.2](v2_0/eark-sip-v2-0-2.pdf) 28-10-2020
 - [PDF Version 2.0.1](v2_0/eark-sip-v2-0-1.pdf) 09-09-2020
 - [PDF Version 2.0.0](v2_0/eark-sip-v2-0-0.pdf) 31-05-2020
-- [PDF Version 2.1.0](/pdf/eark-sip.pdf) 15-10-2021
 
 ### 1.4
 
