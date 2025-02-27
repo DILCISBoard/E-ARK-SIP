@@ -712,36 +712,39 @@
 								https://DILCIS.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd
 								https://DILCIS.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
 
-			<mets:metsHdr
+			<metsHdr
 				CREATEDATE="2018-04-24T14:37:49.602+01:00"
 				LASTMODDATE="2018-04-24T14:37:49.602+01:00"
 				RECORDSTATUS="NEW"
 				csip:OAISPACKAGETYPE="SIP">
-				<mets:agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
-					<mets:name>RODA-in</mets:name>
-					<mets:note csip:NOTETYPE="SOFTWARE VERSION">2.7.2</mets:note>
-				</mets:agent>
-				<mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
-					<mets:name>The Swedish health agency</mets:name>
-					<mets:note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</mets:note>
-				</mets:agent>
-				<mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
-					<mets:name>The agency, Personnel</mets:name>
-					<mets:note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
-				</mets:agent>
-				<mets:agent ROLE="CREATOR" TYPE="INDIVIDUAL">
-					<mets:name>Sven Svensson</mets:name>
-					<mets:note>Phone: 08-123456, Email: sven.svensson@mail.mail</mets:note>
-				</mets:agent>
-				<mets:agent ROLE="PRESERVATION" TYPE="ORGANIZATION">
-					<mets:name>The archives</mets:name>
-					<mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
-				</mets:agent>
-				<mets:altRecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altRecordID>
-				<mets:altRecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altRecordID>
-				<mets:altRecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altRecordID>
-				<mets:altRecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altRecordID>
-			</mets:metsHdr>
+				<agent ROLE="CREATOR" TYPE="OTHER" OTHERROLE="SOFTWARE">
+					<name>RODA-in</name>
+					<note>Version 2.7.3</note>
+				</agent>
+				<agent ROLE="OTHER" OTHERROLE="SUBMITTER" TYPE="ORGANIZATION">
+					<name>The agency, Personnel</name>
+					<note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:12443112345-A357</note>
+				</agent>
+				<agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+					<name>The Swedish health agency</name>
+					<note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</note>
+				</agent>
+				<agent ROLE="CREATOR" TYPE="INDIVIDUAL">
+					<name>Manuel Miranda</name>
+				</agent>
+				<agent ROLE="OTHER" TYPE="INDIVIDUAL" OTHERROLE="SUBMITTER">
+					<name>Sven Svensson</name>
+					<note>Phone: 08-123456, Email: sven.svensson@mail.mail</note>
+				</agent>
+				<agent ROLE="PRESERVATION" TYPE="ORGANIZATION">
+					<name>The archives</name>
+					<note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</note>
+				</agent>
+				<altRecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</altRecordID>
+				<altRecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</altRecordID>
+				<altRecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</altRecordID>
+				<altRecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</altRecordID>
+			</metsHdr>
 			<mets:dmdSec ID="dmdSecExample1" CREATED="2018-04-24T14:37:49.609+01:00">
 				<mets:mdRef
 					LOCTYPE="URL"
