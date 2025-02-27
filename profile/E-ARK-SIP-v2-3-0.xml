@@ -14,13 +14,15 @@
 						http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd
 						http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd"
 	STATUS="provisional" REGISTRATION="unregistered" ID="SIPV2.1.0">
-	<URI LOCTYPE="URL" ASSIGNEDBY="local">https://earksip.dilcis.eu/profile/E-ARK-SIP-v2-2-0.xml</URI>
-	<title>E-ARK SIP METS Profile 2.2</title>
-	<abstract>This is the extension of the E-ARK CS IP profile for creation of a E-ARK SIP.</abstract>
-	<date>2021-10-15T09:00:00</date>
+	<URI LOCTYPE="URL" ASSIGNEDBY="local">https://earksip.dilcis.eu/profile/E-ARK-SIP-v2-3-0.xml</URI>
+	<title>E-ARK SIP METS Profile</title> This is
+	the extension of the E-ARK CSIP profile for creation of a E-ARK SIP. The profile describes the Submission Information Package (SIP) specification
+	and the implementation of METS for packaging OAIS conformant Information Packages. The profile belongs to the SIP specification document which can
+	be found at: https://dilcis.eu/specifications/sip.</abstract>
+	<date>2025-02-19</date>
 	<contact>
 		<institution>DILCIS Board</institution>
-		<address>http://dilcis.eu/</address>
+		<address>http://dilcis.eu</address>
 		<email>info@dilcis.eu</email>
 	</contact>
 	<related_profile RELATIONSHIP="Extends" URI="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP-v2-2-0.xml">
@@ -52,7 +54,7 @@
 	</external_schema>
 	<description_rules>
 		<p xmlns="http://www.w3.org/1999/xhtml">The filepath must be decoded consistently throughout all file references within the information
-			package.</p>
+	package.</p>
 	</description_rules>
 	<controlled_vocabularies>
 		<vocabulary ID="VocabularyRECORDSTATUS">
@@ -98,7 +100,7 @@
 				<description>
 					<head>Package name</head>
 					<p xmlns="http://www.w3.org/1999/xhtml">An optional short text describing the contents of the package, e.g. "Accounting records of
-						2017".</p>
+	2017".</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>METS XPath</dt>
 						<dd>mets/@LABEL</dd>
@@ -125,7 +127,7 @@
 				<description>
 					<head>Package status</head>
 					<p xmlns="http://www.w3.org/1999/xhtml">A way of indicating the status of the package and to instruct the OAIS on how to properly
-						handle the package. If not set, the expected behaviour is equal to NEW.</p>
+	handle the package. If not set, the expected behaviour is equal to NEW.</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>METS XPath</dt>
 						<dd>metsHdr/@RECORDSTATUS</dd>
@@ -154,7 +156,7 @@
 					<p xmlns="http://www.w3.org/1999/xhtml">Example: RA 13-2011/5329; 2012-04-12</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Note: It is recommended to use a machine-readable format for a better description of a
-						submission agreement.</p>
+	submission agreement.</p>
 					<p xmlns="http://www.w3.org/1999/xhtml"> For example, the submission agreement developed by Docuteam GmbH <a
 							href="http://www.loc.gov/standards/mets/profiles/00000041.xml">http://www.loc.gov/standards/mets/profiles/00000041.xml</a></p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
@@ -169,12 +171,12 @@
 				<description>
 					<head>Previous Submission agreement</head>
 					<p xmlns="http://www.w3.org/1999/xhtml">An optional reference to a previous submission agreement(s) which the information may have
-						belonged to.</p>
+	belonged to.</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">`@TYPE` is used with the value "PREVIOUSSUBMISSIONAGREEMENT".</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Example: FM 12-2387/12726, 2007-09-19</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Note: It is recommended to use a machine-readable format for a better description of a
-						submission agreement.</p>
+	submission agreement.</p>
 					<p xmlns="http://www.w3.org/1999/xhtml"> For example, the submission agreement developed by Docuteam GmbH <a
 							href="http://www.loc.gov/standards/mets/profiles/00000041.xml">http://www.loc.gov/standards/mets/profiles/00000041.xml</a></p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
@@ -189,7 +191,7 @@
 				<description>
 					<head>Archival reference code</head>
 					<p xmlns="http://www.w3.org/1999/xhtml">An optional reference code indicating where in the archival hierarchy the package shall be
-						placed in the OAIS.</p>
+	placed in the OAIS.</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">`@TYPE` is used with the value "REFERENCECODE".</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Example: FM 12-2387/12726, 2007-09-19</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
@@ -204,7 +206,7 @@
 				<description>
 					<head>Previous archival reference code</head>
 					<p xmlns="http://www.w3.org/1999/xhtml">In cases where the SIP originates from other institutions maintaining a reference code
-						structure, this element can be used to record these reference codes and therefore support the provenance of the package when a
+	structure, this element can be used to record these reference codes and therefore support the provenance of the package when a
 						whole archival description is not submitted with the submission.</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">`@TYPE` is used with the value "PREVIOUSREFERENCECODE".</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Example: SE/FM/123/123.1/123.1.3</p>
@@ -216,24 +218,26 @@
 					</dl>
 				</description>
 			</requirement>
-			<requirement ID="SIP9" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
+			<requirement ID="SIP9" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
 				<description>
-					<head>Archival creator agent</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">A wrapper element that enables to encode the name of the organisation or person that
-						originally created the data being transferred. Please note that this might be different from the organisation which has been
-						charged with preparing and sending the SIP to the archives.</p>
+					<head>SIP Creator agent</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">
+						A wrapper element that enables to encode the name of the organisation(s) or individual(s) responsible for preparing
+						the information package.</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>METS XPath</dt>
 						<dd>metsHdr/agent</dd>
 						<dt>Cardinality</dt>
-						<dd>0..1</dd>
+						<dd>3..*</dd>
 					</dl>
 				</description>
 			</requirement>
 			<requirement ID="SIP10" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
 				<description>
-					<head>Archival creator agent role</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The role of the person(s) or institution(s) responsible for the document/collection.</p>
+					<head>SIP Creator role</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">
+						An "agent" element MUST have a @ROLE attribute that specifies the role of the organisation or the individual involved in the
+	SIP creation. The ROLE of the SIP Creator must be set to "CREATOR".</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>dependsOn</dt>
 						<dd>SIP9</dd>
@@ -248,8 +252,10 @@
 			</requirement>
 			<requirement ID="SIP11" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
 				<description>
-					<head>Archival creator agent type</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The type of the archival creator agent is "ORGANIZATION" or "INDIVIDUAL".</p>
+					<head>SIP Creator type</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">
+						The agent element MUST have a @TYPE attribute that specifies the type of agent. The possible values for
+						this attribute are "ORGANIZATION", "INDIVIDUAL" or "OTHER". If "OTHER" is used, then the @OTHERTYPE must be set.</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>dependsOn</dt>
 						<dd>SIP9</dd>
@@ -264,10 +270,10 @@
 			</requirement>
 			<requirement ID="SIP12" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
 				<description>
-					<head>Archival creator agent name</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation(s) that originally created the data being transferred.</p>
+					<head>SIP Creator name</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">The name of the organisation or individual that created the SIP.</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Please note that this might be different from the organisation which has been charged with
-						preparing and sending the SIP to the archives.</p>
+	preparing and sending the SIP to the archives, i.e. SUBMITTER.</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>dependsOn</dt>
 						<dd>SIP9</dd>
@@ -282,9 +288,15 @@
 			</requirement>
 			<requirement ID="SIP13" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
 				<description>
-					<head>Archival creator agent additional information</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The archival creator agent has a note providing a unique identification code for the
-						archival creator.</p>
+					<head>SIP Creator note</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">
+
+						The SIP Creator may have a note element to record additional
+						information regarding the agent's activities with respect to the information package. In particular, this element can be used
+	to
+						provide a unique
+						identification code for the Creator of the package when combined with the attribute "@NOTETYPE".
+					</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>dependsOn</dt>
 						<dd>SIP9</dd>
@@ -297,10 +309,12 @@
 					</dl>
 				</description>
 			</requirement>
-			<requirement ID="SIP14" REQLEVEL="MUST" RELATEDMAT="VocabularyNoteType" EXAMPLES="metsHdrElementExample1">
+			<requirement ID="SIP14" REQLEVEL="MAY" RELATEDMAT="VocabularyNoteType" EXAMPLES="metsHdrElementExample1">
 				<description>
-					<head>Classification of the archival creator agent additional information</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The archival creator agent note is typed with the value of "IDENTIFICATIONCODE".</p>
+					<head>SIP Creator identification code (classifier)</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">If the "note" element is used to provide a an identification code of the agent, then the
+	"@NOTETYPE" attribute should be set to
+						"IDENTIFICATIONCODE".</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>dependsOn</dt>
 						<dd>SIP13</dd>
@@ -309,28 +323,29 @@
 						<dt>METS XPath</dt>
 						<dd>metsHdr/agent/note/@csip:NOTETYPE</dd>
 						<dt>Cardinality</dt>
-						<dd>1..1</dd>
+						<dd>0..1</dd>
 					</dl>
 				</description>
 			</requirement>
 			<requirement ID="SIP15" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
 				<description>
-					<head>Submitting agent</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">A wrapper element that enables to encode the name of the organisation or person submitting
-						the package to the archive.</p>
+					<head>SIP Submitter agent</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">An wrapper element that enables to encode the name of the organisation or person
+						submitting
+						the package to the Archive.</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>METS XPath</dt>
 						<dd>metsHdr/agent</dd>
 						<dt>Cardinality</dt>
-						<dd>1..1</dd>
+						<dd>3..*</dd>
 					</dl>
 				</description>
 			</requirement>
 			<requirement ID="SIP16" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
 				<description>
-					<head>Submitting agent role</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The role of the person(s) or institution(s) responsible for creating and/or submitting the
-						package.</p>
+					<head>SIP Submitter role</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">The role of the person or institution responsible for submitting the
+						package to the Archive. The value of the @ROLE attribute should be "OTHER".</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>dependsOn</dt>
 						<dd>SIP15</dd>
@@ -343,26 +358,48 @@
 					</dl>
 				</description>
 			</requirement>
+
 			<requirement ID="SIP17" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
 				<description>
-					<head>Submitting agent type</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The type of the submitting agent is "ORGANIZATION" or "INDIVIDUAL".</p>
+					<head>SIP Submitter other role</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">The role of the person or institution responsible for submitting the package to the
+	Archive. The value of the "@OTHERROLE" attribute should be set to "SUBMITTER".</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>dependsOn</dt>
 						<dd>SIP15</dd>
 					</dl>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>METS XPath</dt>
-						<dd>metsHdr/agent/@TYPE</dd>
+						<dd>metsHdr/agent/@OTHERROLE</dd>
 						<dt>Cardinality</dt>
 						<dd>1..1</dd>
 					</dl>
 				</description>
 			</requirement>
+
 			<requirement ID="SIP18" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
 				<description>
-					<head>Submitting agent name</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">Name of the organisation submitting the package to the archive.</p>
+					<head>SIP Submitter type</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">The type of Submitter can be set to "ORGANIZATION", "INDIVIDUAL", or "OTHER". If
+						"OTHER" is used then the @OTHERTYPE attribute must be set.</p>
+					<dl xmlns="http://www.w3.org/1999/xhtml">
+						<dt>dependsOn</dt>
+						<dd>SIP15</dd>
+					</dl>
+					<dl xmlns="http://www.w3.org/1999/xhtml">
+						<dt>METS XPath</dt>
+						<dd>metsHdr/agent/@TYPE</dd>
+						<dt>Cardinality</dt>
+						<dd>1..1</dd>
+					</dl>
+				</description>
+			</requirement>
+			<requirement ID="SIP19" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
+				<description>
+					<head>SIP Submitter name</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">
+						Name of the organisation or individual responsible for submitting the package to the
+						Archive.</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>dependsOn</dt>
 						<dd>SIP15</dd>
@@ -375,10 +412,20 @@
 					</dl>
 				</description>
 			</requirement>
-			<requirement ID="SIP19" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
+			<requirement ID="SIP20" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
 				<description>
-					<head>Submitting agent additional information</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The submitting agent has a note providing a unique identification code for the submitter.</p>
+					<head>SIP Submitter note</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">
+
+
+						The SIP Submitter may have a note element to record additional
+						information regarding the agent's activities with respect to the information package. In particular, this element can be used
+	to
+						provide a unique
+						identification code for the Submitter of the package when combined with the attribute "@NOTETYPE".
+
+					</p>
+
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>dependsOn</dt>
 						<dd>SIP15</dd>
@@ -391,13 +438,18 @@
 					</dl>
 				</description>
 			</requirement>
-			<requirement ID="SIP20" REQLEVEL="MUST" RELATEDMAT="VocabularyNoteType" EXAMPLES="metsHdrElementExample1">
+			<requirement ID="SIP21" REQLEVEL="MUST" RELATEDMAT="VocabularyNoteType" EXAMPLES="metsHdrElementExample1">
 				<description>
-					<head>Classification of the submitting agent additional information</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The submitting agent note is typed with the value of "IDENTIFICATIONCODE".</p>
+					<head>SIP Submitter identification code (classifier)</head>
+					<p xmlns="http://www.w3.org/1999/xhtml">
+
+						If the "note" element is used to provide a an identification code of the agent, then the "@NOTETYPE" attribute should be set
+						to
+						"IDENTIFICATIONCODE".</p>
+
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>dependsOn</dt>
-						<dd>SIP19</dd>
+						<dd>SIP20</dd>
 					</dl>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>METS XPath</dt>
@@ -407,177 +459,7 @@
 					</dl>
 				</description>
 			</requirement>
-			<requirement ID="SIP21" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
-				<description>
-					<head>Contact person agent</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">A wrapper element that enables to encode the name of the contact person for the
-						submission.</p>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>METS XPath</dt>
-						<dd>metsHdr/agent</dd>
-						<dt>Cardinality</dt>
-						<dd>0..*</dd>
-					</dl>
-				</description>
-			</requirement>
-			<requirement ID="SIP22" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
-				<description>
-					<head>Contact person agent role</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The role of the contact person is "CREATOR".</p>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>dependsOn</dt>
-						<dd>SIP21</dd>
-					</dl>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>METS XPath</dt>
-						<dd>metsHdr/agent/@ROLE</dd>
-						<dt>Cardinality</dt>
-						<dd>1..1</dd>
-					</dl>
-				</description>
-			</requirement>
-			<requirement ID="SIP23" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
-				<description>
-					<head>Contact person agent type</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The type of the contact person agent is "INDIVIDUAL".</p>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>dependsOn</dt>
-						<dd>SIP21</dd>
-					</dl>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>METS XPath</dt>
-						<dd>metsHdr/agent/@TYPE</dd>
-						<dt>Cardinality</dt>
-						<dd>1..1</dd>
-					</dl>
-				</description>
-			</requirement>
-			<requirement ID="SIP24" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
-				<description>
-					<head>Contact person agent name</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">Name of the contact person.</p>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>dependsOn</dt>
-						<dd>SIP21</dd>
-					</dl>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>METS XPath</dt>
-						<dd>metsHdr/agent/name</dd>
-						<dt>Cardinality</dt>
-						<dd>1..1</dd>
-					</dl>
-				</description>
-			</requirement>
-			<requirement ID="SIP25" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
-				<description>
-					<head>Contact person agent additional information</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The submitting agent has one or more notes giving the contact information.</p>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>dependsOn</dt>
-						<dd>SIP21</dd>
-					</dl>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>METS XPath</dt>
-						<dd>metsHdr/agent/note</dd>
-						<dt>Cardinality</dt>
-						<dd>0..*</dd>
-					</dl>
-				</description>
-			</requirement>
-			<requirement ID="SIP26" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
-				<description>
-					<head>Preservation agent</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">A wrapper element that enables to encode the name of the organisation or person that
-						preserves the package.</p>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>METS XPath</dt>
-						<dd>metsHdr/agent</dd>
-						<dt>Cardinality</dt>
-						<dd>0..1</dd>
-					</dl>
-				</description>
-			</requirement>
-			<requirement ID="SIP27" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
-				<description>
-					<head>Preservation agent role</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The role of the preservation agent is "PRESERVATION".</p>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>dependsOn</dt>
-						<dd>SIP26</dd>
-					</dl>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>METS XPath</dt>
-						<dd>metsHdr/agent/@ROLE</dd>
-						<dt>Cardinality</dt>
-						<dd>1..1</dd>
-					</dl>
-				</description>
-			</requirement>
-			<requirement ID="SIP28" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
-				<description>
-					<head>Preservation agent type</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The type of the submitting agent is "ORGANIZATION".</p>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>dependsOn</dt>
-						<dd>SIP26</dd>
-					</dl>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>METS XPath</dt>
-						<dd>metsHdr/agent/@TYPE</dd>
-						<dt>Cardinality</dt>
-						<dd>1..1</dd>
-					</dl>
-				</description>
-			</requirement>
-			<requirement ID="SIP29" REQLEVEL="MUST" EXAMPLES="metsHdrElementExample1">
-				<description>
-					<head>Preservation agent name</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">Name of the organisation preserving the package.</p>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>dependsOn</dt>
-						<dd>SIP26</dd>
-					</dl>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>METS XPath</dt>
-						<dd>metsHdr/agent/name</dd>
-						<dt>Cardinality</dt>
-						<dd>1..1</dd>
-					</dl>
-				</description>
-			</requirement>
-			<requirement ID="SIP30" REQLEVEL="MAY" EXAMPLES="metsHdrElementExample1">
-				<description>
-					<head>Preservation agent additional information</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The preservation agent has a note providing a unique identification code for the archival
-						creator.</p>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>dependsOn</dt>
-						<dd>SIP26</dd>
-					</dl>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>METS XPath</dt>
-						<dd>metsHdr/agent/note</dd>
-						<dt>Cardinality</dt>
-						<dd>0..1</dd>
-					</dl>
-				</description>
-			</requirement>
-			<requirement ID="SIP31" REQLEVEL="MUST" RELATEDMAT="VocabularyNoteType" EXAMPLES="metsHdrElementExample1">
-				<description>
-					<head>Classification of the preservation agent additional information</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">The preservation agent note is typed with the value of "IDENTIFICATIONCODE".</p>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>dependsOn</dt>
-						<dd>SIP30</dd>
-					</dl>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>METS XPath</dt>
-						<dd>metsHdr/agent/note/@csip:NOTETYPE</dd>
-						<dt>Cardinality</dt>
-						<dd>1..1</dd>
-					</dl>
-				</description>
-			</requirement>
+
 		</metsHdr>
 		<dmdSec ID="dmdSecElement">
 			<requirement ID="REF_CSIP_1" REQLEVEL="SHOULD">
@@ -585,7 +467,7 @@
 					<head>Descriptive metadata</head>
 					<p xmlns="http://www.w3.org/1999/xhtml"> The SIP dmdSec element should comply with <a
 							href="http://earkcsip.dilcis.eu/#533-use-of-the-mets-descriptive-metadata-section-element-dmdsec">dmdSec requirements in
-						the CSIP profile.</a></p>
+	the CSIP profile.</a></p>
 				</description>
 			</requirement>
 		</dmdSec>
@@ -600,11 +482,11 @@
 			</requirement>
 		</amdSec>
 		<fileSec ID="fileSecElement">
-			<requirement ID="SIP32" REQLEVEL="MAY" EXAMPLES="fileSecExample1">
+			<requirement ID="SIP22" REQLEVEL="MAY" EXAMPLES="fileSecExample1">
 				<description>
 					<head>File format name</head>
 					<p xmlns="http://www.w3.org/1999/xhtml">An optional attribute may be used if the MIMETYPE is not sufficient for the purposes of
-						processing the information package.</p>
+	processing the information package.</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Example: "Extensible Markup Language"</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Example: "PDF/A"</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Example: "ISO/IEC 26300:2006"</p>
@@ -616,11 +498,11 @@
 					</dl>
 				</description>
 			</requirement>
-			<requirement ID="SIP33" REQLEVEL="MAY" EXAMPLES="fileSecExample1">
+			<requirement ID="SIP23" REQLEVEL="MAY" EXAMPLES="fileSecExample1">
 				<description>
 					<head>File format version</head>
 					<p xmlns="http://www.w3.org/1999/xhtml">The version of the file format when the use of PREMIS has not been agreed upon in the
-						submission agreement.</p>
+	submission agreement.</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Example: "1.0"</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>METS XPath</dt>
@@ -630,7 +512,7 @@
 					</dl>
 				</description>
 			</requirement>
-			<requirement ID="SIP34" REQLEVEL="MAY" EXAMPLES="fileSecExample1">
+			<requirement ID="SIP24" REQLEVEL="MAY" EXAMPLES="fileSecExample1">
 				<description>
 					<head>File format registry</head>
 					<p xmlns="http://www.w3.org/1999/xhtml">The name of the format registry used to identify the file format when the use of PREMIS
@@ -644,11 +526,11 @@
 					</dl>
 				</description>
 			</requirement>
-			<requirement ID="SIP35" REQLEVEL="MAY" EXAMPLES="fileSecExample1">
+			<requirement ID="SIP25" REQLEVEL="MAY" EXAMPLES="fileSecExample1">
 				<description>
 					<head>File format registry key</head>
 					<p xmlns="http://www.w3.org/1999/xhtml">Key of the file format in the registry when use of PREMIS has not been agreed upon in the
-						submission agreement.</p>
+	submission agreement.</p>
 					<p xmlns="http://www.w3.org/1999/xhtml">Example: "fmt/101"</p>
 					<dl xmlns="http://www.w3.org/1999/xhtml">
 						<dt>METS XPath</dt>
@@ -717,7 +599,7 @@
 		<URI>https://github.com/ESSolutions</URI>
 		<description>
 			<p xmlns="http://www.w3.org/1999/xhtml">A suite of tools for e-archiving and digital preservation. The tools provide functionality for
-				producers to archive digital information, for archives to preserve digital information and for consumers to access archived
+	producers to archive digital information, for archives to preserve digital information and for consumers to access archived
 				information.</p>
 		</description>
 		<note>
@@ -729,15 +611,15 @@
 		<URI>http://github.com/keeps/roda</URI>
 		<description>
 			<p xmlns="http://www.w3.org/1999/xhtml">RODA is a digital repository solution that delivers functionality for all the main units of the
-				OAIS reference model. RODA is capable of ingesting, managing and providing access to the various types of digital objects produced by
+	OAIS reference model. RODA is capable of ingesting, managing and providing access to the various types of digital objects produced by
 				large corporations or public bodies.</p>
 			<p xmlns="http://www.w3.org/1999/xhtml">RODA is based on open-source technologies and is supported by existing standards such as the Open
-				Archival Information System (OAIS), Metadata Encoding and Transmission Standard (METS), Encoded Archival Description (EAD), Dublin
+	Archival Information System (OAIS), Metadata Encoding and Transmission Standard (METS), Encoded Archival Description (EAD), Dublin
 				Core (DC) and PREMIS (Preservation Metadata).</p>
 		</description>
 		<note>
 			<p xmlns="http://www.w3.org/1999/xhtml">RODA is licensed under LGPLv3 for all source-code including interoperability libraries like SIP
-				manipulation libraries.</p>
+	manipulation libraries.</p>
 		</note>
 	</tool>
 	<tool>
@@ -745,16 +627,17 @@
 		<URI>https://rodain.roda-community.org</URI>
 		<description>
 			<p xmlns="http://www.w3.org/1999/xhtml">RODA-in is a tool specially designed for producers and archivists to create Submission Information
-				Packages (SIP) ready to be submitted to an Open Archival Information System (OAIS). The tool creates SIPs from files and folders
+	Packages (SIP) ready to be submitted to an Open Archival Information System (OAIS). The tool creates SIPs from files and folders
 				available on the local file system.</p>
 			<p xmlns="http://www.w3.org/1999/xhtml">RODA-in supports several Submission Information Package formats such as BagIt, E-ARK SIP and the
-				Hungarian SIP format.</p>
+	Hungarian SIP format.</p>
 		</description>
 		<note>
 			<p xmlns="http://www.w3.org/1999/xhtml">RODA-in is licensed under LGPLv3.</p>
 		</note>
 	</tool>
-	<Example ID="metsRootElementExample1" LABEL="METS root element example with values from E-ARK-SIP as well as CS IP.">
+	<Example
+		ID="metsRootElementExample1" LABEL="METS root element example with values from E-ARK-SIP as well as CS IP.">
 		<mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" csip:OTHERTYPE="Accounting"
 			PROFILE="https://earksip.dilcis.eu/profileE-ARK-SIP-v2-2-0.xml"
 			xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd
@@ -762,19 +645,27 @@
 								https://DILCIS.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd
 								https://DILCIS.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd" />
 	</Example>
-	<Example ID="metsHdrElementExample1" LABEL="METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.">
+	<Example
+		ID="metsHdrElementExample1" LABEL="METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.">
 		<metsHdr
 			CREATEDATE="2018-04-24T14:37:49.602+01:00"
 			LASTMODDATE="2018-04-24T14:37:49.602+01:00"
 			RECORDSTATUS="NEW"
 			csip:OAISPACKAGETYPE="SIP">
+			<agent ROLE="CREATOR" TYPE="OTHER" OTHERROLE="SOFTWARE">
+				<name>RODA-in</name>
+				<note>Version 2.7.3</note>
+			</agent>
+			<agent ROLE="OTHER" OTHERROLE="SUBMITTER" TYPE="ORGANIZATION">
+				<name>The agency, Personnel</name>
+				<note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:12443112345-A357</note>
+			</agent>
 			<agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
 				<name>The Swedish health agency</name>
 				<note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</note>
 			</agent>
-			<agent ROLE="CREATOR" TYPE="ORGANIZATION">
-				<name>The agency, Personnel</name>
-				<note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</note>
+			<agent ROLE="CREATOR" TYPE="INDIVIDUAL">
+				<name>Manuel Miranda</name>
 			</agent>
 			<agent ROLE="OTHER" TYPE="INDIVIDUAL" OTHERROLE="SUBMITTER">
 				<name>Sven Svensson</name>
@@ -790,7 +681,8 @@
 			<altRecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</altRecordID>
 		</metsHdr>
 	</Example>
-	<Example ID="fileSecExample1" LABEL="METS example of an SIP with file information together with the info from CS IP.">
+	<Example
+		ID="fileSecExample1" LABEL="METS example of an SIP with file information together with the info from CS IP.">
 		<file
 			ID="docx-file"
 			MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -805,7 +697,10 @@
 			<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/File.docx" />
 		</file>
 	</Example>
-	<Appendix NUMBER="1" LABEL="Example of a whole METS document describing an submission information package with no representations.">
+
+
+	<Appendix NUMBER="1"
+		LABEL="Example of a whole METS document describing an submission information package with no representations.">
 		<mets:mets
 			OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182"
 			LABEL="Accounting records of 2017"
