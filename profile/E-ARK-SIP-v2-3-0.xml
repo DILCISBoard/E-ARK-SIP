@@ -595,18 +595,6 @@
 		</metadata_files>
 	</technical_requirements>
 	<tool>
-		<name>ESSArch (ETP, ETA, EPP, ECORE)</name>
-		<URI>https://github.com/ESSolutions</URI>
-		<description>
-			<p xmlns="http://www.w3.org/1999/xhtml">A suite of tools for e-archiving and digital preservation. The tools provide functionality for
-	producers to archive digital information, for archives to preserve digital information and for consumers to access archived
-				information.</p>
-		</description>
-		<note>
-			<p xmlns="http://www.w3.org/1999/xhtml">ES Solutions - www.essolutions.se</p>
-		</note>
-	</tool>
-	<tool>
 		<name>RODA</name>
 		<URI>http://github.com/keeps/roda</URI>
 		<description>
