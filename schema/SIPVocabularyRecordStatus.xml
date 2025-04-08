@@ -12,7 +12,7 @@
 				NEW
 			</Term>
 			<Definition>
-				A new delivery.
+				The SIP constitutes a new submission not previously delivered to the repository.
 			</Definition>
 		</Entry>
 		<Entry>
@@ -20,7 +20,7 @@
 				SUPPLEMENT
 			</Term>
 			<Definition>
-				Extends the previous delivery.
+				The SIP supplements a previous submission by adding new or complementary information.
 			</Definition>
 		</Entry>
 		<Entry>
@@ -28,7 +28,7 @@
 				REPLACEMENT
 			</Term>
 			<Definition>
-				Replaces a previous delivery.
+				The SIP fully replaces a previous submission, typically correcting or updating its content.
 			</Definition>
 		</Entry>
 		<Entry>
@@ -36,7 +36,7 @@
 				TEST
 			</Term>
 			<Definition>
-				A test delivery. No AIP should be created.
+				The SIP is submitted for testing purposes only and must not result in the creation of an AIP.
 			</Definition>
 		</Entry>
 		<Entry>
@@ -44,7 +44,7 @@
 				VERSION
 			</Term>
 			<Definition>
-				A delivery with same content regarding files but one or more files have a new version.
+				The SIP contains the same set of content files as a previous submission, but includes one or more files with updated versions.
 			</Definition>
 		</Entry>
 		<Entry>
@@ -52,7 +52,7 @@
 				DELETE
 			</Term>
 			<Definition>
-				An order from the Producer to remove an existing AIP.
+				A request from the Producer for the OAIS to delete an existing AIP from the repository.
 			</Definition>
 		</Entry>
 		<Entry>
@@ -60,7 +60,7 @@
 				OTHER
 			</Term>
 			<Definition>
-				Status not in list.
+				The SIP has a status that does not match any of the predefined values in this vocabulary.
 			</Definition>
 		</Entry>
 	</Vocabulary>
