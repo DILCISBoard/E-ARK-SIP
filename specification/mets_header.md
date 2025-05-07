@@ -44,17 +44,19 @@ The <metsHdr> element may also be used to indicate the expected behaviour of the
 The complete list of values admissible for the `@RECORDSTATUS` attribute are:
 
 - **NEW** - The SIP constitutes a new submission not previously delivered to the repository.
-- SUPPLEMENT — The SIP supplements a previous submission by adding new or complementary information.
+- **SUPPLEMENT** — The SIP supplements a previous submission by adding new or complementary information.
 - **REPLACEMENT** - The SIP fully replaces a previous submission, typically correcting or updating its content.
 - **TEST** - The SIP is submitted for testing purposes only and must not result in the creation of an AIP.
 - **VERSION** - The SIP contains the same set of content files as a previous submission, but includes one or more files with updated versions.
 - **DELETE** — A request from the Producer for the OAIS to delete an existing AIP from the repository.
 - **OTHER** - The SIP has a status that does not match any of the predefined values in this vocabulary.
 
-See the Package status vocabulary (`@RECORDSTATUS`) for further details.
+See the `Package status` vocabulary (`@RECORDSTATUS`) for further details.
 
 ### Submission agreement
 
 The metsHdr element also provides a mechanism to identify the Submission Agreement that governs the creation of a given SIP. This is achieved using the `altRecordID` element with the attribute `mets/metsHdr/altRecordID/@TYPE="SUBMISSIONAGREEMENT"`. Declaring the applicable Submission Agreement ensures that the SIP can be validated against a known set of rules agreed between the Producer and the OAIS.
 
 The table below outlines the key extensions in the use of the `mets/metsHdr` element between the E-ARK SIP and the Common Specification for Information Packages (CSIP).
+
+### Key extensions to the metsHdr element
