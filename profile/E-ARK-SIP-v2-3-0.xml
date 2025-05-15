@@ -308,11 +308,11 @@
 				<description>
 					<head>SIP Submitter note</head>
 					<p xmlns="http://www.w3.org/1999/xhtml">
-						The SIP Submitter may optionally include a note element to record additional
-						information regarding the agent's activities with respect to the information package. In particular, this element may be used
-	to provide a unique identification code for the submitter of the package. For that purpose, this element MUST be combined with the use of the
-	attribute
-						"@NOTETYPE".
+						The SIP Submitter MAY optionally include note element(s) to record additional information regarding the agent’s activities
+						with respect to the information package. In particular, this element MAY be used to provide a unique identification code for
+	the submitter of the
+						package. For that purpose, this element MUST be combined with the use of the attribute “@NOTETYPE” with the value set to
+	“IDENTIFICATION CODE”.
 					</p>
 
 					<dl xmlns="http://www.w3.org/1999/xhtml">
@@ -323,29 +323,10 @@
 						<dt>METS XPath</dt>
 						<dd>metsHdr/agent/note</dd>
 						<dt>Cardinality</dt>
-						<dd>0..1</dd>
+						<dd>0..*</dd>
 					</dl>
 				</description>
 			</requirement>
-			<requirement ID="SIP15" REQLEVEL="MUST" RELATEDMAT="VocabularyNoteType" EXAMPLES="metsHdrElementExample2">
-				<description>
-					<head>SIP Submitter identification code (classifier)</head>
-					<p xmlns="http://www.w3.org/1999/xhtml">
-						If one wants to provide a unique identification code for the submitter of the package, then the "@NOTETYPE" attribute should
-						be set to "IDENTIFICATIONCODE".</p>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>dependsOn</dt>
-						<dd>SIP14</dd>
-					</dl>
-					<dl xmlns="http://www.w3.org/1999/xhtml">
-						<dt>METS XPath</dt>
-						<dd>metsHdr/agent/note/@csip:NOTETYPE</dd>
-						<dt>Cardinality</dt>
-						<dd>0..1</dd>
-					</dl>
-				</description>
-			</requirement>
-
 		</metsHdr>
 		<dmdSec ID="dmdSecElement">
 			<requirement ID="REF_CSIP_1" REQLEVEL="SHOULD">
