@@ -15,10 +15,13 @@
 						http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd"
 	STATUS="provisional" REGISTRATION="unregistered" ID="SIPV2.1.0">
 	<URI LOCTYPE="URL" ASSIGNEDBY="local">https://earksip.dilcis.eu/profile/E-ARK-SIP-v2-3-0.xml</URI>
-	<title>E-ARK SIP METS Profile</title> This is
-	the extension of the E-ARK CSIP profile for creation of a E-ARK SIP. The profile describes the Submission Information Package (SIP) specification
-	and the implementation of METS for packaging OAIS conformant Information Packages. The profile belongs to the SIP specification document which can
-	be found at: https://dilcis.eu/specifications/sip.</abstract>
+	<title>E-ARK SIP METS Profile</title>
+	<abstract>
+		This is	the extension of the E-ARK CSIP profile for creation of a E-ARK SIP. The profile describes the
+		Submission Information Package (SIP) specification and the implementation of METS for packaging OAIS
+		conformant Information Packages. The profile belongs to the SIP specification document which can be
+		found at: https://dilcis.eu/specifications/sip.
+	</abstract>
 	<date>2025-04-08</date>
 	<contact>
 		<institution>DILCIS Board</institution>
