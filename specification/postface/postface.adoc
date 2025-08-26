@@ -1,5 +1,5 @@
-
-# Postface
+= Postface
+:imagesdir: images
 
 !INCLUDE "authors.md"
 
