@@ -1,6 +1,6 @@
-= Introduction
 :doctype: book
-:imagesdir: images
+[chapter]
+= Introduction
 
 According to ISO 14721:2012 - Open archival information system (OAIS) Reference model, every submission to an archive is made through one or more distinct transmissions of Submission Information Packages (SIP). However, the OAIS Reference Model itself does not provide detailed guidelines on the structure of these information packages.
 
@@ -30,6 +30,7 @@ ____
 
 The E-ARK SIP is aligned with this definition, expanding upon the E-ARK Common Specification for Information Packages (CSIP). It enhances this specification by incorporating specific requirements essential for selecting, packaging, transmitting, receiving, validating, and ingesting information originally held by a Producer.
 
+[chapter]
 = Structure
 
 The SIP specification follows a structure that is common to Information Packages in the E-ARK set of specifications. The common structure is fully described in the Common Specification for Information Packages (see Section 4. CSIP structure).
@@ -61,6 +62,7 @@ image:Fig_3_SIP.svg[General SIP structure]
 
 The details of the internal structure of an SIP including its `data` and `metadata` folders can be further specified by `Submission Agreements`. These can exist for a particular submission, a special collection or a specific Producer.
 
+[chapter]
 = METS
 
 The Metadata Encoding and Transmission Standard (METS) is a standard for encoding descriptive, administrative, and structural metadata expressed using the XML Schema Language.

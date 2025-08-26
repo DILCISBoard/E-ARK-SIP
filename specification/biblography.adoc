@@ -1,5 +1,5 @@
+[chapter]
 = Bibliography
-:imagesdir: images
 
 . A Checklist for Documenting PREMIS-METS Decisions in a METS Profile, 2010,
  URL: http://www.loc.gov/standards/premis/premis_mets_checklist.pdf

@@ -1,5 +1,4 @@
-:imagesdir: images
-
+[chapter]
 == Extended use of the METS header (element `metsHdr`)
 
 The `<metsHdr>` (METS header) element is a crucial part of the METS schema, providing metadata about the creation and management of the Submission Information Package (SIP). This element encapsulates information about various actors involved in the creation, preparation, and submission of the SIP. These actors are referred to as "agents" and are represented within the METS schema by the `<agent>` element, which is nested within the `<metsHdr>` element.
