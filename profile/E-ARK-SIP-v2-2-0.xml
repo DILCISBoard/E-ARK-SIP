@@ -68,7 +68,7 @@
 			<name>Alternative record ID's</name>
 			<maintenance_agency>DILCIS Board</maintenance_agency>
 			<URI>http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml</URI>
-			<context>Used in `altrecordID/@TYPE`</context>
+			<context>Used in `altRecordID/@TYPE`</context>
 			<description>
 				<p xmlns="http://www.w3.org/1999/xhtml">Describes the type of the alternative record ID.</p>
 			</description>
@@ -762,7 +762,7 @@
 								https://DILCIS.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd
 								https://DILCIS.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd" />
 	</Example>
-	<Example ID="metsHdrElementExample1" LABEL="METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.">
+	<Example ID="metsHdrElementExample1" LABEL="METS example of altRecordID's, and SIP agents following the SIP profile as well as CS IP.">
 		<metsHdr
 			CREATEDATE="2018-04-24T14:37:49.602+01:00"
 			LASTMODDATE="2018-04-24T14:37:49.602+01:00"

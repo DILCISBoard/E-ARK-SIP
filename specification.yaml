@@ -1,58 +1,24 @@
 ---
-preface:
-  - name: common-intro
-    type: file
-    source: spec-publisher/res/md/common-intro.md
-
-body:
-  - name: introduction
-    type: file
-    source: specification/introduction.md
-
+tables:
   - name: metadata-root-requirements
-    heading: Mets Root Element Requirements
+    heading: "=== Mets Root Element Requirements"
     type: requirements
     section: metsRootElement
     examples: true
 
-  - name: mets-header
-    type: file
-    source: specification/mets_header.md
-
   - name: metadata-metsHdr-requirements
-    heading: Mets Header Element Requirements
+    heading: "=== Mets Header Element Requirements"
     type: requirements
     section: metsHdr
     examples: true
 
-  - name: mets-filesec
-    type: file
-    source: specification/mets_filesec.md
-
   - name: metadata-filesec-requirements
-    heading: Mets FileSec Element Requirements
+    heading: "=== Mets FileSec Element Requirements"
     type: requirements
     section: fileSec
     examples: true
 
-  - name: cits
-    type: file
-    source: specification/cits.md
-
-  - name: glossary
-    type: file
-    source: specification/glossary.md
-
-  - name: biblography
-    type: file
-    source: specification/bibliography.md
-
 appendices:
-  - name: semantic
-    heading: "Submission Agreement semantic elements"
-    label: "A"
-    type: file
-    source: "specification/appendix_a.md"
 
   - name: mets.examples
     heading: "E-ARK Information Package METS Example"
