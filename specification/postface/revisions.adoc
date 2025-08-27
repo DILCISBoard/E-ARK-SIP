@@ -177,7 +177,7 @@
 | 29.01.2016
 | Tarvo Kärberg
 | NAE
-| Final version (general paart of D3.3)
+| Final version (general part of D3.3)
 
 | 1.1
 | 14.07.2016
