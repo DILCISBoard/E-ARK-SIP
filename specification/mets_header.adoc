@@ -42,7 +42,7 @@ Please note that the SIP must include information about the agent that has submi
 
 === Package status
 
-The +++<metsHdr>+++element may also be used to indicate the expected behaviour of the OAIS while processing a given SIP. For example, it is possible to signal that a SIP is intended to replace an existing AIP in the repository by setting `mets/metsHdr/@RECORDSTATUS="REPLACEMENT"`, or to indicate that a SIP is submitted for testing purposes only, in which case no AIP should be created (`@RECORDSTATUS="TEST"`).+++</metsHdr>+++
+The `<metsHdr>` element may also be used to indicate the expected behaviour of the OAIS while processing a given SIP. For example, it is possible to signal that a SIP is intended to replace an existing AIP in the repository by setting `mets/metsHdr/@RECORDSTATUS="REPLACEMENT"`, or to indicate that a SIP is submitted for testing purposes only, in which case no AIP should be created (`@RECORDSTATUS="TEST"`). `</metsHdr>`
 
 The complete list of values admissible for the `@RECORDSTATUS` attribute are:
 
