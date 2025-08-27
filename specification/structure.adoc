@@ -1,0 +1,31 @@
+[chapter]
+= Structure
+
+The SIP specification follows a structure that is common to Information Packages in the E-ARK set of specifications. The common structure is fully described in the Common Specification for Information Packages (see Section 4. CSIP structure).
+
+In its simplest form, an SIP consists of metadata and zero or more representations, also composed of `data` and `metadata`, as seen in <<fig2,Figure 2>>. A package with zero representations means that it only contains metadata. This is a special type of Information Package that enables Producers to deliver updates to the metadata to previously ingested packages.
+
++++<a name="fig2">++++++</a>+++
+image:Fig_2_SIP.svg[SIP data model]
+
+*Figure 2*: Simplified view of the structure of an information package.
+
+According to http://www.loc.gov/standards/premis/v3/premis-3-0-final.pdf[PREMIS Version 3.0]:
+
+____
+A representation is a set of files, including structural metadata, needed for a complete and reasonable rendition of an Intellectual Entity. For example, a journal article may be complete in one PDF file. This single file constitutes the representation. Another journal article may consist of one SGML file and two image files. These three files constitute the representation. A third article may be represented by one TIFF image for each of 12 pages plus an XML file of structural metadata showing the order of the pages. These 13 files constitute the representation.
+____
+
+As one SIP may contain multiple representations of the same intellectual entity, representations MUST be placed within distinct folders (i.e., `rep-001`, `rep-002`, `rep-n` under the `representations` folder). In contrast, metadata may exist within each representation folder or at the root level (next to the `representations` folder). Metadata can serve multiple purposes, being the most common one the support for discoverability of resources within the OAIS (i.e. descriptive metadata).
+
+If metadata is stored at the root level of the package, then there is generally no need to include `metadata` at the representation level. In such cases, the `metadata` folder under representations is considered optional. The SIP also accounts for the following additional folders, which can exist both at the root level or under the `representations` folder (<<fig3,Figure 3>>):
+
+* `documentation` -- includes materials that provide additional context or clarification about the data it contains. For instance, this might encompass a data dictionary for a SIARD (Software-Independent Archiving of Relational Databases) file. Such documentation is crucial for ensuring that the data can be accurately interpreted, used, and preserved over time. It serves as a valuable resource for understanding the structure, meaning, and organization of the data, making it an essential component of the package for both current users and future stakeholder;
+* `schemas` -- designated for holding the schemas of XML files that are part of the data or metadata. It serves as a central repository for XML schemas, enabling consistent validation and interpretation of the XML structures within the package. This ensures that both the data and metadata are structured in a manner that adheres to predefined standards and formats, facilitating accurate data exchange and interoperability between systems.
+
++++<a name="fig3">++++++</a>+++
+image:Fig_3_SIP.svg[General SIP structure]
+
+*Figure 3:* Example of the full use of the SIP structure
+
+The details of the internal structure of an SIP including its `data` and `metadata` folders can be further specified by `Submission Agreements`. These can exist for a particular submission, a special collection or a specific Producer.

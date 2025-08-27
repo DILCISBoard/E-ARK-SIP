@@ -1,19 +1,19 @@
 ---
 tables:
   - name: metadata-root-requirements
-    heading: "=== Mets Root Element Requirements"
+    heading: "Mets Root Element Requirements"
     type: requirements
     section: metsRootElement
     examples: true
 
   - name: metadata-metsHdr-requirements
-    heading: "=== Mets Header Element Requirements"
+    heading: "Mets Header Element Requirements"
     type: requirements
     section: metsHdr
     examples: true
 
   - name: metadata-filesec-requirements
-    heading: "=== Mets FileSec Element Requirements"
+    heading: "Mets FileSec Element Requirements"
     type: requirements
     section: fileSec
     examples: true
