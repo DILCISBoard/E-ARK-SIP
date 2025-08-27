@@ -9,7 +9,7 @@ body:
     type: file
     source: specification/introduction.md
 
-  - name: metadata-root-requirments
+  - name: metadata-root-requirements
     heading: Mets Root Element Requirements
     type: requirements
     section: metsRootElement
@@ -19,7 +19,7 @@ body:
     type: file
     source: specification/mets_header.md
 
-  - name: metadata-metsHdr-requirments
+  - name: metadata-metsHdr-requirements
     heading: Mets Header Element Requirements
     type: requirements
     section: metsHdr
@@ -45,7 +45,7 @@ body:
 
   - name: biblography
     type: file
-    source: specification/biblography.md
+    source: specification/bibliography.md
 
 appendices:
   - name: semantic
@@ -72,7 +72,7 @@ appendices:
     type: mets
     section: vocabulary
 
-  - name: mets.metadata.requirments
+  - name: mets.metadata.requirements
     heading: "E-ARK SIP Metadata Requirements"
     label: "E"
     type: mets
