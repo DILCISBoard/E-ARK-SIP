@@ -1,6 +1,7 @@
 [glossary]
 = Glossary
 
+[%header,cols="2,6"]
 |===
 | Term | Definition
 

@@ -27,18 +27,20 @@ specifically targeting the pre-ingest and ingest stages.
 
 :sectnums!:
 :partnums!:
+:imagesdir: 
+
 include::common-intro.adoc[]
+
+:imagesdir: images
 
 toc::[]
 
 :sectnums:
 :partnums:
+
 include::introduction.adoc[]
-include::tables/metadata-root-requirements.adoc[]
-include::mets_header.adoc[]
-include::tables/metadata-metshdr-requirements.adoc[]
-include::mets_filesec.adoc[]
-include::tables/metadata-filesec-requirements.adoc[]
+include::structure.adoc[]
+include::mets.adoc[]
 include::cits.adoc[]
 include::glossary.adoc[]
 include::bibliography.adoc[]
@@ -47,4 +49,8 @@ include::appendices/mets.examples.adoc[]
 include::appendices/mets.schema.adoc[]
 include::appendices/mets.vocabs.adoc[]
 include::appendices/mets.metadata.requirements.adoc[]
+
+:sectnums!:
+:partnums!:
+
 include::postface/postface.adoc[]
