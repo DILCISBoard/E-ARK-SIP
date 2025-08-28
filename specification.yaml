@@ -19,7 +19,6 @@ tables:
     examples: true
 
 appendices:
-
   - name: mets.examples
     heading: "E-ARK Information Package METS Example"
     label: "B"
