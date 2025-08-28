@@ -1,4 +1,7 @@
-:imagesdir: images
+[chapter]
+= Appendices
+
+== Appendix A: Submission Agreement semantic elements
 
 The following list of semantic elements provide a starting point for anyone willing to prepare a Submission Agreement. This list is not prescriptive, or by any means complete. It merely serves the purpose of outlining the most relevant semantic elements that should be present in a Submission Agreement.
 

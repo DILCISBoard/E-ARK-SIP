@@ -1,8 +1,6 @@
+[chapter]
 = Postface
-:imagesdir: images
 
-!INCLUDE "authors.md"
-
-!INCLUDE "revisions.md"
-
-!INCLUDE "ack-contact.md"
+include::authors.adoc[]
+include::revisions.adoc[]
+include::ack-contact.adoc[]

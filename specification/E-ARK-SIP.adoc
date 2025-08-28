@@ -1,0 +1,50 @@
+// E-ARK Specification for Submission Information Packages as AsciiDoc
+= E-ARK SIP: Specification for Submission Information Packages
+Miguel Ferreira
+:revnumber: v${RELEASE_VERSION}
+:revdate: ${RELEASE_DATE}
+:revremark: Full revision of the metsHdr section to better describe the agent element and its use. Improved the examples. Removed optional agent requirements from the requirements table.
+:doctype: book
+:imagesdir: images
+:source-highlighter: rouge
+:rouge-style: github
+:org: KEEPS SOLUTIONS
+:sectnums:
+:partnums:
+:!chapter-signifier:
+:toc: macro
+:description: This document provides a comprehensive specification for the creation and parsing \
+of E-ARK Submission Information Packages (SIP). Its primary goals include outlining \
+a general-purpose structure for Submission Information Packages that accommodates \
+a diverse array of archival materials—such as document and image collections, databases, \
+and geographical data. Additionally, it aims to improve interoperability between \
+Producers and Archives by recommending best practices for metadata, content, and \
+the structural organization of Submission Information Packages. This specification is \
+designed for a broad audience, including record creators, archival institutions, and \
+software providers tasked with the preparation, packaging, delivery, and reception of \
+information packages for archiving within an Open Archival Information System (OAIS), \
+specifically targeting the pre-ingest and ingest stages.
+
+:sectnums!:
+:partnums!:
+include::common-intro.adoc[]
+
+toc::[]
+
+:sectnums:
+:partnums:
+include::introduction.adoc[]
+include::tables/metadata-root-requirements.adoc[]
+include::mets_header.adoc[]
+include::tables/metadata-metshdr-requirements.adoc[]
+include::mets_filesec.adoc[]
+include::tables/metadata-filesec-requirements.adoc[]
+include::cits.adoc[]
+include::glossary.adoc[]
+include::bibliography.adoc[]
+include::appendix_a.adoc[]
+include::appendices/mets.examples.adoc[]
+include::appendices/mets.schema.adoc[]
+include::appendices/mets.vocabs.adoc[]
+include::appendices/mets.metadata.requirements.adoc[]
+include::postface/postface.adoc[]
